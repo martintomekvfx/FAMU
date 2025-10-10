@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poznámky z AV - Otázka reprezentace</title>
+    <style>
+        @media print {
+            body { margin: 1in; }
+            h1, h2, h3 { page-break-after: avoid; }
+            img { max-width: 100%; page-break-inside: avoid; }
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #333;
+            background: #fff;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 12px;
+            margin-top: 40px;
+            font-size: 2em;
+        }
+        
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #95a5a6;
+            padding-bottom: 10px;
+            margin-top: 35px;
+            font-size: 1.6em;
+        }
+        
+        h3 {
+            color: #555;
+            margin-top: 28px;
+            font-size: 1.3em;
+        }
+        
+        h4 {
+            color: #666;
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+        
+        p {
+            margin: 12px 0;
+        }
+        
+        strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        em {
+            color: #555;
+        }
+        
+        a {
+            color: #3498db;
+            text-decoration: none;
+            border-bottom: 1px dotted #3498db;
+        }
+        
+        a:hover {
+            border-bottom: 1px solid #3498db;
+        }
+        
+        ul, ol {
+            padding-left: 30px;
+            margin: 15px 0;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #3498db;
+            padding: 15px 20px;
+            margin: 25px 0;
+            background: #f8f9fa;
+            color: #555;
+            font-style: italic;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 25px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background-color: #3498db;
+            color: white;
+            padding: 14px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        hr {
+            border: none;
+            border-top: 2px solid #eee;
+            margin: 35px 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 25px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .arrow {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px 20px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Poznámky z AV - Otázka reprezentace</h1>
+
+<p><strong>Deadline textu:</strong> 2. 11.</p>
+<p><strong>Rozsah:</strong> 5 normostran</p>
+
+<hr>
+
+<h2>📑 Obsah</h2>
+
+<ul>
+<li><a href="#fenomenologie">Fenomenologie</a></li>
+<li><a href="#reprezentace">Opakovaná reprezentace</a></li>
+<li><a href="#martin-kohout">Martin Kohout - Slides</a></li>
+<li><a href="#google-maps">Příklad: Google Maps</a></li>
+<li><a href="#kod">Kód jako mapa</a></li>
+<li><a href="#umberto-eco">Umberto Eco - Semiotika</a></li>
+<li><a href="#mapa-uzemi">Mapa a území</a></li>
+<li><a href="#substance-diference">Substanční vs. diferenciální</a></li>
+<li><a href="#platonova-jeskyne">Platonova jeskyně</a></li>
+<li><a href="#kant">Kant - Věci o sobě</a></li>
+<li><a href="#nietzsche">Nietzsche a idea koně</a></li>
+<li><a href="#whitehead">Whitehead - Bifurkace přírody</a></li>
+<li><a href="#schizma">Evropské schizma</a></li>
+<li><a href="#konceptualni-umeni">Konceptuální umění</a></li>
+<li><a href="#postfakticita">Postfakticita - Postpravda</a></li>
+<li><a href="#euklid">Euklid a axiomy</a></li>
+<li><a href="#goedel">Gödelova věta o neúplnosti</a></li>
+<li><a href="#heisenberg">Heisenbergův princip neurčitosti</a></li>
+<li><a href="#hawthorne">Hawthorneův efekt</a></li>
+<li><a href="#media-pozani">Média a systematické poznání</a></li>
+<li><a href="#kiwi">Příklad: Kiwi a dinosaurus</a></li>
+<li><a href="#veda-kontext">Ideál vědy - Vytrhávání z kontextu</a></li>
+<li><a href="#duchamp">Příklad z umění: Duchamp</a></li>
+<li><a href="#bryle">Metafora brýlí</a></li>
+<li><a href="#transformace">Reprezentace jako transformace</a></li>
+<li><a href="#hodina2">Hodina 2</a></li>
+<li><a href="#ballard">J.G. Ballard</a></li>
+<li><a href="#zizek">Slavoj Žižek</a></li>
+<li><a href="#obsese">Obsese jako pevný bod</a></li>
+<li><a href="#kritika-pritomnosti">Kritika přítomnosti</a></li>
+</ul>
+
+<hr>
+
+<h2 id="fenomenologie">Fenomenologie</h2>
+
+<blockquote>
+<strong>"Zpátky k věcem samým"</strong>
+</blockquote>
+
+<p>Fenomenologie se zaměřuje na to, jak se nám věci jeví a jak je vnímáme. Není to jen o objektech samotných, ale o naší zkušenosti s nimi.</p>
+
+<hr>
+
+<h2 id="reprezentace">Opakovaná reprezentace</h2>
+
+<p><strong>Reprezentace je to, co se děje...</strong></p>
+
+<p>Klíčová otázka reprezentace není jen technická, ale ontologická - co to znamená, když něco reprezentujeme?</p>
+
+<hr>
+
+<h2 id="martin-kohout">Martin Kohout - Slides</h2>
+
+<h3>Prezentace a reprezentace</h3>
+
+<p>Martin Kohout ve svých slides zkoumá vztah mezi tím, co prezentujeme, a tím, co reprezentujeme.</p>
+
+<p><span class="arrow">→</span> <strong>Jedna věc ovlivňuje druhou</strong></p>
+
+<hr>
+
+<h2 id="google-maps">Příklad: Google Maps</h2>
+
+<p><strong>Google Maps mají to dohromady</strong> - jedno ovlivňuje druhé.</p>
+
+<h3>Reprezentace dat v reálném čase</h3>
+
+<p>Nevidíme rozdíl mezi mapou a územím. Mapa v reálném čase se stává samotným územím.</p>
+
+<div class="note">
+<strong>Klíčový poznatek:</strong> Media formulují realitu, ne jen mapují.
+</div>
+
+<hr>
+
+<h2 id="kod">Kód jako mapa</h2>
+
+<blockquote>
+<strong>Kód je mapou něčeho, co vzniká, až to spustíme.</strong>
+</blockquote>
+
+<p><strong>Neujatost je nesmysl.</strong> Media formulují realitu, ne jen mapují.</p>
+
+<hr>
+
+<h2 id="umberto-eco">Umberto Eco - Semiotika</h2>
+
+<h3>Semiotika jako studium znaků</h3>
+
+<p><strong>Umberto Eco</strong> říká, že semiotiku se dá definovat jako:</p>
+
+<blockquote>
+<strong>"Studium všeho toho, co se dá použít ke lhaní"</strong>
+</blockquote>
+
+<p><span class="arrow">→</span> Pokud se to dá použít ke lhaní, tak je to reprezentace.</p>
+
+<p>To platí pro reprezentaci obecně.</p>
+
+<hr>
+
+<h2 id="mapa-uzemi">Mapa a území</h2>
+
+<p>Viděli jsme vztah map a území jako <strong>oddělené věci</strong>.</p>
+
+<h3>Map and Territory</h3>
+
+<p>Mapa byla považována za reprezentaci území. Ale co když je tomu jinak?</p>
+
+<hr>
+
+<h2 id="substance-diference">Substanční vs. diferenciální</h2>
+
+<p>Eco tvrdí rozdíl mezi:</p>
+
+<ul>
+<li><strong>Substancionární</strong> (hmota, substance)</li>
+<li><strong>Diferenciální</strong> (rozdíl, diference)</li>
+</ul>
+
+<h3>Substance je hmota</h3>
+<p>Diference je rozdíl.</p>
+
+<p>To jsou <strong>dvě různé věci</strong>.</p>
+
+<h3>Dnes už to nejsou dvě rozdělené věci</h3>
+
+<p><span class="arrow">→</span> Dnes je to <strong>spektrum</strong>.</p>
+
+<p><strong>Čistá substance neexistuje.</strong> Každá substance jako dřevo nebo železo nosi vlastní informaci - papír je měkký a pokrčí se.</p>
+
+<h4>Příklad: Pokrčený papír</h4>
+
+<p>Diferenciální věci v kultuře nemůže fungovat bez substance.</p>
+
+<blockquote>
+<strong>Vždy jsou ty věci v hmotě.</strong>
+</blockquote>
+
+<p>Dobrý příklad, jak si to představit, je vzít papír a pokrčit ho. <strong>Mohou mít ty čáry samostatnou existenci bez toho?</strong></p>
+
+<hr>
+
+<h2>Mapa z hmoty, která je v tom území</h2>
+
+<p>Mapa je součástí území z materialistického pohledu.</p>
+
+<h3>Historický zlom - před 2500 lety</h3>
+
+<p>Díky <strong>Sokratovi a Platonovi</strong> se ten předpoklad rozsekl.</p>
+
+<p><span class="arrow">→</span> Od té doby je západní civilizace založena na mýtech.</p>
+
+<hr>
+
+<h2 id="platonova-jeskyne">Platonova jeskyně</h2>
+
+<p><strong>Jevy jsou reprezentace věcí o sobě.</strong></p>
+
+<p>V Platonově alegorii jeskyně vidíme stíny na stěně - ty jsou pouze reprezentací skutečných objektů.</p>
+
+<hr>
+
+<h2 id="kant">Kant - Věci o sobě</h2>
+
+<blockquote>
+<strong>K věcem se nedostaneme, jen k jevům.</strong>
+</blockquote>
+
+<p>Kant tvrdí, že nemáme přístup k věcem samotným (<em>noumenon</em>), pouze k jejich jevům (<em>phenomenon</em>).</p>
+
+<hr>
+
+<h2 id="nietzsche">Nietzsche a idea koně</h2>
+
+<p>Ten problém, ke kterému se vrací <strong>Nietzsche</strong>, říká, že oddělení na reprezentaci a prezentaci:</p>
+
+<ul>
+<li>Je <strong>idea koně</strong> - svět ideí, ke kterému nemáme přístup</li>
+<li>Kůň reprezentuje tu ideu</li>
+<li>Představa je dokonalá, ale ten kůň žádný není</li>
+</ul>
+
+<blockquote>
+<strong>Reprezentace je něco méně cenného vůči prezentaci.</strong>
+</blockquote>
+
+<hr>
+
+<h2 id="whitehead">Whitehead - Bifurkace přírody</h2>
+
+<h3>Bifurkace přírody = Rozvětvění přírody</h3>
+
+<p><strong>Alfred North Whitehead</strong> kritizuje rozdělení přírody.</p>
+
+<p>Svět, příroda nebo realita je rozdělena na části:</p>
+<ul>
+<li><strong>Objektivní</strong></li>
+<li><strong>Subjektivní</strong></li>
+</ul>
+
+<h3>Dvojí krok ke vztahu reality</h3>
+
+<p><strong>Oddělení na svět ideí</strong></p>
+
+<p><strong>První krok je separace</strong></p>
+
+<p><strong>Druhý krok je hierarchizace</strong></p>
+
+<blockquote>
+<strong>Realita je víc než její reprezentace.</strong>
+</blockquote>
+
+<hr>
+
+<h2 id="schizma">Evropské schizma</h2>
+
+<p>Tohle to schizma zakládá <strong>evropskou myšlenkovou tradici</strong>.</p>
+
+<h3>Rozum nad vášně</h3>
+
+<ul>
+<li><strong>Rozum</strong> je to svaté</li>
+<li><strong>Vášeň</strong> je to zlé, zkreslující</li>
+</ul>
+
+<blockquote>
+<strong>Křesťanství je platonismus pro masy.</strong> - Nietzsche
+</blockquote>
+
+<p><strong>Objektivita je víc než subjektivita</strong> - je to oddělené a je to víc.</p>
+
+<hr>
+
+<h2 id="konceptualni-umeni">Konceptuální umění</h2>
+
+<h3>Poezie jako mapa</h3>
+
+<p>Poezie je taky mapou, jen něčeho, co vzniká až když tu poezii čteme.</p>
+
+<h3>Konceptuální umění</h3>
+
+<p>Myšlenka a reprezentace je to, co to umění vytváří - až když konfrontujeme s tím uměním.</p>
+
+<p>I popisování je materiální praxe, která má vlastní zkušenost. To, co se dozvídáme, tak přistupujeme k něčemu, co tam bylo před tím, než jsme to objevili.</p>
+
+<p><strong>Otázka:</strong> Takže říká, že to neexistuje, dokud to nepopíšeme? Je to esencionalismus?</p>
+
+<hr>
+
+<h2 id="postfakticita">Postfakticita - Postpravda</h2>
+
+<h3>Strukturalismus a poststrukturalismus</h3>
+
+<p>Je to skutečnost, která se podle vědy kouká sama na sebe.</p>
+
+<hr>
+
+<h2 id="euklid">Euklid a axiomy</h2>
+
+<h3>Co je to axiom?</h3>
+
+<blockquote>
+<strong>Axiom je tvrzení tak zjevné, že nemusí být dokazováno.</strong>
+</blockquote>
+
+<p><strong>Euklid</strong> řekl, že je <strong>pět axiomů</strong>.</p>
+
+<p>Například: <em>Úsečka jako nejkratší věc na rovině</em></p>
+
+<h3>Vědecký postup - dedukce</h3>
+
+<p>Tohle je postup vědy: z něčeho vyvozujeme něco dalšího - <strong>dedukce</strong>.</p>
+
+<h3>Euklidův model</h3>
+
+<p>Euklidův model - axiomy a pak obor - se stal vzorem vědeckým.</p>
+
+<p>Spinoza se pokusil to napodobit v případě etiky. Je to fantastická přetlva, ale on se o to pokusil.</p>
+
+<p><strong>Matematické axiomy by měly být dotažené. Ale nejsou.</strong></p>
+
+<hr>
+
+<h2>Gottlob Frege - Teorie množin</h2>
+
+<p>Na toto přistoupil <strong>Gottlob Frege</strong> - <strong>teorie množin</strong>.</p>
+
+<p>Silná matematická teorie. 95 % matiky by se dalo vyjádřit pomocí jazyka teorie množin.</p>
+
+<p><strong>Všechno se dá popsat kombinací množin...</strong></p>
+
+<h3>Paradox holiče</h3>
+
+<blockquote>
+Přijde holič do města a říká, že bude holit lidi, kteří sebe samotní jen holí.
+<br><br>
+<strong>Ale on se sám neholí, tím se holí, ale tím se neholí??????</strong>
+</blockquote>
+
+<hr>
+
+<h2>Principia Mathematica</h2>
+
+<p><strong>Principia Mathematica</strong> přistoupili k tomu tím, že zakázaly určité způsoby definování množin. Pokusily se vystavět matiku bezrozpornou, ale tím, že zakázaly nějaké postupy.</p>
+
+<blockquote>
+<strong>Nemáme matiku, která je bezrozporná a úplná.</strong>
+</blockquote>
+
+<p><span class="arrow">→</span> <strong>Buď jedno, anebo druhé.</strong></p>
+
+<hr>
+
+<h2 id="goedel">Gödelova věta o neúplnosti (1933)</h2>
+
+<p><strong>Kurt Gödel</strong> - <strong>Teorie neúplnosti (1933)</strong></p>
+
+<p>On vzal teorii čísel (to je něco jako teorie množin) a jazykem té teorie množin zformuloval větu, která je ekvivalentní: <em>"Toto tvrzení se nedá dokázat"</em> - a pak to dokázal.</p>
+
+<blockquote>
+<strong>Nemůže existovat systém, který bude bez paradoxů a úplný</strong> - tím to odkázal.
+</blockquote>
+
+<h3>Metamatematika</h3>
+
+<p>Vedle teorému neúplnosti je důležitý také:</p>
+
+<hr>
+
+<h2 id="heisenberg">Heisenbergův princip neurčitosti</h2>
+
+<p>Čím jdeme do hloubky...</p>
+
+<h3>Kvantová fyzika</h3>
+
+<p><strong>Limity pozorování bez změny</strong></p>
+
+<p>V kvantové fyzice nemůžeme pozorovat systém bez toho, aniž bychom ho změnili.</p>
+
+<hr>
+
+<h2 id="hawthorne">Hawthorneův efekt</h2>
+
+<h3>Výzkum</h3>
+
+<p>Dva sociologové ve Francii zkoumají nejlepší osvětlení.</p>
+
+<p>Ptají se zaměstnanců.</p>
+
+<p><strong>Zaměstnanci odpovídali motivovaní tím, že se někdo zajímá, co oni si myslí.</strong></p>
+
+<blockquote>
+<strong>Samotný dotaz změnil to, co oni chtěli pozorovat.</strong>
+</blockquote>
+
+<h3>Zlom ve společenských vědách</h3>
+
+<p>Tím se dělá zlom ve společenských vědách. Ty byly formulovány dle přírodních věd.</p>
+
+<p><strong>Společnost mění svoje chování ve světle toho, co se o ní ví.</strong></p>
+
+<hr>
+
+<h2 id="media-pozani">Média a systematické poznání</h2>
+
+<p>Mluvím hodně o vědě - je to <strong>systematický způsob poznání</strong>.</p>
+
+<p><strong>Nesystematický způsob poznání</strong> je mediální produkce.</p>
+
+<p>Veškerá mediální produkce jsou <strong>produktem mapy</strong>.</p>
+
+<h3>Média v dějinách</h3>
+
+<p>Čím víc jdeme do hloubky dějin médií, tak ta média jak fungují a nebo jak rámují...</p>
+
+<blockquote>
+<strong>Ta média se spoluudílela na tom, jak rozumíme tomu světu.</strong>
+</blockquote>
+
+<p>Jen jsme na to vždy zapomněli, že to bylo od médií. Myslíme si, že to bylo vždycky.</p>
+
+<hr>
+
+<h2 id="kiwi">Příklad: Kiwi a dinosaurus</h2>
+
+<p><strong>Kiwi vypadá jako dinosaurus...</strong></p>
+
+<p>Ale jak víme, jak vypadá dinosaurus?</p>
+
+<h3>Reprezentace médii</h3>
+
+<p>A s tou reprezentací médií je to <strong>dost podobné</strong>.</p>
+
+<p>Někdo přijde s tím, že budeme měřit jev tak a tak.</p>
+
+<h4>Příklad: Teplota podle Celsia</h4>
+
+<p>Teplota podle Celsia - někdo přišel s tímto způsobem měření a reprezentace.</p>
+
+<h4>Zlatý standard</h4>
+
+<p><strong>Zlatý standard</strong> - krytý zlatem.</p>
+
+<hr>
+
+<h2 id="veda-kontext">Ideál vědy - Vytrhávání z kontextu</h2>
+
+<blockquote>
+<strong>Ideálem vědy bylo dlouhou dobu vytrhávat věci z kontextu.</strong>
+</blockquote>
+
+<p>Věda se ptá na společné věci, věci odlišné pro jednotlivce jsou zanedbatelné.</p>
+
+<hr>
+
+<h2 id="duchamp">Příklad z umění: Duchamp</h2>
+
+<p><strong>Duchamp kritizuje galerii</strong> - protože to místo, které má hezky být s uměním, které je dobré. Ale to jsme řekli my.</p>
+
+<p><span class="arrow">→</span> Kdo rozhoduje, co je umění? Instituce, kterou jsme vytvořili my sami.</p>
+
+<hr>
+
+<h2>Po Platonově jeskyni je další a další...</h2>
+
+<p>Po Platonově jeskyni následují další a další vrstvy reprezentací.</p>
+
+<p>Je to nekonečný řetězec reprezentací, kde každá vrstva je jen odkazem na další.</p>
+
+<hr>
+
+<h2 id="bryle">Metafora brýlí</h2>
+
+<blockquote>
+<strong>Brýle - abychom se na ně podívali, tak je musíme sundat, ale bez brýlí je nemůžeme vidět.</strong>
+</blockquote>
+
+<p>Tato metafora popisuje náš vztah k nástrojům poznání - nemůžeme se na ně podívat, aniž bychom je používali.</p>
+
+<hr>
+
+<h2 id="transformace">Reprezentace jako transformace</h2>
+
+<blockquote>
+<strong>Zjišťujeme, že to, co bylo reprezentací, je transformací.</strong>
+</blockquote>
+
+<p><strong>V té mapě to území zanechává otisk.</strong></p>
+
+<p><span class="arrow">→</span> Mapa není neutrální záznam, ale aktivní transformace území.</p>
+
+<hr>
+
+<h2>Úkol</h2>
+
+<p><strong>Přečíst si do čtvrtka něco, co nám pošle.</strong></p>
+
+<p>On v tom textu formuluje tohle svými slovy.</p>
+
+<hr>
+
+<h1 id="hodina2">📚 Hodina 2</h1>
+
+<h2 id="ballard">J.G. Ballard</h2>
+
+<p><strong>Považoval auto a dálnice za největší vynález 20. století.</strong></p>
+<p>V bouračce umřela jeho žena.</p>
+
+<h3>Recepce díla</h3>
+<ul>
+<li>Kniha byla okamžitě skartována v Americe</li>
+<li>Mnohem větší měl uznání u Francouzů</li>
+</ul>
+
+<h3>Nová britská vlna</h3>
+<ul>
+<li>Snažili se redefinovat, v čem spočívá sci-fi</li>
+<li>Byl výrazně inspirován surrealisty</li>
+<li>Pak ho ovlivnil pop art</li>
+</ul>
+
+<h4>Latentní vs. Manifestní</h4>
+<p>Spatřuje v tom vztah mezi:</p>
+<ul>
+<li><strong>Latentní</strong> - skrytý / sny</li>
+<li><strong>Manifestní</strong> - viditelný</li>
+</ul>
+
+<hr>
+
+<h2 id="zizek">Slavoj Žižek</h2>
+
+<h3>Klíčové koncepty</h3>
+<ul>
+<li><strong>Kniha mytologie</strong></li>
+<li><strong>Smrt autora</strong> - Barthes</li>
+</ul>
+
+<p><strong>Když si předáme Freudovu analýzu k Marxovi...</strong></p>
+
+<p><strong>Racionalita</strong> - může skončit židovskou otázkou</p>
+
+<h3>Habitualizace</h3>
+<p><strong>Habitualizace</strong> - zvykáme si na něco</p>
+
+<h3>Politika percepce</h3>
+<p><strong>Politika percepce</strong> - Je to, jak to působí</p>
+
+<p><strong>Vrtět psem</strong></p>
+
+<hr>
+
+<h2 id="obsese">Obsese jako pevný bod</h2>
+
+<blockquote>
+<strong>U tvořícího člověka - je pevný bod nějaká obsese, ke které se vrací. Nestačí to pojmenovat. Musí se to vyrobit.</strong>
+</blockquote>
+
+<hr>
+
+<h2 id="kritika-pritomnosti">Kritika přítomnosti</h2>
+
+<ul>
+<li><strong>Nejde se dostat za stíny jeskyně</strong></li>
+<li><strong>Každé dekódování je novým zakódováním</strong></li>
+<li><strong>Bezprostřední náhled neexistuje</strong></li>
+</ul>
+
+<blockquote>
+<strong>To, co se k nám dostává k interpretaci, je transformováno tím, jak uchopujeme.</strong>
+</blockquote>
+
+<p><strong>Proto je přítomnost metafyzicky nemožná.</strong></p>
+
+<blockquote>
+<strong>Každý kontakt se skutečností skutečnost mění.</strong>
+</blockquote>
+
+<hr>
+
+<h2>Závěr</h2>
+
+<blockquote>
+<strong>Nevinná objektivní nestranná věda neexistuje.</strong>
+</blockquote>
+
+<p>Všechno zasahuje do toho procesu a mění to zkoumané samotné.</p>
+
+<blockquote>
+<strong>My jsme se vydali mapovat a tím mapováním měníme to území.</strong>
+</blockquote>
+
+<hr>
+
+</body>
+</html>

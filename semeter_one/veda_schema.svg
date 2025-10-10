@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#2c3e50">VĚDA</text>
+  
+  <!-- Dividing line -->
+  <line x1="400" y1="60" x2="400" y2="380" stroke="#95a5a6" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Left side - Natural Sciences -->
+  <rect x="50" y="80" width="300" height="280" fill="#3498db" rx="10" opacity="0.9"/>
+  <text x="200" y="120" text-anchor="middle" font-size="20" font-weight="bold" fill="white">PŘÍRODNÍ VĚDY</text>
+  
+  <!-- Natural Sciences content -->
+  <text x="200" y="160" text-anchor="middle" font-size="16" fill="white" font-style="italic">Natural Sciences</text>
+  
+  <line x1="80" y1="190" x2="320" y2="190" stroke="white" stroke-width="1"/>
+  
+  <text x="200" y="230" text-anchor="middle" font-size="18" font-weight="bold" fill="white">Cíl: VYSVĚTLENÍ</text>
+  <text x="200" y="255" text-anchor="middle" font-size="14" fill="white">(Explanation)</text>
+  
+  <text x="200" y="295" text-anchor="middle" font-size="14" fill="white">Předmět: Zákonitosti</text>
+  <text x="200" y="315" text-anchor="middle" font-size="14" fill="white">Materiální svět</text>
+  <text x="200" y="335" text-anchor="middle" font-size="12" fill="white" opacity="0.8">např. voda vře při 100°C</text>
+  
+  <!-- Right side - Human Sciences -->
+  <rect x="450" y="80" width="300" height="280" fill="#e74c3c" rx="10" opacity="0.9"/>
+  <text x="600" y="120" text-anchor="middle" font-size="20" font-weight="bold" fill="white">HUMANITNÍ VĚDY</text>
+  
+  <!-- Human Sciences content -->
+  <text x="600" y="160" text-anchor="middle" font-size="16" fill="white" font-style="italic">Human Sciences</text>
+  
+  <line x1="480" y1="190" x2="720" y2="190" stroke="white" stroke-width="1"/>
+  
+  <text x="600" y="230" text-anchor="middle" font-size="18" font-weight="bold" fill="white">Cíl: POROZUMĚNÍ</text>
+  <text x="600" y="255" text-anchor="middle" font-size="14" fill="white">(Understanding)</text>
+  
+  <text x="600" y="295" text-anchor="middle" font-size="14" fill="white">Předmět: Význam</text>
+  <text x="600" y="315" text-anchor="middle" font-size="14" fill="white">Interpretace</text>
+  <text x="600" y="335" text-anchor="middle" font-size="12" fill="white" opacity="0.8">Co to znamená?</text>
+  
+  <!-- Bottom attribution -->
+  <text x="400" y="395" text-anchor="middle" font-size="11" fill="#7f8c8d">Wilhelm Dilthey → Max Weber (novokantovci)</text>
+</svg>
