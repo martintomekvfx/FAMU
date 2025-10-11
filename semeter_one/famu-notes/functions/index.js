@@ -2,6 +2,10 @@ const functions = require('firebase-functions');
 const { Client } = require('@notionhq/client');
 const cors = require('cors')({ origin: true });
 
+// Export calendar sync function
+const { calendarSync } = require('./calendarSync');
+exports.calendarSync = calendarSync;
+
 // Initialize Notion client
 const notion = new Client({
   auth: functions.config().notion.api_key,
