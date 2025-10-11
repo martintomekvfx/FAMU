@@ -185,16 +185,17 @@ function CalendarPage() {
         </div>
       </header>
 
-      {/* Notion + Google Calendar Sync */}
-      <SyncedCalendar
-        events={events}
-        onEventAdd={handleSubmit}
-        onEventUpdate={(event) => handleEdit(event)}
-        onEventDelete={handleDelete}
-      />
+      {/* Notion Calendar Embed */}
+      <div className="w-full h-[calc(100vh-200px)] bg-white">
+        <iframe
+          src="https://www.notion.so/YOUR_CALENDAR_PAGE_ID?v=YOUR_VIEW_ID"
+          className="w-full h-full border-0"
+          title="Notion Calendar"
+        />
+      </div>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 hidden">
         {events.length === 0 ? (
           <div className="text-center py-12 bg-white rounded-lg shadow-lg border-2 border-gray-900">
             <CalendarIcon className="w-16 h-16 mx-auto mb-4 text-gray-400" />
