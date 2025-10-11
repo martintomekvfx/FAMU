@@ -63,6 +63,33 @@ V souboru `src/services/notionService.js` nahraď:
 const API_URL = 'https://us-central1-YOUR_PROJECT.cloudfunctions.net/notionSync';
 ```
 
+## 🚀 RYCHLÝ START - Auto Setup Script:
+
+### **Nejjednodušší způsob - spusť script:**
+
+```bash
+# 1. Jdi do scripts složky
+cd scripts
+
+# 2. Nainstaluj dependencies
+npm install
+
+# 3. Nastav API keys
+export NOTION_API_KEY="ntn_YOUR_API_KEY"
+export NOTION_DATABASE_ID="2892f121ab5f802a917dcb05c0062179"
+
+# 4. Spusť setup
+npm run setup
+```
+
+**Za 2 minuty máš:**
+- ✅ Všechny předměty v Notion
+- ✅ Rozvrh (sudý/lichý týden)
+- ✅ Dashboard s widgety
+- ✅ Strukturu pro poznámky
+
+---
+
 ## 🎯 Jak to funguje:
 
 ### 1. Sync tlačítko na každém předmětu
