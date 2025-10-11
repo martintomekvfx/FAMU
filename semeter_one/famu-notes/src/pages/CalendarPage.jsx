@@ -188,8 +188,9 @@ function CalendarPage() {
       {/* Notion Calendar Embed */}
       <div className="w-full h-[calc(100vh-200px)] bg-white">
         <iframe
-          src="https://www.notion.so/YOUR_CALENDAR_PAGE_ID?v=YOUR_VIEW_ID"
+          src="https://axiomatic-range-b04.notion.site/ebd/2892f121ab5f80c486c4f603df4dcc24"
           className="w-full h-full border-0"
+          allowFullScreen
           title="Notion Calendar"
         />
       </div>
