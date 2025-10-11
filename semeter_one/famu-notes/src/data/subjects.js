@@ -137,6 +137,25 @@ export const subjects = [
     ],
     links: [],
   },
+  {
+    id: 'test',
+    name: 'TEST - Notion Integration',
+    shortName: 'TEST',
+    description: 'Test subject for Markdown → Notion → App workflow',
+    color: 'purple',
+    notionEnabled: true, // Flag to indicate Notion integration
+    classes: [
+      {
+        id: 1,
+        date: '11. 10.',
+        lecturer: 'AI Assistant',
+        title: 'Test Class - Notion Integration',
+        description: 'Testing Markdown to Notion publishing workflow',
+        notionPageId: null, // Will be filled after publishing
+      },
+    ],
+    links: [],
+  },
 ];
 
 // Obecné poznámky - separate from subjects

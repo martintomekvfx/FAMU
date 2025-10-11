@@ -4,6 +4,7 @@ import BeerButton from './components/BeerButton';
 import Home from './pages/Home';
 import SubjectPage from './pages/SubjectPage';
 import ClassPage from './pages/ClassPage';
+import NotionClassPage from './pages/NotionClassPage';
 import ChatPage from './pages/ChatPage';
 import TimetablePage from './pages/TimetablePage';
 import CalendarPage from './pages/CalendarPage';
@@ -28,6 +29,7 @@ function App() {
             <Route path="/secret-game" element={<GamePage />} />
             <Route path="/subject/:subjectId" element={<SubjectPage />} />
             <Route path="/subject/:subjectId/mindmap" element={<MindMapPage />} />
+            <Route path="/subject/test/class/:classId" element={<NotionClassPage />} />
             <Route path="/subject/:subjectId/class/:classId" element={<ClassPage />} />
           </Routes>
         </main>
