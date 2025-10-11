@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Calendar as CalendarIcon, Plus, X, Edit2, Trash2 } from 'lucide-react';
 import { db } from '../firebase';
 import { collection, addDoc, query, orderBy, onSnapshot, deleteDoc, doc, updateDoc, serverTimestamp } from 'firebase/firestore';
+import SyncedCalendar from '../components/SyncedCalendar';
+import { calendarSyncService } from '../services/calendarSyncService';
 
 function CalendarPage() {
   const [events, setEvents] = useState([]);
@@ -42,16 +44,40 @@ function CalendarPage() {
     e.preventDefault();
     
     try {
+      const eventData = {
+        ...formData,
+        start: `${formData.date}T${formData.time || '00:00'}:00`,
+        end: `${formData.date}T${formData.time ? `${parseInt(formData.time.split(':')[0]) + 1}:${formData.time.split(':')[1]}` : '01:00'}:00`,
+      };
+
       if (editingEvent) {
         await updateDoc(doc(db, 'calendarEvents', editingEvent.id), {
           ...formData,
           updatedAt: serverTimestamp(),
         });
+        
+        // Update in Notion + Google
+        try {
+          await calendarSyncService.updateEvent(editingEvent.id, formData);
+        } catch (syncError) {
+          console.log('Sync update failed (will sync later):', syncError);
+        }
       } else {
-        await addDoc(collection(db, 'calendarEvents'), {
+        const docRef = await addDoc(collection(db, 'calendarEvents'), {
           ...formData,
           createdAt: serverTimestamp(),
         });
+        
+        // Sync to Notion + Google
+        try {
+          await calendarSyncService.createEvent({
+            id: docRef.id,
+            ...eventData,
+          });
+          console.log('✅ Event synced to Notion + Google');
+        } catch (syncError) {
+          console.log('Sync failed (will retry on next auto-sync):', syncError);
+        }
       }
       
       setFormData({
@@ -73,6 +99,14 @@ function CalendarPage() {
     if (window.confirm('Opravdu chceš smazat tuto událost?')) {
       try {
         await deleteDoc(doc(db, 'calendarEvents', eventId));
+        
+        // Delete from Notion + Google
+        try {
+          await calendarSyncService.deleteEvent(eventId);
+          console.log('✅ Event deleted from Notion + Google');
+        } catch (syncError) {
+          console.log('Sync delete failed (will clean up on next auto-sync):', syncError);
+        }
       } catch (error) {
         console.error('Chyba při mazání události:', error);
       }
@@ -150,6 +184,14 @@ function CalendarPage() {
           </div>
         </div>
       </header>
+
+      {/* Notion + Google Calendar Sync */}
+      <SyncedCalendar
+        events={events}
+        onEventAdd={handleSubmit}
+        onEventUpdate={(event) => handleEdit(event)}
+        onEventDelete={handleDelete}
+      />
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

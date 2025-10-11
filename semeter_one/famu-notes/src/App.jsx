@@ -6,6 +6,7 @@ import SubjectPage from './pages/SubjectPage';
 import ClassPage from './pages/ClassPage';
 import ChatPage from './pages/ChatPage';
 import TimetablePage from './pages/TimetablePage';
+import CalendarPage from './pages/CalendarPage';
 import DeadlinePage from './pages/DeadlinePage';
 import GamePage from './pages/GamePage';
 import BulletinBoardPage from './pages/BulletinBoardPage';
@@ -22,6 +23,7 @@ function App() {
             <Route path="/bulletin-board" element={<BulletinBoardPage />} />
             <Route path="/chat" element={<ChatPage />} />
             <Route path="/timetable" element={<TimetablePage />} />
+            <Route path="/calendar" element={<CalendarPage />} />
             <Route path="/deadlines" element={<DeadlinePage />} />
             <Route path="/secret-game" element={<GamePage />} />
             <Route path="/subject/:subjectId" element={<SubjectPage />} />
