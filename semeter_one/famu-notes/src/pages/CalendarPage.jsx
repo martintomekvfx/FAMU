@@ -185,14 +185,42 @@ function CalendarPage() {
         </div>
       </header>
 
-      {/* Notion Calendar Embed */}
-      <div className="w-full h-[calc(100vh-200px)] bg-white">
+      {/* Notion Calendar Embed - Try iframe first, fallback to button */}
+      <div className="w-full h-[calc(100vh-200px)] bg-white relative">
         <iframe
-          src="https://axiomatic-range-b04.notion.site/ebd/2892f121ab5f80c486c4f603df4dcc24"
+          src="https://calendar.notion.so"
           className="w-full h-full border-0"
           allowFullScreen
           title="Notion Calendar"
+          onError={(e) => {
+            console.log('Notion Calendar cannot be embedded');
+          }}
         />
+        
+        {/* Fallback: Open in new tab button (visible if iframe fails) */}
+        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-50 to-purple-50 backdrop-blur-sm">
+          <div className="text-center p-8 bg-white rounded-2xl shadow-2xl border-2 border-gray-900 max-w-md">
+            <div className="text-6xl mb-4">📅</div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-3">Notion Calendar</h3>
+            <p className="text-gray-600 mb-6">
+              Notion Calendar nemůže být embedován přímo. <br/>
+              Otevři ho v novém okně!
+            </p>
+            <a
+              href="https://calendar.notion.so"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-black text-white rounded-xl font-bold text-lg hover:bg-gray-800 transition-all hover:scale-105 shadow-lg"
+            >
+              <CalendarIcon className="w-6 h-6" />
+              Otevřít Notion Calendar
+              <span className="text-2xl">→</span>
+            </a>
+            <p className="text-sm text-gray-500 mt-4">
+              Nebo použij <a href="https://notion.so" target="_blank" className="underline">notion.so</a>
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Main Content */}
