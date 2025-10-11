@@ -14,7 +14,7 @@ const path = require('path');
 
 // Konfigurace
 const NOTION_API_KEY = process.env.NOTION_API_KEY;
-const DATABASE_ID = process.env.NOTION_DATABASE_ID;
+let DATABASE_ID = process.env.NOTION_DATABASE_ID;
 
 if (!NOTION_API_KEY || !DATABASE_ID) {
   console.error('❌ Chyba: Nastav environment variables!');
@@ -23,6 +23,9 @@ if (!NOTION_API_KEY || !DATABASE_ID) {
   console.log('export NOTION_DATABASE_ID="your_database_id"');
   process.exit(1);
 }
+
+// Remove dashes from database ID if present
+DATABASE_ID = DATABASE_ID.replace(/-/g, '');
 
 const notion = new Client({ auth: NOTION_API_KEY });
 
@@ -126,15 +129,31 @@ async function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// 1. Vytvoř hlavní dashboard page
+// 1. Vytvoř předměty v databázi (ne dashboard - to je složitější)
 async function createDashboard() {
-  console.log('📊 Vytváření Dashboard...');
+  console.log('📊 Přeskakuji Dashboard (vytvoř ručně v Notion)...');
+  console.log('   Místo toho vytvoříme předměty přímo v databázi!\n');
+  return null; // Vrátíme null, budeme vytvářet přímo v databázi
+}
+
+// Alternativní funkce - vytvoř page v databázi
+async function createDashboardInDatabase() {
+  console.log('📊 Vytváření Dashboard v databázi...');
   
   const dashboard = await notion.pages.create({
     parent: { database_id: DATABASE_ID },
     properties: {
       Name: {
         title: [{ text: { content: '🎓 FAMU Dashboard' } }],
+      },
+      Code: {
+        rich_text: [{ text: { content: 'DASHBOARD' } }],
+      },
+      Color: {
+        select: { name: 'blue' },
+      },
+      SubjectID: {
+        rich_text: [{ text: { content: 'dashboard' } }],
       },
     },
     children: [
@@ -399,18 +418,13 @@ async function createClass(parentPageId, classData, subjectName) {
 // Main setup function
 async function setupNotion() {
   console.log('🚀 Začínám Notion setup...\n');
+  console.log('📝 Poznámka: Dashboard a Rozvrh vytvoř ručně v Notion');
+  console.log('   Tento script vytvoří všechny předměty a hodiny!\n');
 
   try {
-    // 1. Vytvoř dashboard
-    const dashboardId = await createDashboard();
-    await sleep(1000);
-
-    // 2. Vytvoř rozvrh
-    await createTimetable(dashboardId);
-    await sleep(1000);
-
-    // 3. Vytvoř všechny předměty
-    console.log('\n📚 Vytváření předmětů...\n');
+    // Vytvoř všechny předměty přímo v databázi
+    console.log('📚 Vytváření předmětů v databázi...\n');
+    
     for (const subject of subjects) {
       const pageId = await createSubject(subject);
       
@@ -426,10 +440,15 @@ async function setupNotion() {
 
     console.log('\n✅ Notion setup dokončen!');
     console.log('\n🎉 Tvůj Notion workspace je připravený!');
-    console.log('📍 Otevři Notion a zkontroluj databázi: famu-predmety\n');
+    console.log('📍 Otevři Notion a zkontroluj databázi: famu-predmety');
+    console.log('\n💡 Tip: Vytvoř Dashboard page ručně a přidej:');
+    console.log('   - Link na databázi');
+    console.log('   - Rozvrh (sudý/lichý týden)');
+    console.log('   - Widgety (Indify, atd.)\n');
 
   } catch (error) {
     console.error('\n❌ Chyba při setupu:', error.message);
+    console.error('Stack:', error.stack);
     process.exit(1);
   }
 }
