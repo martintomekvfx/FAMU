@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poznámky z DDF</title>
+    <style>
+        @media print {
+            body { margin: 1in; }
+            h1, h2, h3 { page-break-after: avoid; }
+            img { max-width: 100%; page-break-inside: avoid; }
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #333;
+            background: #fff;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 12px;
+            margin-top: 40px;
+            font-size: 2em;
+        }
+        
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #95a5a6;
+            padding-bottom: 10px;
+            margin-top: 35px;
+            font-size: 1.6em;
+        }
+        
+        h3 {
+            color: #555;
+            margin-top: 28px;
+            font-size: 1.3em;
+        }
+        
+        h4 {
+            color: #666;
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+        
+        p {
+            margin: 12px 0;
+        }
+        
+        strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        em {
+            color: #555;
+        }
+        
+        a {
+            color: #3498db;
+            text-decoration: none;
+            border-bottom: 1px dotted #3498db;
+        }
+        
+        a:hover {
+            border-bottom: 1px solid #3498db;
+        }
+        
+        ul, ol {
+            padding-left: 30px;
+            margin: 15px 0;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #3498db;
+            padding: 15px 20px;
+            margin: 25px 0;
+            background: #f8f9fa;
+            color: #555;
+            font-style: italic;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 25px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background-color: #3498db;
+            color: white;
+            padding: 14px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        hr {
+            border: none;
+            border-top: 2px solid #eee;
+            margin: 35px 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 25px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .arrow {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Poznámky z DDF - První hodina (1. 10. 2025)</h1>
+
+<p><strong>Odkazy:</strong> <a href="https://kdt.famu.cz/studijni-opory/">https://kdt.famu.cz/studijni-opory/</a></p>
+
+<hr>
+
+<h2>📅 Rozvrh zimního semestru 2025/26</h2>
+
+<table>
+<thead>
+<tr>
+<th>Datum</th>
+<th>Téma</th>
+<th>Lektor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 10.</td>
+<td>Historické výkladové rámce, vývoj definice pojmu DF a „non-fiction", estetické a společenské kontexty, konstituce samostatné disciplíny. Druhy dokumentů: observační, participační, performativní, reflexivní (Bill Nichols). Rozdíl mezi dokumentem, reportáží a publicistikou.</td>
+<td>Tomáš Hirt</td>
+</tr>
+<tr>
+<td>8. 10.</td>
+<td>Sovětská montážní škola a její pokus změnit kinematografii až na úroveň pojmů, estetika a teorie materialismu, anti-narace a dedramatizace jako nové východisko kinematografie. Esfir Šubová a Dziga Vertov.</td>
+<td>Tomáš Hirt</td>
+</tr>
+<tr>
+<td>15. 10.</td>
+<td>Etnografický film po II. světové válce a jeho vztah k vizuální antropologii se zaměřením na dílo Jeana Rouche.</td>
+<td>Hana Muchová</td>
+</tr>
+<tr>
+<td>22. 10.</td>
+<td>První „actualités" – bratři Lumièrové (např. Příjezd vlaku na nádraží, 1896). Etnografické a vědecké filmy (Jean Painlevé, Felix-Louis Regnault). Dokumentární produkce v období rané kinematografie (tj. do let 1908-1910). Bratři Lumièrové a T. A. Edison – jejich pojetí dokumentu. Fabulované/rekonstruované dokumenty – Georges Méliès. Dokumentární aspekty raných filmů – Alice Guy. Dokument jako vědecký a popularizační nástroj – Jean Painlevé, lékařské filmy, Étienne-Jules Marey, Eadweard Muybridge. Dokument jako zdroj poznání - Albert Kahn, Albert Machin. Fenomén cestovatelských filmů a jejich vliv na estetiku dokumentu.</td>
+<td>David Čeněk</td>
+</tr>
+<tr>
+<td>29. 10.</td>
+<td><strong>Výuka odpadá - MFDF Jihlava</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>5. 11.</td>
+<td>Regionální fokus na Československo 1918-1939: dokument a instituce, dokument a reklama, dokument a umění. Alexander Hackenschmied, Karel Plicka, Jiří Lehovec, Jiří Weiss.</td>
+<td>Alice Růžičková</td>
+</tr>
+<tr>
+<td>12. 11.</td>
+<td>Československé poválečné filmy tematizující válečnou zkušenost – příklady a diskurzy reflexe s odstupem.</td>
+<td>Petr Kubica</td>
+</tr>
+<tr>
+<td>19. 11.</td>
+<td>Vlna poetismu a romantismu – Robert Flaherty, Ernest B. Schoedsack a Merian C. Cooper, Jean Epstein – Finis Terrae. Stírání hranice mezi inscenovaným a dokumentárním. Produkce amerického kontinentu ve vztahu k národnímu obrození – dokument jako zdroj poznání a reflexe (Kanada, Mexiko, Argentina, Brazílie, USA).</td>
+<td>David Čeněk</td>
+</tr>
+<tr>
+<td>26. 11.</td>
+<td>Třetí avantgarda a její dokumentární pohled (městské symfonie). Joris Ivens, Jean Epstein, René Clair, Luis Buñuel, Jean Vigo, László Moholy-Nagy, Ilja Kopalin, Michail Kaufman, Charles Sheeler, Paul Strand, Jay Leyda, Alberto Cavalcanti. Vztah surrealistů k dokumentárnímu filmu. Dokument jako reflexe filmové profese (Charles Chaplin, Buster Keaton) a rané filmy o filmu.</td>
+<td>David Čeněk</td>
+</tr>
+<tr>
+<td>3. 12.</td>
+<td>Dokumentární film a státní agenda – nový model institucionální praxe a diskurzy konstituce: John Grierson a tzv. Britská dokumentární škola. Dokumentární film a vládní zakázkové filmy: Frank Capra, John Ford, John Huston, William Wyler, George Stevens – hollywoodská praxe mění estetiku reportážního dokumentu.</td>
+<td>David Čeněk</td>
+</tr>
+<tr>
+<td>10. 12.</td>
+<td>Poválečná konstituce dokumentu v kontextu umělecké kinematografie – příklady a kontext Československa</td>
+<td>Alice Růžičková</td>
+</tr>
+<tr>
+<td>17. 12.</td>
+<td>Rozvoj politického dokumentárního filmu: Bída v Borinage (r. Henri Storck a Joris Ivens), Země bez chleba. Témata na okraji (bezdomovectví – Georges Lecombe, Lionel Rogosin - chudoba, rasismus) – USA, Španělsko, Belgie, Německo, Velká Británie, Francie.</td>
+<td>David Čeněk</td>
+</tr>
+<tr>
+<td>7. 1.</td>
+<td>Československo 60. let a dokument I.</td>
+<td>Petr Kubica</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2>📑 Obsah</h2>
+
+<ul>
+<li><a href="#prvni-hodina">První hodina</a>
+  <ul>
+    <li><a href="#literatura">Doporučená literatura</a></li>
+    <li><a href="#70-leta">70. léta - Co je to dokumentární film?</a></li>
+    <li><a href="#naivni-realismus">Naivní realismus</a></li>
+    <li><a href="#formalni-esteticka">Formální a estetická otázka</a></li>
+    <li><a href="#posun-70">Od 70. let - Posun v teorii dokumentárního filmu</a></li>
+    <li><a href="#episteme">Epistémé</a></li>
+    <li><a href="#nanuk">Příklad: Nanuk of the North</a></li>
+  </ul>
+</li>
+<li><a href="#humanitni-vedy">Co jsou to humanitní vědy?</a>
+  <ul>
+    <li><a href="#definice-vedy">Definice vědy</a></li>
+    <li><a href="#pojem">Co je to pojem?</a></li>
+    <li><a href="#teorie">Teorie</a></li>
+    <li><a href="#prechodove-ritualy">Příklad: Teorie přechodových rituálů</a></li>
+    <li><a href="#rozdil-vedy">Jak se věda liší od jiných způsobů zkoumání reality?</a></li>
+    <li><a href="#interpretace-popis">Interpretace vs. Popis</a></li>
+  </ul>
+</li>
+<li><a href="#prirodni-humanitni">Přírodní vědy vs. Humanitní vědy</a>
+  <ul>
+    <li><a href="#historicky-kontext">Historický kontext</a></li>
+    <li><a href="#weber">Klíčový rozdíl podle Maxe Webera</a></li>
+    <li><a href="#discipliny">Rozdělení věd podle disciplín</a></li>
+  </ul>
+</li>
+</ul>
+
+<hr>
+
+<h2 id="prvni-hodina">První hodina</h2>
+
+<h3 id="literatura">Doporučená literatura</h3>
+<ul>
+<li><strong>Bill Nichols</strong> - <em>Engaging Cinema: Introduction to Film Studies</em></li>
+</ul>
+
+<h3>Způsoby přemýšlení</h3>
+
+<h4 id="70-leta">70. léta - Co je to dokumentární film?</h4>
+
+<p><strong>Slavná definice dokumentárního filmu (John Grierson):</strong></p>
+<ul>
+<li>Tvůrčí zpracování zkušenosti</li>
+<li>Skutečnost, ke které se vztahuje</li>
+</ul>
+
+<h4 id="naivni-realismus">Naivní realismus</h4>
+<p>Naivní realismus je přesvědčení, které spočívá v tom, že existuje vnější skutečnost a my ji tvůrčím postupech uchopáváme a zpracováváme.</p>
+
+<p><strong>Bill Nichols</strong> říká, že se v souvislosti s touto myšlenkou došlo k výraznému otřesu. Postavil se velký otazník nad přesvědčení, že tady je vnější skutečnost.</p>
+
+<blockquote>
+To, co je ta skutečnost, kterou reprezentuje, tak je <em>neproblematicky?</em>
+</blockquote>
+
+<p>Bill Nichols rozděluje ty dějiny uvažování na období před tím zlomem.</p>
+
+<h4 id="formalni-esteticka">Formální a estetická otázka</h4>
+
+<p><strong>Formální</strong> - Myslím tím strhovou skladbu, soustředění se na ty elementy, ze kterých je ten film složený - oblast formy.</p>
+
+<p><strong>Estetika</strong> - se týká toho, nakolik a jak využívá uměleckých prostředků.</p>
+
+<hr>
+
+<h3 id="posun-70">Od 70. let - Posun v teorii dokumentárního filmu</h3>
+
+<p>Od 70. let se teorie dokumentárního filmu začínají zaměřovat na <strong>sociální rozměr kinematografie</strong>.</p>
+
+<ul>
+<li>Estetická stránka ustupuje do pozadí</li>
+<li>Je chápána jako součást té stránky formální</li>
+<li>Bill Nichols píše o tom, co je součástí té filmové vědy, tak tvrdí, že to je studium:
+  <ul>
+    <li><strong>Sociálních aspektů</strong> kinematografie</li>
+    <li><strong>Formálních aspektů</strong></li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>Studium filmu se zaměřuje na dva kontexty:</strong></p>
+<ol>
+<li>Kontext sociální</li>
+<li>Kontext formální</li>
+</ol>
+
+<h4>V čem spočívá ten sociální kontext?</h4>
+
+<p>Ve výsledné podobě těch dokumentárních filmů se projevují:</p>
+<ul>
+<li>Způsoby uvažování</li>
+<li>Kulturní a sociální vzorce</li>
+<li>Prostoru, kde ty filmy vznikaly</li>
+</ul>
+
+<hr>
+
+<h3 id="episteme">Epistémé</h3>
+
+<p>Teď prostě řeší epistémé.</p>
+
+<h4 id="nanuk">Příklad: Nanuk of the North</h4>
+
+<ul>
+<li><strong>Film:</strong> <em>Nanuk of the North</em></li>
+<li><strong>Režisér:</strong> Robert Flaherty</li>
+<li>Působil s <strong>Johnem Griersonem</strong>, který je tvůrčí postavou britské dokumentaristické školy</li>
+</ul>
+
+<p><strong>Odkazy k filmu:</strong></p>
+<ul>
+<li><a href="https://www.csfd.cz/film/81655-nanuk-clovek-primitivni/prehled/">ČSFD - Nanuk, člověk primitivní</a></li>
+<li><a href="https://www.youtube.com/watch?v=lkW14Lu1IBo">YouTube - Nanuk of the North</a></li>
+</ul>
+
+<div style="margin: 25px 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+<iframe 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+    src="https://www.youtube.com/embed/lkW14Lu1IBo" 
+    title="Nanuk of the North" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+</div>
+
+<p><strong>Klíčová otázka:</strong><br>
+Jaká představivost dovedla toho filmaře k tomu, aby si řekl, že nechce, aby měl pušku a raději si vzal harpunu? Proč?</p>
+
+<p><span class="arrow">→</span> Prostě jak se promítá nějaká dobová situace a nebo dobová kultura<br>
+<span class="arrow">→</span> <strong>No prostě epistéma.</strong></p>
+
+<hr>
+
+<h2 id="humanitni-vedy">Co jsou to humanitní vědy?</h2>
+
+<p><strong>A jak se liší od věd přírodních?</strong></p>
+
+<h3>Sociální rozměr kinematografie</h3>
+
+<p id="definice-vedy"><strong>Definice vědy:</strong></p>
+
+<blockquote>
+Věda je souřadný soubor racionálních, pojmově zakotvených tvrzení, jejichž účelem je ověřitelným a opakovatelným způsobem interpretovat jevy materiálního a smyslového světa
+</blockquote>
+
+<p>Věda je uspořádána na základě <strong>pojmově zakotvených tvrzení</strong> - neboli myšlení v pojmech.</p>
+
+<hr>
+
+<h3 id="pojem">Co je to pojem?</h3>
+
+<ul>
+<li><strong>Zobecňující funkce</strong></li>
+<li><strong>Má definici</strong></li>
+</ul>
+
+<h4>Epistéma = Paradigma?</h4>
+
+<p>Ano, <strong>paradigma je epistéma v rámci vědy</strong>.</p>
+
+<p><strong>Funkce pojmů:</strong></p>
+<ul>
+<li>Pojmy pomáhají uchopovat aspekty světa</li>
+<li><em>Jazyk tvoří svět</em> (poznámka autora)</li>
+<li>Umožňuje komunikovat s lidmi, kteří znají ty definice</li>
+</ul>
+
+<p>Pojmy jsou <strong>uspořádána</strong> do definic.</p>
+
+<hr>
+
+<h3 id="teorie">Teorie</h3>
+
+<p><strong>Co to je?</strong><br>
+<strong>Balíček pojmů.</strong></p>
+
+<p>Teorie tvoří <strong>filtr</strong>, skrz který si třídíme vnímání reality.</p>
+
+<hr>
+
+<h2 id="prechodove-ritualy">Příklad: Teorie přechodových rituálů</h2>
+
+<p><strong>Autor:</strong> Arnold van Gennep (nizozemský etnolog)<br>
+<strong>Doba:</strong> Počátek 20. století</p>
+
+<p>Van Gennep tvrdí, že přechod z jednoho sociálního statusu do druhého <strong>probíhá všude stejně ve třech fázích:</strong></p>
+
+<h3>Fáze 1: Separace (oddělení)</h3>
+<ul>
+<li>Aktér je oddělen od svého dosavadního statusu</li>
+<li><strong>Příklad:</strong> Ohlášky v rámci katolické komunity</li>
+</ul>
+
+<h3>Fáze 2: Pomezí - Liminalita</h3>
+<ul>
+<li>Nějakou dobu trvá</li>
+<li>Přechodné stadium</li>
+</ul>
+
+<h3>Fáze 3: Znovuzačlenění</h3>
+<ul>
+<li>Návrat/začlenění do společnosti v novém statusu</li>
+<li><strong>Příklad:</strong> Svatba</li>
+</ul>
+
+<p><strong>Teorie přechodového rituálu je tedy pojmový balíček.</strong></p>
+
+<p><span class="arrow">→</span> Je to součást naší hlavy, a ne společnosti</p>
+
+<hr>
+
+<h2 id="rozdil-vedy">Jak se věda liší od jiných způsobů zkoumání reality?</h2>
+
+<p><strong>V možnosti opakovatelnosti</strong> se věda liší právě od jiných způsobů zkoumání reality.<br>
+Např. transové stavy nelze opakovat stejným způsobem.</p>
+
+<hr>
+
+<h3 id="interpretace-popis">Interpretace vs. Popis</h3>
+
+<p><strong>Interpretace</strong> - v kontrastu k termínu "popis"</p>
+
+<ul>
+<li>Interpretace míří <strong>za rovinu bezprostředně jasného</strong></li>
+<li>Interpretace míří k principům, které nejsou zjevné na první pohled</li>
+</ul>
+
+<h4>Příklad: Židle s polštářem</h4>
+
+<p>Židle s polštářem sama o sobě nemá ten status.<br>
+Až když ji dáme do kontextu ostatních židlí - je to vlastně nějaká společnost.</p>
+
+<p><strong>Humanitní vědy studují význam</strong> - CO to znamená?</p>
+
+<p><strong>Pojem:</strong> Autentičnost</p>
+
+<hr>
+
+<h3 id="prirodni-humanitni">Přírodní vědy vs. Humanitní vědy</h3>
+
+<p><strong>Předmětem interpretace v kontextu přírodních věd</strong>, které studují jevy materiálního světa, je <strong>nějaká zákonitost</strong> - přírodní zákon.</p>
+
+<p><strong>Příklad zákonitosti:</strong> Voda se vaří při 100 stupních</p>
+
+<hr>
+
+<h2>Pár bodů k rozdílu mezi humanitními a přírodními vědami</h2>
+
+<h3 id="historicky-kontext">Historický kontext</h3>
+
+<p><strong>Odvíjí se to od novokantovců:</strong></p>
+<ul>
+<li><strong>Wilhelm Dilthey</strong> (není to podstatné jméno)</li>
+<li>Na něj navazuje <strong>Max Weber</strong></li>
+</ul>
+
+<p>Max Weber ten způsob uvažování o tom, že jsou dva způsoby dělání vědy, přenesl do humanitně vědní praxe.</p>
+
+<h3 id="weber">Klíčový rozdíl podle Maxe Webera</h3>
+
+<img src="veda_schema.svg" alt="Schéma rozdílu mezi přírodními a humanitními vědami">
+
+<p>Weber charakterizuje vědy následovně:</p>
+
+<table>
+<thead>
+<tr>
+<th><strong>Přírodní vědy</strong></th>
+<th><strong>Humanitní vědy</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cíl: <strong>Vysvětlení</strong></td>
+<td>Cíl: <strong>Porozumění</strong></td>
+</tr>
+<tr>
+<td>Explanation</td>
+<td>Understanding</td>
+</tr>
+<tr>
+<td>Zákonitosti</td>
+<td>Význam</td>
+</tr>
+<tr>
+<td>Materiální svět</td>
+<td>Interpretace</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Porozumění</strong> = porozumění aktérsky předávanému významu.</p>
+
+<hr>
+
+<h3 id="discipliny">Klíčové pojmy: Subjektivita, Objektivita, Intersubjektivita</h3>
+
+<p><strong>Intersubjektivita</strong> (pojem)</p>
+
+<p><strong>Subjektivita</strong> ↔ <strong>Objektivita</strong></p>
+
+<p><strong>Intersubjektivita</strong> jako střední cesta</p>
+
+<p><em>Otázka:</em> Je intersubjektivita společnost, či kontext?</p>
+
+<hr>
+
+<h3>Rozdělení věd podle disciplín</h3>
+
+<h4>Společenské vědy</h4>
+<p>Kategorie <strong>společenská věda</strong> obvykle zahrnuje tři hlavní disciplíny:</p>
+<ul>
+<li><strong>Sociologie</strong></li>
+<li><strong>Ekonomie</strong></li>
+<li><strong>Politologie</strong></li>
+</ul>
+
+<h4>Humanitní vědy</h4>
+<p>Do kategorie <strong>humanitní vědy</strong> patří:</p>
+<ul>
+<li><strong>Psychologie</strong></li>
+<li><strong>Etnologie</strong></li>
+<li><strong>Filmová věda</strong></li>
+<li><strong>Literární věda</strong></li>
+</ul>
+
+<p><em>...tak to jsou humanitní vědy</em></p>
+
+<hr>
+
+<h2>V rámci filmové vědy sledujeme...</h2>
+
+<h3>Definice dokumentárního filmu</h3>
+
+<blockquote>
+<p>Dokumentární film vypráví o situacích a událostech týkajících se skutečných lidí (<strong>sociálních herců</strong>), kteří nám představují sami sebe v příbězích, jež nám přibližují věrohodnou představu o zobrazovaných životech, situacích a událostech či pohled na ně. Specifické hledisko filmového tvůrce nevytváří fiktivních alegorií, ale spíše zprostředkovává přímý vhled do žitého světa.</p>
+</blockquote>
+
+<h4>Klíčové poznámky:</h4>
+
+<p><strong>Dokumentární film vypráví</strong> = to znamená, že ten film reprezentuje nějakou představu určitého autora o těch lidech, o kterých chce něco říct.</p>
+
+<p>To, co je dokumentárním filmu dokumentováno, je <strong>porozumění lidských souvislostí</strong> – neboli <strong>autorská perspektiva</strong>.</p>
+
+<p><span class="arrow">→</span> Je to tedy příběh, který si poskládal ten autor dokumentu, jinak to být nemůže.</p>
+
+<p>I když jsem objektivní, tak vypravím příběh, ale je to moje přesvědčení o tom, že to filmové médium zachycuje realitu.</p>
+
+<hr>
+
+<h3>Sociální herec</h3>
+
+<p><strong>Přímá návaznost na Goffmana</strong> – představuje dramaturgickou sociologii.</p>
+
+<h4>Erving Goffman - Dramaturgická sociologie</h4>
+
+<p>Pro analýzu společenských situací si <strong>Erving Goffman</strong> vypůjčuje termíny z divadelního prostředí:</p>
+
+<ul>
+<li><strong>Jeviště</strong> (front stage)</li>
+<li><strong>Zákulisí</strong> (back stage)</li>
+<li><strong>Role</strong></li>
+<li><strong>Maska</strong></li>
+</ul>
+
+<blockquote>
+<p><strong>Jsme sociální herci furt. Není žádná skrytá přirozenost člověka.</strong></p>
+</blockquote>
+
+<p>Když chci někoho zachytit, tak ho musím zachytit v rámci různých sociálních rolí.</p>
+
+<h4>Impression Management</h4>
+
+<p><strong>Impression management</strong> (řízení dojmu) – klíčový koncept Goffmana.</p>
+
+<p>Tohle je etický zřetel v rámci participační dokumentární tvorby.</p>
+
+<hr>
+
+<h3>Klíčové principy dokumentárního filmu</h3>
+
+<p>Nevytváří fikční alegorii, ale spíše <strong>zprostředkuje přímý vhled</strong>.</p>
+
+<blockquote>
+<p><strong>Důležité je zprostředkovat divákovi vhled do toho života nejlepším způsobem, o kterém jsem přesvědčený, že není lživý.</strong></p>
+</blockquote>
+
+<hr>
+
+<h2>Bill Nichols - Mody dokumentárního filmu</h2>
+
+<p><strong>Bill Nichols</strong> pak přichází s dalšími pojmy, které nám pomáhají analyzovat film. Nejvíce je zdůrazňováno:</p>
+
+<h3>Modus (způsob reprezentace)</h3>
+
+<p>Šest základních modů dokumentárního filmu podle Billa Nicholse:</p>
+
+<ul>
+<li><strong>Výkladový</strong> (Expository)</li>
+<li><strong>Poetický</strong> (Poetic)</li>
+<li><strong>Observační</strong> (Observational)</li>
+<li><strong>Participační</strong> (Participatory)</li>
+<li><strong>Reflexivní</strong> (Reflexive)</li>
+<li><strong>Performativní</strong> (Performative)</li>
+</ul>
+
+<hr>
+
+<h3>Příklad: The Hunters (John Marshall)</h3>
+
+<p><strong>Film:</strong> <em>The Hunters</em><br>
+<strong>Režisér:</strong> John Marshall</p>
+
+<p><a href="https://www.youtube.com/watch?v=mHXXj1O2hNk">YouTube - The Hunters</a></p>
+
+<div style="margin: 25px 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+<iframe 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+    src="https://www.youtube.com/embed/mHXXj1O2hNk" 
+    title="The Hunters - John Marshall" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+</div>
+
+</body>
+</html>

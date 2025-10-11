@@ -1,4 +1,4 @@
-# 📝 Notion Integration Setup
+# 📝 Notion Integration Setup (Firebase Functions)
 
 ## ✅ Co už máš hotové:
 
@@ -6,34 +6,62 @@
 2. ✅ API Key: `ntn_YOUR_API_KEY_HERE` (máš ho uložený)
 3. ✅ Database ID: `2892f121ab5f802a917dcb05c0062179`
 4. ✅ Integration připojena k databázi
+5. ✅ Firebase projekt nastavený
 
-## 🚀 Deployment na Vercel:
+## 🚀 Setup Firebase Functions:
 
-### Krok 1: Vytvoř Vercel účet
-1. Jdi na https://vercel.com/signup
-2. Přihlas se přes GitHub
-
-### Krok 2: Importuj projekt
-1. Klikni na "Add New..." → "Project"
-2. Vyber GitHub repository: `FAMU`
-3. Klikni "Import"
-
-### Krok 3: Nastav Environment Variables
-V Vercel dashboardu:
-1. Jdi do "Settings" → "Environment Variables"
-2. Přidej tyto proměnné:
-
-```
-NOTION_API_KEY = ntn_YOUR_NOTION_API_KEY
-NOTION_DATABASE_ID = 2892f121ab5f802a917dcb05c0062179
+### Krok 1: Přihlas se do Firebase CLI
+```bash
+firebase login
 ```
 
-**Poznámka:** Použij svůj Notion API key, který jsi dostal při vytváření integrace.
+### Krok 2: Inicializuj Firebase projekt
+```bash
+cd famu-notes
+firebase init
+```
+- Vyber: **Functions** (mezerník pro výběr)
+- Vyber existující projekt
+- Jazyk: **JavaScript**
+- ESLint: **No** (nebo Yes, jak chceš)
+- Install dependencies: **Yes**
 
-### Krok 4: Deploy
-1. Klikni "Deploy"
-2. Počkej 2-3 minuty
-3. Hotovo! 🎉
+### Krok 3: Nainstaluj dependencies
+```bash
+cd functions
+npm install
+```
+
+### Krok 4: Nastav Firebase Config
+```bash
+firebase functions:config:set \
+  notion.api_key="ntn_YOUR_API_KEY" \
+  notion.database_id="2892f121ab5f802a917dcb05c0062179"
+```
+
+**Poznámka:** Nahraď `ntn_YOUR_API_KEY` svým skutečným API key!
+
+### Krok 5: Deploy Functions
+```bash
+firebase deploy --only functions
+```
+
+Počkej 1-2 minuty... 🚀
+
+### Krok 6: Získej Function URL
+Po deployi uvidíš:
+```
+✔  functions[notionSync(us-central1)] Successful create operation.
+Function URL: https://us-central1-YOUR_PROJECT.cloudfunctions.net/notionSync
+```
+
+**Zkopíruj tuto URL!**
+
+### Krok 7: Aktualizuj frontend
+V souboru `src/services/notionService.js` nahraď:
+```javascript
+const API_URL = 'https://us-central1-YOUR_PROJECT.cloudfunctions.net/notionSync';
+```
 
 ## 🎯 Jak to funguje:
 
