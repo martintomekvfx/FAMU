@@ -174,13 +174,24 @@ function CalendarPage() {
                 <p className="text-gray-200 text-sm">Deadlines, zkoušky a další události</p>
               </div>
             </div>
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="flex items-center gap-2 bg-white text-gray-900 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-            >
-              <Plus className="w-5 h-5" />
-              Přidat událost
-            </button>
+            <div className="flex gap-3">
+              <a
+                href="https://axiomatic-range-b04.notion.site/ebd/2892f121ab5f80c486c4f603df4dcc24"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-white text-gray-900 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+              >
+                <Plus className="w-5 h-5" />
+                Přidat v Notion
+              </a>
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-lg font-medium hover:bg-gray-800 transition-colors"
+              >
+                <Plus className="w-5 h-5" />
+                Přidat lokálně
+              </button>
+            </div>
           </div>
         </div>
       </header>
