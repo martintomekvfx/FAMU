@@ -369,13 +369,24 @@ function InterventionsPage() {
   const guerillaArt = [
     {
       title: 'Detournement - Boj s reklamou',
-      subtitle: 'Guerilla Art',
+      subtitle: 'Guerilla Art / Reclaiming Public Space',
       icon: '🎭',
       color: 'pink',
-      description: 'Přelepování nelegálních reklam uměleckými zásahy. Autorská reakce na vizuální smog.',
+      description: 'Přelepování nelegálních reklam uměleckými zásahy. Autorská reakce na vizuální smog a reclaiming public space.',
       artist: 'Ptáček',
       status: 'Probíhá',
-      details: ['Reakce na reklamy', 'Kritické umění', 'Anonymní akce'],
+      details: ['Subvertising', 'Kritické umění', 'Anonymní akce', 'Reclaiming space'],
+      fullDescription: 'Systematická práce s reklamním prostorem na Palmovce jako forma kritického umění a "reclaiming public space".\n\nMetodologie:\n\n1. **Mapping nelegálních reklam** - Kompletní kontrola Palmovky a identifikace všech nelegálních reklam (bez povolení)\n\n2. **Odstranění nelegálních reklam** - 100% odstranění identifikovaných nelegálních reklam (legální akce)\n\n3. **Práce s reklamními rámy** - Hackování legálních reklamních sloupů a billboardů:\n   • Použití reklamy jako rámu pro umění\n   • Subvertising - přetvoření reklamního sdělení\n   • Detournement - odklon významu reklamy\n   • Instalace vlastních děl do prázdných rámů\n\n4. **Reclaiming Public Space** - Symbolické znovudobytí veřejného prostoru od komerčního využití zpět pro komunitu a umění.\n\nInspirováno prací @oxpostertime - umělecké intervence v městském prostoru, které využívají reklamní infrastrukturu jako médium pro kritické umění.',
+      materials: ['Vlastní tisky/plakáty', 'Lepidlo na plakáty', 'Ochranná vrstva (lak)', 'Dokumentační fotoaparát', 'Rukavice'],
+      budget: '~500-1000 Kč (tisk, materiály)',
+      timeline: 'Průběžně - mapping 1 týden, intervence opakovaně',
+      location: 'Palmovka - reklamní sloupy, billboardy, nelegální plochy',
+      images: [],
+      inspiration: {
+        name: '@oxpostertime',
+        url: 'https://www.instagram.com/oxpostertime/',
+        description: 'Umělecké posters ve veřejném prostoru',
+      },
     },
     {
       title: 'Street Art - Obrazy v ulicích',
@@ -662,6 +673,23 @@ function InterventionsPage() {
                 <div className="bg-teal-50 rounded-lg p-4">
                   <h4 className="font-bold text-teal-900 mb-2">🤝 Spolupráce</h4>
                   <p className="text-gray-700">{selectedProject.partner}</p>
+                </div>
+              )}
+
+              {/* Inspiration */}
+              {selectedProject.inspiration && (
+                <div className="bg-pink-50 rounded-lg p-4">
+                  <h4 className="font-bold text-pink-900 mb-2">💡 Inspirace</h4>
+                  <a
+                    href={selectedProject.inspiration.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-pink-700 hover:text-pink-900 transition-colors"
+                  >
+                    <span className="font-medium">{selectedProject.inspiration.name}</span>
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                  <p className="text-sm text-gray-600 mt-1">{selectedProject.inspiration.description}</p>
                 </div>
               )}
 
