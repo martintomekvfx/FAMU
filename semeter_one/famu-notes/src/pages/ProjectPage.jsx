@@ -190,18 +190,6 @@ function OverviewPage() {
         </div>
       </div>
 
-      {/* Project Summary SVG */}
-      <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">📋 Přehled projektu</h2>
-        <div className="w-full overflow-hidden rounded-lg">
-          <img 
-            src="/palmovka_project_summary.svg" 
-            alt="Project Summary" 
-            className="w-full h-auto"
-          />
-        </div>
-      </div>
-
       {/* Quick Info Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border-2 border-blue-200">
