@@ -912,9 +912,65 @@ function OutputsPage() {
   return (
     <div className="space-y-6">
       <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">🎬 Hlavní výstupy</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">🎬 Hlavní výstupy projektu</h2>
+        <p className="text-gray-600 mb-8">Tři hlavní pilíře výzkumu a umělecké tvorby</p>
         
-        {/* Main Output - Film */}
+        {/* Output 1 - Interventions Documentation */}
+        <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-8 border-2 border-blue-500 mb-6">
+          <div className="flex items-start gap-6">
+            <div className="flex-shrink-0">
+              <div className="w-20 h-20 bg-blue-500 rounded-lg flex items-center justify-center">
+                <Target className="w-12 h-12 text-white" />
+              </div>
+            </div>
+            <div className="flex-1">
+              <h3 className="text-2xl font-bold text-blue-900 mb-2">1. Zdokumentované intervence</h3>
+              <p className="text-gray-700 mb-4">
+                Kompletní dokumentace všech realizovaných guerillových intervencí ve veřejném prostoru.
+              </p>
+              <div className="bg-white rounded-lg p-4 mb-3">
+                <h4 className="font-bold text-gray-900 mb-2">Obsah:</h4>
+                <ul className="text-sm text-gray-700 space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-500">•</span>
+                    <span><strong>Fotodokumentace:</strong> Před/během/po záběry všech intervencí</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-500">•</span>
+                    <span><strong>Proces:</strong> Popis realizace, materiály, časová osa</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-500">•</span>
+                    <span><strong>Reakce:</strong> Komunitní odezva, adopce, změny</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-500">•</span>
+                    <span><strong>Měření:</strong> Dwell time, survival time, využití prostoru</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                  Slunečnice
+                </span>
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                  Parklety
+                </span>
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                  Hlasovací popelníky
+                </span>
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                  Banány
+                </span>
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                  Game Jam
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Output 2 - Experimental Film */}
         <div className="bg-gradient-to-r from-red-50 to-pink-50 rounded-xl p-8 border-2 border-red-500 mb-6">
           <div className="flex items-start gap-6">
             <div className="flex-shrink-0">
@@ -923,17 +979,45 @@ function OutputsPage() {
               </div>
             </div>
             <div className="flex-1">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Experimentální dokumentární film</h3>
+              <h3 className="text-2xl font-bold text-red-900 mb-2">2. Experimentální dokumentární film</h3>
               <p className="text-lg text-gray-700 mb-3">Délka: 20–30 minut</p>
-              <p className="text-gray-600 mb-3">
-                Využití 8mm, VHS estetiky, digitálu a animace. Zachycení atmosféry, proměn a komunitních reakcí.
+              <p className="text-gray-700 mb-4">
+                Observační a participační dokumentární film zachycující lidi, atmosféru a proměny veřejného prostoru.
               </p>
+              <div className="bg-white rounded-lg p-4 mb-3">
+                <h4 className="font-bold text-gray-900 mb-2">Filmové techniky:</h4>
+                <ul className="text-sm text-gray-700 space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-red-500">•</span>
+                    <span><strong>8mm film:</strong> Poetické a nostalgické pasáže</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-red-500">•</span>
+                    <span><strong>VHS:</strong> Zrnitá textura a dokumentární autenticita</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-red-500">•</span>
+                    <span><strong>Digitál:</strong> Přesný záznam procesu a reakcí</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-red-500">•</span>
+                    <span><strong>Animace:</strong> Introspektivní roviny a metafory</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-white rounded-lg p-4 mb-3">
+                <h4 className="font-bold text-gray-900 mb-2">Přístup:</h4>
+                <p className="text-sm text-gray-700">
+                  <strong>Observační:</strong> Sledování komunitních reakcí bez ovlivňování<br/>
+                  <strong>Participační:</strong> Aktivní zapojení do intervencí, reflexe vlastní role
+                </p>
+              </div>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm font-medium">
-                  Anifilm
+                  Festival Anifilm
                 </span>
                 <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm font-medium">
-                  Ji.hlava
+                  Ji.hlava IDFF
                 </span>
                 <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm font-medium">
                   Projekce na Palmovce
@@ -943,36 +1027,96 @@ function OutputsPage() {
           </div>
         </div>
 
-        {/* Secondary Outputs */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-blue-50 rounded-xl p-6 border-2 border-blue-200">
-            <FileText className="w-10 h-10 text-blue-600 mb-3" />
-            <h4 className="font-bold text-lg text-blue-900 mb-2">Závěrečná zpráva</h4>
-            <ul className="text-sm text-gray-700 space-y-1">
-              <li>• Vyhodnocení intervencí</li>
-              <li>• Doporučení pro město</li>
-              <li>• Data a poznatky</li>
-            </ul>
+        {/* Output 3 - Anthropological Research */}
+        <div className="bg-gradient-to-r from-green-50 to-teal-50 rounded-xl p-8 border-2 border-green-500 mb-6">
+          <div className="flex items-start gap-6">
+            <div className="flex-shrink-0">
+              <div className="w-20 h-20 bg-green-500 rounded-lg flex items-center justify-center">
+                <FileText className="w-12 h-12 text-white" />
+              </div>
+            </div>
+            <div className="flex-1">
+              <h3 className="text-2xl font-bold text-green-900 mb-2">3. Antropologický výzkum a magisterská práce</h3>
+              <p className="text-gray-700 mb-4">
+                Systematické pozorování dat, analýza a teoretické shrnutí guerillových intervencí ve veřejném prostoru.
+              </p>
+              <div className="bg-white rounded-lg p-4 mb-3">
+                <h4 className="font-bold text-gray-900 mb-2">Výzkumná část:</h4>
+                <ul className="text-sm text-gray-700 space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500">•</span>
+                    <span><strong>Kvantitativní data:</strong> Before/After měření, dwell time, survival time</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500">•</span>
+                    <span><strong>Kvalitativní data:</strong> Rozhovory, pozorování, terénní deník</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500">•</span>
+                    <span><strong>Analýza:</strong> Tematické kódování, triangulace metod</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500">•</span>
+                    <span><strong>KPI evaluace:</strong> Aktivace, vytrvalost, čistota, viditelnost</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-white rounded-lg p-4 mb-3">
+                <h4 className="font-bold text-gray-900 mb-2">Magisterská práce (text):</h4>
+                <ul className="text-sm text-gray-700 space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500">•</span>
+                    <span><strong>Teoretický rámec:</strong> Právo na město, tactical urbanism, participativní umění</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500">•</span>
+                    <span><strong>Metodologie:</strong> Mixed-methods, akční výzkum, autoetnografie</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500">•</span>
+                    <span><strong>Případové studie:</strong> Detailní analýza každé intervence</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500">•</span>
+                    <span><strong>Závěry a doporučení:</strong> Pro město, komunitu, další výzkum</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500">•</span>
+                    <span><strong>Teoretické shrnutí:</strong> Příspěvek k oboru, reflexe procesu</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">
+                  FAMU Magisterská
+                </span>
+                <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">
+                  Publikace
+                </span>
+                <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">
+                  Data pro město Praha 8
+                </span>
+              </div>
+            </div>
           </div>
+        </div>
 
-          <div className="bg-green-50 rounded-xl p-6 border-2 border-green-200">
-            <FileText className="w-10 h-10 text-green-600 mb-3" />
-            <h4 className="font-bold text-lg text-green-900 mb-2">Otevřené manuály</h4>
-            <ul className="text-sm text-gray-700 space-y-1">
-              <li>• Návody mikro-intervencí</li>
-              <li>• Inspirace pro komunity</li>
-              <li>• Open-source přístup</li>
-            </ul>
-          </div>
-
-          <div className="bg-purple-50 rounded-xl p-6 border-2 border-purple-200">
-            <ImageIcon className="w-10 h-10 text-purple-600 mb-3" />
-            <h4 className="font-bold text-lg text-purple-900 mb-2">Fotodokumentace</h4>
-            <ul className="text-sm text-gray-700 space-y-1">
-              <li>• Před/po záběry</li>
-              <li>• Proces a reakce</li>
-              <li>• Vizuální archiv</li>
-            </ul>
+        {/* Additional Outputs */}
+        <div className="bg-gray-50 rounded-xl p-6 border-2 border-gray-300">
+          <h3 className="text-xl font-bold text-gray-900 mb-4">📦 Doplňkové výstupy</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-white rounded-lg p-4">
+              <h4 className="font-bold text-gray-900 mb-2">Otevřené manuály</h4>
+              <p className="text-sm text-gray-600">Návody pro replikaci intervencí</p>
+            </div>
+            <div className="bg-white rounded-lg p-4">
+              <h4 className="font-bold text-gray-900 mb-2">Datový balíček</h4>
+              <p className="text-sm text-gray-600">Raw data, šablony, měření</p>
+            </div>
+            <div className="bg-white rounded-lg p-4">
+              <h4 className="font-bold text-gray-900 mb-2">Komunitní prezentace</h4>
+              <p className="text-sm text-gray-600">Venkovní výstava na Palmovce</p>
+            </div>
           </div>
         </div>
       </div>
