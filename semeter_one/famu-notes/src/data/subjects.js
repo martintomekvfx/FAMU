@@ -137,6 +137,32 @@ export const subjects = [
     ],
     links: [],
   },
+  {
+    id: 'pr',
+    name: 'PR - Profesní rozvoj',
+    shortName: 'PR',
+    description: 'Profesní rozvoj - granty, dotace, status umělce',
+    color: 'orange',
+    classes: [
+      {
+        id: 1,
+        date: 'Úterý 17:20-18:55',
+        lecturer: 'LUKÁČOVÁ M.',
+        title: 'Dotace a granty pro umělce',
+        description: 'Status umělce, národní registr umělců, dotace MK ČR, kreativní vouchery, granty Prahy 8',
+      },
+    ],
+    links: [
+      {
+        name: 'MK ČR - Žádosti o dotace',
+        url: 'https://www.mk.gov.cz/zadosti-o-dotace-cs-2023',
+      },
+      {
+        name: 'Oborová dotační řízení 2026',
+        url: 'https://mk.gov.cz/oborova-dotacni-rizeni-na-rok-2026-vyhlasovaci-podminky',
+      },
+    ],
+  },
 ];
 
 // Obecné poznámky - separate from subjects
