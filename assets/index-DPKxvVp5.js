@@ -359,16 +359,16 @@ Please change the parent <Route path="${R}"> to <Route path="${R==="/"?"*":`${R}
               `,children:[o.jsx(yM,{className:"w-5 h-5"}),o.jsx("span",{className:"font-medium",children:"Přehled předmětů"})]}),o.jsxs(it,{to:"/timetable",onClick:()=>e(!1),className:`
                 flex items-center gap-3 px-3 py-2 rounded-lg transition-colors mt-2
                 ${a.pathname==="/timetable"?"bg-gray-900 text-white border border-gray-900":"text-gray-700 hover:bg-gray-100 border border-gray-300"}
-              `,children:[o.jsx(hS,{className:"w-5 h-5"}),o.jsx("span",{className:"font-medium",children:"📅 Rozvrh"})]}),o.jsxs(it,{to:"/chat",onClick:()=>e(!1),className:`
+              `,children:[o.jsx(hS,{className:"w-5 h-5"}),o.jsx("span",{className:"font-medium",children:"Rozvrh"})]}),o.jsxs(it,{to:"/chat",onClick:()=>e(!1),className:`
                 flex items-center gap-3 px-3 py-2 rounded-lg transition-colors mt-2
                 ${h("/chat")?"bg-gray-900 text-white border border-gray-900":"text-gray-700 hover:bg-gray-100 border border-gray-300"}
-              `,children:[o.jsx(Iu,{className:"w-5 h-5"}),o.jsx("span",{className:"font-medium",children:"💬 Chat"})]}),o.jsxs(it,{to:"/bulletin-board",onClick:()=>e(!1),className:`
+              `,children:[o.jsx(Iu,{className:"w-5 h-5"}),o.jsx("span",{className:"font-medium",children:"Chat"})]}),o.jsxs(it,{to:"/bulletin-board",onClick:()=>e(!1),className:`
                 flex items-center gap-3 px-3 py-2 rounded-lg transition-colors mt-2
                 ${h("/bulletin-board")?"bg-gray-900 text-white border border-gray-900":"text-gray-700 hover:bg-gray-100 border border-gray-300"}
-              `,children:[o.jsx(Gf,{className:"w-5 h-5"}),o.jsx("span",{className:"font-medium",children:"📌 Nástěnka"})]}),o.jsxs(it,{to:"/project",onClick:()=>e(!1),className:`
+              `,children:[o.jsx(Gf,{className:"w-5 h-5"}),o.jsx("span",{className:"font-medium",children:"Nástěnka"})]}),o.jsxs(it,{to:"/project",onClick:()=>e(!1),className:`
                 flex items-center gap-3 px-3 py-2 rounded-lg transition-colors mt-2
                 ${a.pathname.startsWith("/project")?"bg-gray-900 text-white border border-gray-900":"text-gray-700 hover:bg-gray-100 border border-gray-300"}
-              `,children:[o.jsx(LM,{className:"w-5 h-5"}),o.jsx("span",{className:"font-medium",children:"🎨 Můj Projekt"})]}),o.jsxs(it,{to:"/subject/general",onClick:()=>e(!1),className:`
+              `,children:[o.jsx(LM,{className:"w-5 h-5"}),o.jsx("span",{className:"font-medium",children:"Můj Projekt"})]}),o.jsxs(it,{to:"/subject/general",onClick:()=>e(!1),className:`
                 flex items-center gap-3 px-3 py-2 rounded-lg transition-colors mt-2
                 ${h("/subject/general")?"bg-gray-900 text-white border border-gray-900":"text-gray-700 hover:bg-gray-100 border border-gray-300"}
               `,children:[o.jsx(Vi,{className:"w-5 h-5"}),o.jsxs("span",{className:"font-medium",children:[i0.icon," ",i0.shortName]})]}),o.jsxs("div",{className:"mt-6",children:[o.jsx("h3",{className:"text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3",children:"Předměty"}),ed.map(m=>{const g=n[m.id],x=f(m.id);return o.jsxs("div",{className:"mb-2",children:[o.jsxs("div",{className:"flex items-center",children:[o.jsxs(it,{to:`/subject/${m.id}`,onClick:()=>e(!1),className:`
