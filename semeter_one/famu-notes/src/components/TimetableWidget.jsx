@@ -5,8 +5,8 @@ const CLASSES = [
   // Pondělí (Po) - row 0
   {
     day: 0,
-    left: 289, // 14:00 position
-    width: 289, // duration
+    left: 430, // 14:00 position (adjusted for 9:00 start)
+    width: 280, // duration 3h 15min
     top: 0,
     height: 119,
     code: '373AVTE1',
@@ -19,7 +19,20 @@ const CLASSES = [
   // Úterý (Ut) - row 1
   {
     day: 1,
-    left: 289,
+    left: 16, // 9:50 position
+    width: 274, // duration 3h 10min (9:50 - 13:00)
+    top: 120,
+    height: 119,
+    code: 'Dílna',
+    teacher: 'TBA',
+    room: 'TBA',
+    time: '9:50 - 13:00',
+    color: '#CCCCCC',
+    link: '/subject/general',
+  },
+  {
+    day: 1,
+    left: 430,
     width: 215,
     top: 120,
     height: 119,
@@ -32,7 +45,7 @@ const CLASSES = [
   },
   {
     day: 1,
-    left: 585,
+    left: 726,
     width: 141,
     top: 120,
     height: 119,
@@ -46,8 +59,8 @@ const CLASSES = [
   // Středa (St) - row 2
   {
     day: 2,
-    left: 363,
-    width: 289,
+    left: 504,
+    width: 280,
     top: 240,
     height: 119,
     code: '303DDF1',
@@ -59,7 +72,7 @@ const CLASSES = [
   },
   {
     day: 2,
-    left: 659,
+    left: 800,
     width: 141,
     top: 300, // starts at 18:10
     height: 59,
@@ -74,7 +87,7 @@ const CLASSES = [
   // Čtvrtek (Ct) - row 3
   {
     day: 3,
-    left: 0,
+    left: 102,
     width: 133,
     top: 360,
     height: 119,
@@ -87,7 +100,7 @@ const CLASSES = [
   },
   {
     day: 3,
-    left: 289,
+    left: 430,
     width: 141,
     top: 360,
     height: 119,
@@ -100,7 +113,7 @@ const CLASSES = [
   },
   {
     day: 3,
-    left: 585,
+    left: 726,
     width: 215,
     top: 360,
     height: 59,
@@ -130,17 +143,17 @@ function TimetableWidget() {
 
       {/* Schedule - KOS Style */}
       <div className="p-6 overflow-x-auto">
-        <div className="relative" style={{ minWidth: '900px' }}>
+        <div className="relative" style={{ minWidth: '1100px' }}>
           {/* Time axis */}
-          <div className="relative" style={{ width: '801px', height: '20px', marginLeft: '54px' }}>
-            {['11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'].map((time, index) => (
+          <div className="relative" style={{ width: '1000px', height: '20px', marginLeft: '54px' }}>
+            {['9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00'].map((time, index) => (
               <div
                 key={time}
                 className="absolute text-xs text-gray-600 font-mono"
                 style={{
-                  left: `${22.22 + index * 88.89}px`,
+                  left: `${index * 86}px`,
                   top: '-5px',
-                  width: '88.89px',
+                  width: '86px',
                   textAlign: 'center',
                 }}
               >
@@ -176,12 +189,12 @@ function TimetableWidget() {
             style={{
               marginLeft: '53px',
               height: '600px',
-              width: '800px',
+              width: '1032px',
               fontSize: '0px',
             }}
           >
             {/* Vertical time lines */}
-            {[22.22, 111.11, 200, 288.89, 377.78, 466.67, 555.56, 644.44, 733.33].map((left, index) => (
+            {[0, 86, 172, 258, 344, 430, 516, 602, 688, 774, 860, 946].map((left, index) => (
               <div
                 key={`vline-${index}`}
                 className="absolute"
@@ -203,7 +216,7 @@ function TimetableWidget() {
                 style={{
                   top: `${top}px`,
                   left: '0px',
-                  width: '800px',
+                  width: '1032px',
                   height: '1px',
                   backgroundColor: '#E3DFDF',
                 }}
@@ -217,7 +230,7 @@ function TimetableWidget() {
                 style={{
                   top: `${todayIndex * 120}px`,
                   left: '0px',
-                  width: '800px',
+                  width: '1032px',
                   height: todayIndex === 0 ? '120px' : '119px',
                 }}
               />
@@ -257,7 +270,7 @@ function TimetableWidget() {
           </div>
 
           {/* Legend */}
-          <div className="mt-4 border border-black p-3" style={{ width: '853px', marginLeft: '53px' }}>
+          <div className="mt-4 border border-black p-3" style={{ width: '1085px', marginLeft: '53px' }}>
             <div className="flex items-center gap-4 text-xs">
               <span className="font-bold">Legenda:</span>
               <div className="flex items-center gap-2">
