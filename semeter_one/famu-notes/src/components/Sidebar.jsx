@@ -158,6 +158,22 @@ function Sidebar() {
               <span className="font-medium">📌 Nástěnka</span>
             </Link>
 
+            {/* Project */}
+            <Link
+              to="/project"
+              onClick={() => setIsOpen(false)}
+              className={`
+                flex items-center gap-3 px-3 py-2 rounded-lg transition-colors mt-2
+                ${location.pathname.startsWith('/project')
+                  ? 'bg-gray-900 text-white border border-gray-900' 
+                  : 'text-gray-700 hover:bg-gray-100 border border-gray-300'
+                }
+              `}
+            >
+              <Presentation className="w-5 h-5" />
+              <span className="font-medium">🎨 Můj Projekt</span>
+            </Link>
+
             {/* General Notes */}
             <Link
               to="/subject/general"
