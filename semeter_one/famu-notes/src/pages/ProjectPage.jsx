@@ -280,7 +280,7 @@ function OverviewPage() {
 
                   <div>
                     <p className="font-semibold text-teal-900 mb-2">Mentor/ka pro praktický projekt:</p>
-                    <p className="text-gray-700">TBD</p>
+                    <p className="text-gray-700">Georgy Bagdasarov</p>
                   </div>
 
                   <div>
@@ -293,7 +293,7 @@ function OverviewPage() {
 
                   <div>
                     <p className="font-semibold text-teal-900 mb-2">Mentor/ka pro teoretickou práci:</p>
-                    <p className="text-gray-700">TBD</p>
+                    <p className="text-gray-700">Georgy Bagdasarov</p>
                   </div>
 
                   <div>
