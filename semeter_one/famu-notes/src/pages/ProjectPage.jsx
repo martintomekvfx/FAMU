@@ -1696,6 +1696,40 @@ function TimelinePage() {
         <h2 className="text-2xl font-bold text-gray-900 mb-4">📅 Časový plán projektu</h2>
         <p className="text-gray-600 mb-6">Kompletní timeline od přípravy po finální prezentaci (2 roky)</p>
         
+        {/* Visual Timeline */}
+        <div className="mb-8 overflow-x-auto">
+          <div className="min-w-[800px] relative">
+            {/* Timeline bar */}
+            <div className="flex items-center gap-1 mb-4">
+              {timeline.map((item, index) => (
+                <div key={index} className="flex-1">
+                  <div className={`h-3 bg-gradient-to-r ${item.color} rounded-full relative group cursor-pointer transition-all hover:h-4`}>
+                    <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+                      {item.phase}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            {/* Timeline labels */}
+            <div className="flex items-start gap-1">
+              {timeline.map((item, index) => (
+                <div key={index} className="flex-1 text-center">
+                  <div className="text-xs font-bold text-gray-900 mb-1">{item.phase}</div>
+                  <div className="text-xs text-gray-600">{item.period}</div>
+                </div>
+              ))}
+            </div>
+            
+            {/* Progress indicator */}
+            <div className="mt-4 flex items-center gap-2 text-sm text-gray-600">
+              <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+              <span className="font-medium">Aktuálně: Zima 2025 - Přípravná fáze</span>
+            </div>
+          </div>
+        </div>
+        
         <div className="space-y-6">
           {timeline.map((item, index) => (
             <div key={index} className="relative">
