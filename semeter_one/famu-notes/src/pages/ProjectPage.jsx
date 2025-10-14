@@ -60,16 +60,7 @@ const subpages = [
 function ProjectPage() {
   const { subpage } = useParams();
   const currentSubpage = subpage || 'overview';
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const isScrolled = true; // Always keep it compact
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -545,6 +536,12 @@ const officialProjects = [
       artist: 'Ptáček + další umělci',
       status: 'Probíhá',
       details: ['Prázdné plochy', 'Kolektivní akce', 'Neoficiální galerie'],
+      fullDescription: '**Koncept**\n\nGuerilová galerie je projekt zaměřený na oživení prázdných městských ploch pomocí uměleckých děl. Cílem je vytvořit neoficiální veřejnou galerii dostupnou všem.\n\n**Realizace**\n\nVýlep autorských tisků, grafik a uměleckých děl do:\n\n• Prázdných městských rámů\n\n• Vývěsek\n\n• Prázdných ploch ve veřejném prostoru\n\n**Kolektivní akce**\n\nProjekt je otevřený pro další umělce a kreativce, kteří chtějí přispět svými díly do veřejného prostoru.\n\n**Cíl**\n\nPřeměnit šedé a opomíjené plochy města na venkovní galerii dostupnou všem. Demokratizace umění a přístup k němu přímo v ulicích.',
+      materials: ['Vlastní tisky/grafiky', 'Lepidlo na plakáty', 'Ochranná vrstva'],
+      budget: '~200-500 Kč (tisk, materiály)',
+      timeline: 'Průběžně - spontánní instalace',
+      location: 'Palmovka a okolí - prázdné plochy, vývěsky, rámy',
+      images: [],
     },
     {
       title: 'Houpačka na zapomenutém sušáku',
