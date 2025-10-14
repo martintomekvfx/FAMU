@@ -585,34 +585,6 @@ function InterventionsPage() {
     window.addEventListener('keydown', handleEscape);
     return () => window.removeEventListener('keydown', handleEscape);
   }, [selectedProject]);
-      fullDescription: '**Kontext a problém**\n\nV mnoha vnitroblocích a sídlištích se nacházejí rozlehlé asfaltové plochy, které dnes nemají žádné využití. Dříve na nich stávaly prolézačky, pískoviště či jiné dětské prvky, nebo sloužily jako plácky pro míčové hry. Postupnou „modernizací" a možná i kvůli bezpečnostním normám však spousta těchto plácků zanikla, prolézačky byly odvezeny, a zbyl jen holý asfalt, který se v létě rozpaluje a v zimě klouže.\n\nDospělí ho obcházejí, děti nemají důvod tam jít. Motivací mé intervence bylo ukázat, že i takové místo lze vrátit do hry – doslova. Chtěl jsem zároveň protestovat proti zbytečnému odnímání funkčnosti prostoru (někdy město instaluje třeba automobilové zátarasy bez ohledu na chodce, čímž de facto znemožní pohyb i hru na části chodníku).\n\n**Provedení**\n\nProvedení bylo prosté: opatřil jsem si dětské pouliční křídy a nakreslil na vybrané plochy klasické hry, jako je **skákací panák**, **slalomová opičí dráha** či **obrysy fotbalových branek**. V jednom případě šlo o místo, kde byly zmíněné žluté betonové zátarasy – kolem nich jsem křídou vyznačil cestu a panáka, aby se to „nehratelné" místo paradoxně stalo hřištěm.\n\nVýhodou křídy je, že je dočasná a nikomu trvale nevadí, zároveň je ale dost výrazná, aby upoutala pozornost.\n\n**Okamžitá reakce - Děti jako spojenci**\n\nVýsledek byl okamžitý: ještě než křída pořádně zaschla, děti z blízkého domu si toho všimly a začaly si hrát. V jednom vnitrobloku ke mně dokonce doběhly a s radostí mi poděkovaly, že jsem jim tam „udělal hřiště". Jeden tatínek mi potřásl rukou – byl překvapen, že někdo z vlastní iniciativy oživuje prostor pro děti.\n\nTyto reakce byly veskrze pozitivní. Hra nakreslená na zemi je něco natolik nevinného a apolitického, že ji přijali všichni – vlastně jsem poprvé pocítil jednohlasný souhlas okolí. Nikdo si nestěžoval, že by panák vadil; naopak se brzy vedle objevily další křídové kresby od dětí, které dostaly chuť tvořit také.\n\nUkázalo se tak, že **děti jsou skvělými spojenci v oživování prostoru** – mají přirozenou touhu proměňovat prostředí hrou, jen k tomu často nedostávají příležitost.\n\n**Badatelský zájem a inspirace**\n\nTato intervence vyvolala i můj vlastní badatelský zájem. Začal jsem se zajímat, jaké hry na chodník či asfalt existují, a objevil jsem iniciativy věnující se této tématice. Například projekt **„Hry na chodník"** nabízí sady šablon a realizuje herní malby pro obce, dokonce pořádá dětské dny, kde učí děti méně známé hry (např. různé varianty skákání panáka, bludiště atd.).\n\nTo mě inspirovalo a zároveň upozornilo na výzvu: mnoho her nakreslených na zemi je pro neznalé těžko pochopitelných. Dospělý, který nezná pravidla, často netuší, jak se daná hra hraje, pokud mu to někdo nevysvětlí. Profesionální projekty to řeší organizovaně – např. formou soutěží a instruktáže pro děti. Guerrillový umělec jako já ale takové zázemí nemá; nemohu u každé kresby stát a vysvětlovat pravidla.\n\n**Budoucí plán - Game Jam**\n\nNapadlo mě tedy spojit se s kamarádem herním designérem a vymyslet úplně novou hru na chodník, která by byla intuitivní a srozumitelná na první pohled, bez potřeby vysvětlení. Rýsuje se tu plán uspořádat **malý game jam** ve spolupráci s **katedrou herního designu**, jehož zadáním by bylo vytvořit jednoduchou pouliční hru pro křídu. Ideálně takovou, kterou si může nakreslit kdokoliv před domem a která bude zároveň bavit děti i dospělé.\n\nTo by byl krásný příklad, jak umění, hra a design splynou s komunitní praxí.\n\n**Závěr**\n\nVlastní spontánní křídové zásahy tedy považuji za velmi úspěšné – rozhýbaly jinak mrtvý asfalt a nastartovaly větší úvahy o herním využití veřejného prostoru.',
-      materials: ['Pouliční křídy (různé barvy)', 'Šablony (volitelné)', 'Dokumentační fotoaparát'],
-      budget: '~200 Kč (křídy)',
-      timeline: '1-2 hodiny (kreslení) → Okamžitá reakce dětí',
-      location: 'Zanedbaný asfalt ve vnitroblocích, prázdné plochy, místa se zátarasy',
-      images: [],
-      inspiration: {
-        name: 'Hry na chodník',
-        description: 'Projekt věnující se pouličním hrám a herním malbám',
-      },
-      partner: 'Plán spolupráce s Katedrou herního designu FAMU - game jam',
-    },
-  ];
-
-function InterventionsPage() {
-  const [selectedProject, setSelectedProject] = useState(null);
-
-  // ESC key handler to close modal
-  useEffect(() => {
-    const handleEscape = (e) => {
-      if (e.key === 'Escape' && selectedProject) {
-        setSelectedProject(null);
-      }
-    };
-
-    window.addEventListener('keydown', handleEscape);
-    return () => window.removeEventListener('keydown', handleEscape);
-  }, [selectedProject]);
 
   return (
     <div className="space-y-8">
