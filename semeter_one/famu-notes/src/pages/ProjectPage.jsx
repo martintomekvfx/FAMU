@@ -395,7 +395,7 @@ function OverviewPage() {
           {/* Mentoring Plan */}
           <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-lg p-6 border-2 border-teal-200">
             <div className="flex items-start gap-4">
-              <div className="text-4xl">📋</div>
+              <FileText className="w-12 h-12 text-teal-600" />
               <div className="flex-1">
                 <h3 className="font-bold text-gray-900 mb-4">Plán mentoringu - Magisterský program</h3>
                 
@@ -582,7 +582,7 @@ function OverviewPage() {
 
         <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-6 border-2 border-green-200">
           <div className="flex items-start gap-4">
-            <div className="text-4xl">📋</div>
+            <FileText className="w-12 h-12 text-green-600" />
             <div className="flex-1">
               <h3 className="font-bold text-gray-900 mb-2">Granty Praha 8 - Kultura 2025</h3>
               <p className="text-gray-700 mb-3">
@@ -1063,7 +1063,10 @@ function InterventionsPage() {
 
       {/* Legend */}
       <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl shadow-xl p-6 text-white">
-        <h3 className="text-xl font-bold mb-4">📋 Rozdělení projektu</h3>
+        <div className="flex items-center gap-2 mb-4">
+          <FileText className="w-6 h-6 text-white" />
+          <h3 className="text-xl font-bold">Rozdělení projektu</h3>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <h4 className="font-bold text-blue-300 mb-2">🏗️ OFICIÁLNÍ (Martin Tomek)</h4>
@@ -1315,7 +1318,10 @@ function MethodologyPage() {
     <div className="space-y-6">
       {/* Main Overview */}
       <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">🔬 Metodologie výzkumu</h2>
+        <div className="flex items-center gap-3 mb-4">
+          <Target className="w-8 h-8 text-gray-900" />
+          <h2 className="text-3xl font-bold text-gray-900">Metodologie výzkumu</h2>
+        </div>
         <p className="text-lg text-gray-600 mb-8">
           Smíšený výzkumný design kombinující kvalitativní a kvantitativní přístupy pro ověření dopadu guerillových intervencí.
         </p>
@@ -1468,7 +1474,10 @@ function MethodologyPage() {
 
         {/* Protocol */}
         <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 border-2 border-orange-300 mb-6">
-          <h3 className="text-2xl font-bold text-orange-900 mb-4">📋 Protokol „před–během–po"</h3>
+          <div className="flex items-center gap-2 mb-4">
+            <FileText className="w-7 h-7 text-orange-900" />
+            <h3 className="text-2xl font-bold text-orange-900">Protokol „před–během–po“</h3>
+          </div>
           
           <div className="space-y-4">
             {/* Before */}
