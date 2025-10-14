@@ -1268,7 +1268,12 @@ function InterventionsPage() {
 
               {/* Inspiration */}
               {selectedProject.inspiration && (
-a
+                <div className="bg-pink-50 rounded-lg p-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Lightbulb className="w-5 h-5 text-pink-900" />
+                    <h4 className="font-bold text-pink-900">Inspirace</h4>
+                  </div>
+                  <a
                     href={selectedProject.inspiration.url}
                     target="_blank"
                     rel="noopener noreferrer"
