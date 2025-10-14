@@ -14,7 +14,62 @@ import {
   Film,
   Calendar,
   X,
-  ExternalLink
+  ExternalLink,
+  Video,
+  BookOpen,
+  Building2,
+  Eye,
+  Recycle,
+  DollarSign,
+  Clock,
+  TrendingUp,
+  Package,
+  Presentation,
+  CheckCircle2,
+  Circle,
+  Lightbulb,
+  Palette,
+  Sprout,
+  Armchair,
+  Gamepad2,
+  Camera,
+  Trash2,
+  Banana,
+  Sun,
+  Vote,
+  PaintBucket,
+  Flower2,
+  Sparkles,
+  Hammer,
+  Leaf,
+  TreePine,
+  Sofa,
+  School,
+  PartyPopper,
+  Zap,
+  Droplets,
+  Scissors,
+  Brush,
+  Image as Gallery,
+  Lamp,
+  Waves,
+  MapPin,
+  Award,
+  Rocket,
+  Heart,
+  Star,
+  Smile,
+  MessageCircle,
+  Share2,
+  ThumbsUp,
+  Info,
+  AlertCircle,
+  ChevronRight,
+  Home,
+  Settings,
+  Search,
+  Bell,
+  Menu
 } from 'lucide-react';
 
 // Project subpages data
@@ -152,7 +207,10 @@ function OverviewPage() {
     <div className="space-y-6">
       {/* Introduction */}
       <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl shadow-xl border-2 border-purple-300 p-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">📖 Úvod</h2>
+        <div className="flex items-center gap-3 mb-6">
+          <BookOpen className="w-8 h-8 text-purple-600" />
+          <h2 className="text-3xl font-bold text-gray-900">Úvod</h2>
+        </div>
         <div className="space-y-4 text-gray-700 leading-relaxed">
           <p className="text-lg">
             <strong className="text-purple-900">Zásadním východiskem mého současného uvažování je koncept města jako galerie.</strong> Ulice a veřejná 
@@ -182,17 +240,17 @@ function OverviewPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
             <div className="bg-white rounded-lg p-4 text-center border-2 border-purple-200">
-              <div className="text-3xl mb-2">🏛️</div>
+              <Building2 className="w-10 h-10 text-purple-600 mb-2 mx-auto" />
               <h3 className="font-bold text-purple-900 mb-1">Město jako galerie</h3>
               <p className="text-sm text-gray-600">Ulice = výstavní prostor</p>
             </div>
             <div className="bg-white rounded-lg p-4 text-center border-2 border-blue-200">
-              <div className="text-3xl mb-2">👁️</div>
+              <Eye className="w-10 h-10 text-blue-600 mb-2 mx-auto" />
               <h3 className="font-bold text-blue-900 mb-1">Narušení apatii</h3>
               <p className="text-sm text-gray-600">Probuzení vnímání prostoru</p>
             </div>
             <div className="bg-white rounded-lg p-4 text-center border-2 border-pink-200">
-              <div className="text-3xl mb-2">♻️</div>
+              <Recycle className="w-10 h-10 text-pink-600 mb-2 mx-auto" />
               <h3 className="font-bold text-pink-900 mb-1">Druhý život míst</h3>
               <p className="text-sm text-gray-600">Opomíjená místa → hodnota</p>
             </div>
@@ -202,7 +260,10 @@ function OverviewPage() {
 
       {/* Video Documentation */}
       <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">🎬 Video dokumentace projektu</h2>
+        <div className="flex items-center gap-3 mb-6">
+          <Video className="w-7 h-7 text-gray-900" />
+          <h2 className="text-2xl font-bold text-gray-900">Video dokumentace projektu</h2>
+        </div>
         <div className="aspect-video rounded-xl overflow-hidden bg-black mb-4">
           <iframe
             width="100%"
@@ -233,7 +294,10 @@ function OverviewPage() {
 
       {/* Team */}
       <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">👥 Tým projektu</h2>
+        <div className="flex items-center gap-3 mb-6">
+          <Users className="w-7 h-7 text-gray-900" />
+          <h2 className="text-2xl font-bold text-gray-900">Tým projektu</h2>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-lg p-5 border-2 border-teal-200">
             <div className="flex items-center gap-3 mb-2">
@@ -364,11 +428,17 @@ function OverviewPage() {
 
       {/* Grants & Funding */}
       <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">💰 Financování projektu</h2>
+        <div className="flex items-center gap-3 mb-6">
+          <DollarSign className="w-7 h-7 text-gray-900" />
+          <h2 className="text-2xl font-bold text-gray-900">Financování projektu</h2>
+        </div>
         
         {/* Budget Breakdown */}
         <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6 border-2 border-blue-200 mb-6">
-          <h3 className="font-bold text-gray-900 mb-4">📊 Rozpočet jednotlivých intervencí</h3>
+          <div className="flex items-center gap-2 mb-4">
+            <TrendingUp className="w-6 h-6 text-gray-900" />
+            <h3 className="font-bold text-gray-900">Rozpočet jednotlivých intervencí</h3>
+          </div>
           
           <div className="space-y-3 mb-4">
             <div className="flex justify-between items-center p-3 bg-white rounded-lg">
