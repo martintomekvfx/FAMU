@@ -347,6 +347,23 @@ function InterventionsPage() {
       images: [],
       partner: 'Michal z Herního designu FAMU',
     },
+    {
+      title: 'Interaktivní kamerová hra',
+      subtitle: 'Game Design x Veřejný prostor',
+      icon: '🎮',
+      color: 'purple',
+      description: 'Spolupráce s game designem na vytvoření interaktivní hry s kamerou. Témata: internetová bezpečnost a veřejný prostor.',
+      artist: 'Martin Tomek',
+      status: 'V plánu',
+      details: ['Computer vision', 'Interaktivní instalace', 'Edukace hrou'],
+      fullDescription: 'Mezioborová spolupráce s Katedrou herního designu FAMU na vytvoření interaktivní hry využívající kameru a computer vision. Hra bude instalována ve veřejném prostoru a zaměří se na témata jako internetová bezpečnost, soukromí ve veřejném prostoru, nebo sledování a datová stopa. Herní mechaniky pomohou lidem zážitkově pochopit digitální témata v offline prostředí.',
+      materials: ['Webkamera/tablet', 'Display/projekce', 'Počítač/Raspberry Pi', 'Software (Processing, Unity, web)', 'Ochranný kryt'],
+      budget: '~5000 Kč (technika, výroba, instalace)',
+      timeline: '2-3 měsíce (design, prototyping, testování, instalace)',
+      location: 'Palmovka - frekventované místo, možná čekárna/zastávka',
+      images: [],
+      partner: 'Katedra herního designu FAMU',
+    },
   ];
 
   const guerillaArt = [
