@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { 
   ArrowLeft, 
@@ -62,33 +62,58 @@ const subpages = [
 function ProjectPage() {
   const { subpage } = useParams();
   const currentSubpage = subpage || 'overview';
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 text-white shadow-lg sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <Link
-            to="/"
-            className="inline-flex items-center text-white hover:text-gray-100 mb-4 transition-colors"
-          >
-            <ArrowLeft className="w-5 h-5 mr-2" />
-            Zpět domů
-          </Link>
+      <header className={`bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 text-white shadow-lg sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'py-3' : 'py-8'}`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {!isScrolled && (
+            <Link
+              to="/"
+              className="inline-flex items-center text-white hover:text-gray-100 mb-4 transition-colors"
+            >
+              <ArrowLeft className="w-5 h-5 mr-2" />
+              Zpět domů
+            </Link>
+          )}
           
           <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-4xl font-bold mb-2">🎨 Guerillové intervence</h1>
-              <p className="text-xl text-gray-100">ve veřejném prostoru</p>
-              <p className="text-sm text-gray-200 mt-2">Palmovka, Praha | Autorský projekt | Martin Tomek</p>
+            <div className={`transition-all duration-300 ${isScrolled ? 'flex items-center gap-4' : ''}`}>
+              {isScrolled ? (
+                <>
+                  <Link to="/" className="hover:text-gray-100 transition-colors">
+                    <ArrowLeft className="w-5 h-5" />
+                  </Link>
+                  <div>
+                    <h1 className="text-xl font-bold">🎨 Guerillové intervence</h1>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <h1 className="text-4xl font-bold mb-2">🎨 Guerillové intervence</h1>
+                  <p className="text-xl text-gray-100">ve veřejném prostoru</p>
+                  <p className="text-sm text-gray-200 mt-2">Palmovka, Praha | Autorský projekt | Martin Tomek</p>
+                </>
+              )}
             </div>
             <a
               href="/palmovka_project_proposal.pdf"
               download
-              className="flex items-center gap-2 bg-white text-teal-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors shadow-lg"
+              className={`flex items-center gap-2 bg-white text-teal-600 rounded-lg font-medium hover:bg-gray-100 transition-all shadow-lg ${isScrolled ? 'px-3 py-2 text-sm' : 'px-6 py-3'}`}
             >
-              <Download className="w-5 h-5" />
-              Stáhnout PDF
+              <Download className={`${isScrolled ? 'w-4 h-4' : 'w-5 h-5'}`} />
+              {!isScrolled && 'Stáhnout PDF'}
             </a>
           </div>
         </div>
