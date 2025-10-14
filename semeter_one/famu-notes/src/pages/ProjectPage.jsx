@@ -473,7 +473,13 @@ function InterventionsPage() {
                   ))}
                 </ul>
               </div>
-              <div className="mt-4 pt-3 border-t border-blue-200">
+              {project.timeline && (
+                <div className="mt-3 pt-3 border-t border-blue-200">
+                  <p className="text-xs font-bold text-gray-500 mb-1">⏱️ TIMELINE:</p>
+                  <p className="text-xs text-gray-700">{project.timeline}</p>
+                </div>
+              )}
+              <div className="mt-3 pt-3 border-t border-blue-200">
                 <p className="text-xs text-gray-500">
                   <span className="font-semibold">Autor:</span> {project.artist}
                 </p>
@@ -529,7 +535,13 @@ function InterventionsPage() {
                   ))}
                 </ul>
               </div>
-              <div className="mt-4 pt-3 border-t border-red-200">
+              {project.timeline && (
+                <div className="mt-3 pt-3 border-t border-red-200">
+                  <p className="text-xs font-bold text-gray-500 mb-1">⏱️ TIMELINE:</p>
+                  <p className="text-xs text-gray-700">{project.timeline}</p>
+                </div>
+              )}
+              <div className="mt-3 pt-3 border-t border-red-200">
                 <p className="text-xs text-gray-500">
                   <span className="font-semibold">Street artist:</span> {project.artist}
                 </p>
@@ -609,7 +621,7 @@ function InterventionsPage() {
               {/* Full Description */}
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">📝 Popis projektu</h3>
-                <p className="text-gray-700 leading-relaxed">{selectedProject.fullDescription}</p>
+                <div className="text-gray-700 leading-relaxed whitespace-pre-wrap">{selectedProject.fullDescription}</div>
               </div>
 
               {/* Video if exists */}
@@ -1254,39 +1266,97 @@ function OutputsPage() {
 
 function TimelinePage() {
   const timeline = [
-    { phase: 'Fáze 1', period: 'Měsíce 1-3', title: 'Příprava a výzkum', tasks: ['Antropologická zpráva', 'Mapping lokality', 'Konzultace s komunitou'] },
-    { phase: 'Fáze 2', period: 'Měsíce 4-9', title: 'První intervence', tasks: ['Instalace houpačky', 'Guerillová výsadba', 'Dokumentace reakcí'] },
-    { phase: 'Fáze 3', period: 'Měsíce 10-15', title: 'Rozšíření projektu', tasks: ['Parklety', 'Hlasovací popelníky', 'Game Jam'] },
-    { phase: 'Fáze 4', period: 'Měsíce 16-21', title: 'Dlouhodobé pozorování', tasks: ['Sledování vývoje', 'Sběr dat', 'Rozhovory'] },
-    { phase: 'Fáze 5', period: 'Měsíce 22-24', title: 'Finalizace', tasks: ['Postprodukce filmu', 'Závěrečná zpráva', 'Projekce a prezentace'] },
+    { 
+      phase: 'Zima 2025', 
+      period: 'Leden - Březen 2025', 
+      title: 'Příprava a výroba', 
+      color: 'from-blue-500 to-cyan-500',
+      tasks: [
+        '🗳️ Hlasovací popelníky - design, výroba, jarní klauzurní práce',
+        '🍌 Betonové banány - návrh, výroba formy, odlévání',
+        '🌻 Slunečnice - předsadba na balkoně (březen)',
+        '📋 Mapping lokality a výběr míst'
+      ] 
+    },
+    { 
+      phase: 'Jaro 2026', 
+      period: 'Duben - Červen 2026', 
+      title: 'Instalace a sadba', 
+      color: 'from-green-500 to-teal-500',
+      tasks: [
+        '🌻 Slunečnice - přesadba do 10l květináčů a sadba ven',
+        '🗳️ Hlasovací popelníky - instalace a testování',
+        '🍌 Betonové banány - instalace laviček',
+        '🪑 Parklety - sběr palet a příprava materiálů'
+      ] 
+    },
+    { 
+      phase: 'Léto 2026', 
+      period: 'Červenec - Září 2026', 
+      title: 'Realizace a péče', 
+      color: 'from-yellow-500 to-orange-500',
+      tasks: [
+        '🌻 Slunečnice - péče, zalévání, hnojení',
+        '🪑 Parklety - stavba a instalace obývacího pokoje',
+        '🎮 Game Jam - venkovní interaktivní instalace',
+        '📸 Kontinuální dokumentace všech intervencí'
+      ] 
+    },
+    { 
+      phase: 'Podzim 2026', 
+      period: 'Říjen - Prosinec 2026', 
+      title: 'Finalizace a výsledky', 
+      color: 'from-red-500 to-pink-500',
+      tasks: [
+        '🌻 Slunečnice - rozkvetlé! Finální dokumentace',
+        '📊 Sběr dat z všech intervencí (before/after)',
+        '🎬 Postprodukce dokumentárního filmu',
+        '📝 Příprava magisterské práce'
+      ] 
+    },
+    { 
+      phase: 'Jaro 2027', 
+      period: 'Leden - Červen 2027', 
+      title: 'Dokončení a prezentace', 
+      color: 'from-purple-500 to-indigo-500',
+      tasks: [
+        '🎬 Dokončení experimentálního dokumentárního filmu (20-30 min)',
+        '📝 Finalizace magisterské práce',
+        '🎥 Festivaly: Anifilm, Ji.hlava IDFF',
+        '🎉 Komunitní projekce na Palmovce'
+      ] 
+    },
   ];
 
   return (
     <div className="space-y-6">
       <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">📅 Časový plán (2 roky)</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">📅 Časový plán projektu</h2>
+        <p className="text-gray-600 mb-6">Kompletní timeline od přípravy po finální prezentaci (2 roky)</p>
         
-        <div className="space-y-4">
+        <div className="space-y-6">
           {timeline.map((item, index) => (
-            <div key={index} className="relative pl-8 pb-8 border-l-4 border-teal-500 last:border-l-0 last:pb-0">
-              <div className="absolute left-0 top-0 -ml-3 w-6 h-6 rounded-full bg-teal-500 border-4 border-white"></div>
-              <div className="bg-gradient-to-r from-teal-50 to-cyan-50 rounded-lg p-6 border-2 border-teal-200">
-                <div className="flex items-center gap-3 mb-2">
-                  <span className="px-3 py-1 bg-teal-600 text-white rounded-full text-sm font-bold">
+            <div key={index} className="relative">
+              <div className={`bg-gradient-to-r ${item.color} rounded-xl p-6 text-white shadow-lg`}>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="px-4 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold">
                     {item.phase}
                   </span>
-                  <span className="text-sm text-gray-600">{item.period}</span>
+                  <span className="text-sm font-medium">{item.period}</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
-                <ul className="space-y-1">
+                <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
+                <ul className="space-y-2">
                   {item.tasks.map((task, i) => (
-                    <li key={i} className="text-gray-700 flex items-center gap-2">
-                      <span className="w-2 h-2 bg-teal-500 rounded-full"></span>
-                      {task}
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="text-white/80">•</span>
+                      <span className="flex-1">{task}</span>
                     </li>
                   ))}
                 </ul>
               </div>
+              {index < timeline.length - 1 && (
+                <div className="h-6 w-0.5 bg-gradient-to-b from-gray-300 to-gray-200 mx-auto my-2"></div>
+              )}
             </div>
           ))}
         </div>
