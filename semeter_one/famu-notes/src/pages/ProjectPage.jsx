@@ -150,6 +150,56 @@ function ProjectPage() {
 function OverviewPage() {
   return (
     <div className="space-y-6">
+      {/* Introduction */}
+      <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl shadow-xl border-2 border-purple-300 p-8">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">📖 Úvod</h2>
+        <div className="space-y-4 text-gray-700 leading-relaxed">
+          <p className="text-lg">
+            <strong className="text-purple-900">Zásadním východiskem mého současného uvažování je koncept města jako galerie.</strong> Ulice a veřejná 
+            prostranství chápu jako otevřený výstavní prostor, kde stěny domů mohou fungovat podobně jako 
+            galerijní zdi. Svá díla proto záměrně situuji do městských zákoutí a na opomíjená místa – tak, aby je 
+            mohlo objevit náhodné kolemjdoucí publikum, nejen návštěvníci oficiálních kulturních institucí.
+          </p>
+          
+          <p>
+            Chci tím jednak <strong>zpřístupnit umění širší veřejnosti</strong>, jednak <strong>povzbudit obyvatele, aby si svého okolí více všímali</strong>. 
+            Současná městská zkušenost je totiž často charakterizována vizuálním přetížením a návykovou slepotou: 
+            lidé si vlivem záplavy reklam a informací podvědomě „vypínají" vnímání veřejného prostoru, nebo ho 
+            celé projdou s pohledem upřeným do mobilu.
+          </p>
+          
+          <div className="bg-white rounded-lg p-6 border-l-4 border-purple-500">
+            <p className="italic">
+              <strong>Mým cílem je tuto apatii narušit</strong> – nalézat místa, která zdánlivě k ničemu nejsou a ničemu už neslouží, 
+              a vdechnout jim druhý život tak, aby znovu přinášela hodnotu.
+            </p>
+          </div>
+          
+          <p>
+            Je fascinující, že je <strong className="text-red-700">společensky přijatelnější veřejný prostor ničit, než ho svévolně 
+            vylepšovat či opravovat</strong>. Svými zásahy tuto normu zpochybňuji.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+            <div className="bg-white rounded-lg p-4 text-center border-2 border-purple-200">
+              <div className="text-3xl mb-2">🏛️</div>
+              <h3 className="font-bold text-purple-900 mb-1">Město jako galerie</h3>
+              <p className="text-sm text-gray-600">Ulice = výstavní prostor</p>
+            </div>
+            <div className="bg-white rounded-lg p-4 text-center border-2 border-blue-200">
+              <div className="text-3xl mb-2">👁️</div>
+              <h3 className="font-bold text-blue-900 mb-1">Narušení apatii</h3>
+              <p className="text-sm text-gray-600">Probuzení vnímání prostoru</p>
+            </div>
+            <div className="bg-white rounded-lg p-4 text-center border-2 border-pink-200">
+              <div className="text-3xl mb-2">♻️</div>
+              <h3 className="font-bold text-pink-900 mb-1">Druhý život míst</h3>
+              <p className="text-sm text-gray-600">Opomíjená místa → hodnota</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Video Documentation */}
       <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">🎬 Video dokumentace projektu</h2>
