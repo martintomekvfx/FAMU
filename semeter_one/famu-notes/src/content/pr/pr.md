@@ -45,3 +45,16 @@ od 11. do 19 prsoince deadline!!!!!
 
 nejmensi castka kterou muzete platit 2k
 muzem ziskat az 50k
+
+
+statni filmový fond audiovize
+https://fondkinematografie.cz
+
+
+pak je novy fond audiovize 
+https://www.mk.gov.cz/media-a-audiovize-cs-13
+tady jsou taky nejaky granty
+
+
+u fondu se musi platit poplatky
+na něco 10k na něco 20k
