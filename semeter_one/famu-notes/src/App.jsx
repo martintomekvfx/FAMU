@@ -8,6 +8,7 @@ import ChatPage from './pages/ChatPage';
 import TimetablePage from './pages/TimetablePage';
 import CalendarPage from './pages/CalendarPage';
 import NotesPage from './pages/NotesPage';
+import ProjectPage from './pages/ProjectPage';
 import GamePage from './pages/GamePage';
 import BulletinBoardPage from './pages/BulletinBoardPage';
 import MindMapPage from './pages/MindMapPage';
@@ -25,6 +26,8 @@ function App() {
             <Route path="/timetable" element={<TimetablePage />} />
             <Route path="/calendar" element={<CalendarPage />} />
             <Route path="/notes" element={<NotesPage />} />
+            <Route path="/project" element={<ProjectPage />} />
+            <Route path="/project/:subpage" element={<ProjectPage />} />
             <Route path="/secret-game" element={<GamePage />} />
             <Route path="/subject/:subjectId" element={<SubjectPage />} />
             <Route path="/subject/:subjectId/mindmap" element={<MindMapPage />} />
