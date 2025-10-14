@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { BookOpen, FileText, MessageCircle, StickyNote, CalendarDays, Clock } from 'lucide-react';
+import { BookOpen, FileText, MessageCircle, StickyNote, CalendarDays, Clock, GraduationCap, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { subjects, generalNotes } from '../data/subjects';
 import Dashboard from '../components/Dashboard';
@@ -24,7 +24,7 @@ function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              📚 FAMU Poznámky
+              FAMU Poznámky
             </motion.h1>
             <motion.p 
               className="text-xl text-gray-200 max-w-2xl lg:mx-0 mx-auto mb-4"
@@ -40,14 +40,17 @@ function Home() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.5 }}
             >
-              <span className="inline-flex items-center px-4 py-2 bg-yellow-400 text-gray-900 rounded-full font-semibold text-sm">
-                🎓 Zimní semestr 2025/26
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-400 text-gray-900 rounded-full font-semibold text-sm">
+                <GraduationCap className="w-4 h-4" />
+                Zimní semestr 2025/26
               </span>
-              <span className="inline-flex items-center px-4 py-2 bg-white/10 text-white rounded-full font-medium text-sm backdrop-blur-sm">
-                📖 {subjects.length} předmětů
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 text-white rounded-full font-medium text-sm backdrop-blur-sm">
+                <BookOpen className="w-4 h-4" />
+                {subjects.length} předmětů
               </span>
-              <span className="inline-flex items-center px-4 py-2 bg-white/10 text-white rounded-full font-medium text-sm backdrop-blur-sm">
-                ✨ Nové: Nástěnka
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 text-white rounded-full font-medium text-sm backdrop-blur-sm">
+                <Sparkles className="w-4 h-4" />
+                Nové: Nástěnka
               </span>
             </motion.div>
           </div>
@@ -87,8 +90,8 @@ function Home() {
           >
             <div className="p-4">
               <div className="flex items-center gap-3">
-                <div className="bg-gray-900 rounded-full w-12 h-12 flex items-center justify-center text-2xl flex-shrink-0">
-                  💬
+                <div className="bg-gray-900 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                  <MessageCircle className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-bold text-gray-900">Chat</h3>
@@ -115,8 +118,8 @@ function Home() {
             >
               <div className="p-4">
                 <div className="flex items-center gap-3">
-                  <div className="bg-gray-900 rounded-full w-12 h-12 flex items-center justify-center text-2xl flex-shrink-0">
-                    📌
+                  <div className="bg-gray-900 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <StickyNote className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-bold text-gray-900">Nástěnka</h3>
@@ -143,8 +146,8 @@ function Home() {
             >
               <div className="p-4">
                 <div className="flex items-center gap-3">
-                  <div className="bg-gray-900 rounded-full w-12 h-12 flex items-center justify-center text-2xl flex-shrink-0">
-                    📅
+                  <div className="bg-gray-900 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <CalendarDays className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-bold text-gray-900">Rozvrh</h3>
@@ -171,8 +174,8 @@ function Home() {
             >
               <div className="p-4">
                 <div className="flex items-center gap-3">
-                  <div className="bg-gray-900 rounded-full w-12 h-12 flex items-center justify-center text-2xl flex-shrink-0">
-                    ⏰
+                  <div className="bg-gray-900 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-bold text-gray-900">Deadlines</h3>

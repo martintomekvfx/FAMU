@@ -567,7 +567,10 @@ function OverviewPage() {
 
           <div className="border-t-4 border-blue-500 pt-4">
             <div className="flex justify-between items-center p-4 bg-gradient-to-r from-green-100 to-emerald-100 rounded-xl border-2 border-green-400">
-              <span className="text-xl font-bold text-gray-900">💰 CELKOVÝ ROZPOČET:</span>
+              <div className="flex items-center gap-2">
+                <DollarSign className="w-6 h-6 text-gray-900" />
+                <span className="text-xl font-bold text-gray-900">CELKOVÝ ROZPOČET:</span>
+              </div>
               <span className="text-2xl font-bold text-green-700">17 250 Kč</span>
             </div>
           </div>
@@ -589,7 +592,10 @@ function OverviewPage() {
                 Grantový program pro kulturní a komunitní projekty na území Prahy 8.
               </p>
               <div className="mb-4 p-3 bg-yellow-50 border-l-4 border-yellow-500 rounded">
-                <p className="text-sm font-bold text-yellow-900">⚠️ Deadline: Do konce roku 2025</p>
+                <div className="flex items-center gap-2">
+                  <AlertCircle className="w-4 h-4 text-yellow-900" />
+                  <p className="text-sm font-bold text-yellow-900">Deadline: Do konce roku 2025</p>
+                </div>
               </div>
               <a
                 href="https://www.praha8.cz/Granty-Kultura-2025"
@@ -1134,7 +1140,10 @@ function InterventionsPage() {
               {/* Full Description */}
               {selectedProject.fullDescription ? (
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">📝 Popis projektu</h3>
+                  <div className="flex items-center gap-2 mb-3">
+                    <FileText className="w-6 h-6 text-gray-900" />
+                    <h3 className="text-xl font-bold text-gray-900">Popis projektu</h3>
+                  </div>
                   <div className="text-gray-700 leading-relaxed space-y-3">
                     {selectedProject.fullDescription.split('\n\n').map((paragraph, idx) => {
                       // Handle bullet points
@@ -1165,7 +1174,10 @@ function InterventionsPage() {
                 </div>
               ) : (
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">📝 Popis projektu</h3>
+                  <div className="flex items-center gap-2 mb-3">
+                    <FileText className="w-6 h-6 text-gray-900" />
+                    <h3 className="text-xl font-bold text-gray-900">Popis projektu</h3>
+                  </div>
                   <p className="text-gray-600 italic">Detailní popis bude doplněn.</p>
                 </div>
               )}
@@ -1215,21 +1227,30 @@ function InterventionsPage() {
 
                 {selectedProject.budget && (
                   <div className="bg-green-50 rounded-lg p-4">
-                    <h4 className="font-bold text-green-900 mb-2">💰 Rozpočet</h4>
+                    <div className="flex items-center gap-2 mb-2">
+                      <DollarSign className="w-5 h-5 text-green-900" />
+                      <h4 className="font-bold text-green-900">Rozpočet</h4>
+                    </div>
                     <p className="text-gray-700">{selectedProject.budget}</p>
                   </div>
                 )}
 
                 {selectedProject.timeline && (
                   <div className="bg-purple-50 rounded-lg p-4">
-                    <h4 className="font-bold text-purple-900 mb-2">⏱️ Časový plán</h4>
+                    <div className="flex items-center gap-2 mb-2">
+                      <Clock className="w-5 h-5 text-purple-900" />
+                      <h4 className="font-bold text-purple-900">Časový plán</h4>
+                    </div>
                     <p className="text-gray-700">{selectedProject.timeline}</p>
                   </div>
                 )}
 
                 {selectedProject.location && (
                   <div className="bg-orange-50 rounded-lg p-4">
-                    <h4 className="font-bold text-orange-900 mb-2">📍 Lokalita</h4>
+                    <div className="flex items-center gap-2 mb-2">
+                      <MapPin className="w-5 h-5 text-orange-900" />
+                      <h4 className="font-bold text-orange-900">Lokalita</h4>
+                    </div>
                     <p className="text-gray-700">{selectedProject.location}</p>
                   </div>
                 )}
@@ -1237,16 +1258,17 @@ function InterventionsPage() {
 
               {selectedProject.partner && (
                 <div className="bg-teal-50 rounded-lg p-4">
-                  <h4 className="font-bold text-teal-900 mb-2">🤝 Spolupráce</h4>
+                  <div className="flex items-center gap-2 mb-2">
+                    <Users className="w-5 h-5 text-teal-900" />
+                    <h4 className="font-bold text-teal-900">Spolupráce</h4>
+                  </div>
                   <p className="text-gray-700">{selectedProject.partner}</p>
                 </div>
               )}
 
               {/* Inspiration */}
               {selectedProject.inspiration && (
-                <div className="bg-pink-50 rounded-lg p-4">
-                  <h4 className="font-bold text-pink-900 mb-2">💡 Inspirace</h4>
-                  <a
+a
                     href={selectedProject.inspiration.url}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -1450,7 +1472,7 @@ function MethodologyPage() {
             {/* Boj s reklamou */}
             <div className="bg-white rounded-lg p-5 border-l-4 border-red-500">
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-3xl">🎭</span>
+                <Palette className="w-8 h-8 text-red-600" />
                 <h4 className="font-bold text-red-900 text-lg">3. Boj s reklamou (Detournement)</h4>
               </div>
               <p className="text-sm text-gray-700 mb-3">Kritická reakce na vizuální smog a nelegální reklamy</p>
@@ -1482,7 +1504,10 @@ function MethodologyPage() {
           <div className="space-y-4">
             {/* Before */}
             <div className="bg-white rounded-lg p-5">
-              <h4 className="font-bold text-orange-900 mb-3 text-lg">📍 PŘED (T-7 až T-1 dní)</h4>
+              <div className="flex items-center gap-2 mb-3">
+                <MapPin className="w-6 h-6 text-orange-900" />
+                <h4 className="font-bold text-orange-900 text-lg">PŘED (T-7 až T-1 dní)</h4>
+              </div>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start gap-2">
                   <span className="text-orange-500">•</span>
