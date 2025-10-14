@@ -231,6 +231,18 @@ function OverviewPage() {
 function InterventionsPage() {
   const [selectedProject, setSelectedProject] = useState(null);
 
+  // ESC key handler to close modal
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape' && selectedProject) {
+        setSelectedProject(null);
+      }
+    };
+
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, [selectedProject]);
+
   const officialProjects = [
     {
       title: 'Betonové banány - lavičky',
@@ -264,18 +276,18 @@ function InterventionsPage() {
       location: 'Betonové plochy kolem Palmovky',
       images: [
         {
-          original: '/FAMU/projects/slunecnice/IMG_4417.jpeg',
-          thumbnail: '/FAMU/projects/slunecnice/IMG_4417.jpeg',
+          original: import.meta.env.BASE_URL + 'projects/slunecnice/IMG_4417.jpeg',
+          thumbnail: import.meta.env.BASE_URL + 'projects/slunecnice/IMG_4417.jpeg',
           description: 'Slunečnice na Palmovce - výsadba',
         },
         {
-          original: '/FAMU/projects/slunecnice/IMG_4421.jpeg',
-          thumbnail: '/FAMU/projects/slunecnice/IMG_4421.jpeg',
+          original: import.meta.env.BASE_URL + 'projects/slunecnice/IMG_4421.jpeg',
+          thumbnail: import.meta.env.BASE_URL + 'projects/slunecnice/IMG_4421.jpeg',
           description: 'Slunečnice rostou v betonovém prostoru',
         },
         {
-          original: '/FAMU/projects/slunecnice/IMG_4702.jpeg',
-          thumbnail: '/FAMU/projects/slunecnice/IMG_4702.jpeg',
+          original: import.meta.env.BASE_URL + 'projects/slunecnice/IMG_4702.jpeg',
+          thumbnail: import.meta.env.BASE_URL + 'projects/slunecnice/IMG_4702.jpeg',
           description: 'Rozkvetlé slunečnice na Palmovce',
         },
       ],
@@ -296,8 +308,8 @@ function InterventionsPage() {
       location: 'Frekventovaná místa s kuřáky na Palmovce',
       images: [
         {
-          original: '/FAMU/projects/hlasovaci-popelnik/design.jpeg',
-          thumbnail: '/FAMU/projects/hlasovaci-popelnik/design.jpeg',
+          original: import.meta.env.BASE_URL + 'projects/hlasovaci-popelnik/design.jpeg',
+          thumbnail: import.meta.env.BASE_URL + 'projects/hlasovaci-popelnik/design.jpeg',
           description: 'Design hlasovacího popelníku',
         },
       ],
@@ -523,7 +535,14 @@ function InterventionsPage() {
 
       {/* Project Detail Modal */}
       {selectedProject && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 overflow-y-auto">
+        <div 
+          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 overflow-y-auto"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) {
+              setSelectedProject(null);
+            }
+          }}
+        >
           <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div className="sticky top-0 bg-gradient-to-r from-teal-600 to-cyan-600 text-white p-6 flex items-start justify-between rounded-t-2xl">
               <div>
