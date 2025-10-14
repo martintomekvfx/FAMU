@@ -536,7 +536,7 @@ function InterventionsPage() {
       {/* Project Detail Modal */}
       {selectedProject && (
         <div 
-          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 overflow-y-auto"
+          className="fixed inset-0 bg-black/50 z-[9999] flex items-center justify-center p-4 overflow-y-auto"
           onClick={(e) => {
             if (e.target === e.currentTarget) {
               setSelectedProject(null);
@@ -666,12 +666,22 @@ function InterventionsPage() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">📸 Fotodokumentace</h3>
                   <div className="rounded-xl overflow-hidden border-2 border-gray-200">
+                    <style>{`
+                      .image-gallery-thumbnail img {
+                        object-fit: cover !important;
+                        height: 80px !important;
+                      }
+                      .image-gallery-image {
+                        object-fit: contain !important;
+                      }
+                    `}</style>
                     <ImageGallery
                       items={selectedProject.images}
                       showPlayButton={false}
                       showFullscreenButton={true}
                       showIndex={true}
                       autoPlay={false}
+                      thumbnailPosition="bottom"
                     />
                   </div>
                 </div>
