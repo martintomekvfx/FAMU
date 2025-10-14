@@ -779,7 +779,7 @@ function InterventionsPage() {
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">📝 Popis projektu</h3>
                 <div className="text-gray-700 leading-relaxed space-y-3">
-                  {selectedProject.fullDescription.split('\n\n').map((paragraph, idx) => {
+                  {selectedProject.fullDescription && selectedProject.fullDescription.split('\n\n').map((paragraph, idx) => {
                     // Handle bullet points
                     if (paragraph.trim().startsWith('•')) {
                       return (
