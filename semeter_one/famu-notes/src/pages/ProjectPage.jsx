@@ -315,6 +315,91 @@ function OverviewPage() {
       {/* Grants & Funding */}
       <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">💰 Financování projektu</h2>
+        
+        {/* Budget Breakdown */}
+        <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6 border-2 border-blue-200 mb-6">
+          <h3 className="font-bold text-gray-900 mb-4">📊 Rozpočet jednotlivých intervencí</h3>
+          
+          <div className="space-y-3 mb-4">
+            <div className="flex justify-between items-center p-3 bg-white rounded-lg">
+              <span className="text-gray-700">🗳️ Hlasovací popelníky</span>
+              <span className="font-bold text-gray-900">1 500 Kč</span>
+            </div>
+            <div className="flex justify-between items-center p-3 bg-white rounded-lg">
+              <span className="text-gray-700">🍌 Betonové banány - lavičky</span>
+              <span className="font-bold text-gray-900">3 000 Kč</span>
+            </div>
+            <div className="flex justify-between items-center p-3 bg-green-100 rounded-lg border-2 border-green-300">
+              <span className="text-gray-700">🌻 Slunečnice (realizováno)</span>
+              <span className="font-bold text-green-700">800 Kč</span>
+            </div>
+            <div className="flex justify-between items-center p-3 bg-white rounded-lg">
+              <span className="text-gray-700">🪑 Parklety</span>
+              <span className="font-bold text-gray-900">3 500 Kč</span>
+            </div>
+            <div className="flex justify-between items-center p-3 bg-white rounded-lg">
+              <span className="text-gray-700">🎮 Křídový Game Jam</span>
+              <span className="font-bold text-gray-900">1 000 Kč</span>
+            </div>
+            <div className="flex justify-between items-center p-3 bg-white rounded-lg">
+              <span className="text-gray-700">🎮 Interaktivní kamerová hra</span>
+              <span className="font-bold text-gray-900">5 000 Kč</span>
+            </div>
+          </div>
+
+          <div className="border-t-2 border-blue-300 pt-3 mb-4">
+            <div className="flex justify-between items-center p-3 bg-blue-100 rounded-lg">
+              <span className="text-lg font-bold text-blue-900">Oficiální projekty celkem:</span>
+              <span className="text-xl font-bold text-blue-900">14 800 Kč</span>
+            </div>
+          </div>
+
+          <h4 className="font-bold text-gray-900 mb-3 mt-6">Guerilla Art intervence:</h4>
+          <div className="space-y-3 mb-4">
+            <div className="flex justify-between items-center p-3 bg-white rounded-lg">
+              <span className="text-gray-700">🎭 Detournement - Boj s reklamou</span>
+              <span className="font-bold text-gray-900">750 Kč</span>
+            </div>
+            <div className="flex justify-between items-center p-3 bg-white rounded-lg">
+              <span className="text-gray-700">🎨 Street Art - Obrazy v ulicích</span>
+              <span className="font-bold text-gray-900">400 Kč</span>
+            </div>
+            <div className="flex justify-between items-center p-3 bg-white rounded-lg">
+              <span className="text-gray-700">🖼️ Guerillová galerie</span>
+              <span className="font-bold text-gray-900">350 Kč</span>
+            </div>
+            <div className="flex justify-between items-center p-3 bg-green-100 rounded-lg border-2 border-green-300">
+              <span className="text-gray-700">🪢 Houpačka (realizováno)</span>
+              <span className="font-bold text-green-700">200 Kč</span>
+            </div>
+            <div className="flex justify-between items-center p-3 bg-white rounded-lg">
+              <span className="text-gray-700">💡 Dočasná solární světla</span>
+              <span className="font-bold text-gray-900">750 Kč</span>
+            </div>
+          </div>
+
+          <div className="border-t-2 border-blue-300 pt-3 mb-4">
+            <div className="flex justify-between items-center p-3 bg-purple-100 rounded-lg">
+              <span className="text-lg font-bold text-purple-900">Guerilla Art celkem:</span>
+              <span className="text-xl font-bold text-purple-900">2 450 Kč</span>
+            </div>
+          </div>
+
+          <div className="border-t-4 border-blue-500 pt-4">
+            <div className="flex justify-between items-center p-4 bg-gradient-to-r from-green-100 to-emerald-100 rounded-xl border-2 border-green-400">
+              <span className="text-xl font-bold text-gray-900">💰 CELKOVÝ ROZPOČET:</span>
+              <span className="text-2xl font-bold text-green-700">17 250 Kč</span>
+            </div>
+          </div>
+
+          <div className="mt-4 p-3 bg-yellow-50 border-l-4 border-yellow-400 rounded">
+            <p className="text-sm text-gray-700">
+              <strong>Poznámka:</strong> Rozpočet nezahrnuje náklady na filmovou dokumentaci a techniku (~3 000 Kč).
+              Celkový rozpočet projektu včetně dokumentace: <strong>~20 000 Kč</strong>
+            </p>
+          </div>
+        </div>
+
         <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-6 border-2 border-green-200">
           <div className="flex items-start gap-4">
             <div className="text-4xl">📋</div>
