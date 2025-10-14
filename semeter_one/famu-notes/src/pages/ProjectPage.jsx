@@ -547,14 +547,26 @@ const officialProjects = [
       details: ['Prázdné plochy', 'Kolektivní akce', 'Neoficiální galerie'],
     },
     {
-      title: 'Houpačka na sušáku',
-      subtitle: 'Guerilla Art',
+      title: 'Houpačka na zapomenutém sušáku',
+      subtitle: 'Guerilla Art / Aktivace prostoru',
       icon: '🪢',
       color: 'cyan',
-      description: 'Aktivace opomíjeného prostoru ve vnitrobloku - spontánní reakce obyvatel',
+      description: 'Instalace houpačky na opuštěném kovové sušáku ve vnitrobloku - intervence která motivovala obyvatele k trvalé proměně místa',
       artist: 'Ptáček',
       status: 'Realizováno',
-      details: ['První intervence', 'Komunitní odezva', 'Neformální'],
+      details: ['První intervence', 'Komunitní odezva', 'DIY', 'Trvalý efekt'],
+      fullDescription: '**Kontext a motivace**\n\nJedním z prvních zásahů byla instalace houpačky ve vnitrobloku libeňského sídliště, na konstrukci starých kovových sušáků na prádlo. Tyto sušáky – typický relikt z dob socialismu – už dnes obyvatelé nevyužívali; stály opuštěné na travnaté ploše, kterou nikdo nepovažoval za hřiště či místo k trávení času.\n\nNapadlo mě propůjčit jim nový smysl. Motivací bylo ukázat, že i zdánlivě mrtvý prvek může znovu ožít a přinést radost, pokud se změní úhel pohledu. Zároveň mě zajímalo, jak lidé zareagují: zda houpačku přijmou, ignorují, či odmítnou.\n\n**Realizace - DIY přístup**\n\nRealizace proběhla svépomocí z dostupných materiálů:\n\n• Z odložené **dřevěné palety** (nalezené u kontejneru) jsem pomocí páčidla a pily vyrobil pevné prkno na sezení\n\n• Vše jsem obrousil a natřel pro delší životnost\n\n• Zakoupil jsem dostatečně dlouhé pevné lano\n\n• Musel jsem se naučit **správné uzly** pro bezpečné zavěšení - osobní posun, protože předtím jsem vázat uzly neuměl\n\nHoupačku jsem instaloval za víkendového podvečera: lano jsme uvázali na vodorovnou tyč sušáku. **První pokus ukázal chybu** - lano bylo příliš krátké, sedátko viselo dost vysoko. Než jsem stihl sehnat delší, nechal jsem provizorní houpačku na místě.\n\n**Spontánní komunitní reakce**\n\nBěhem dvou dnů se stalo něco pozoruhodného: **někdo z místních houpačku okamžitě použil a dokonce poopravil její zavěšení**, aby se na ní dalo lépe houpat. Jinými slovy, prostor začal žít: anonymní uživatel nejen akceptoval můj zásah, ale aktivně ho vylepšil.\n\nJakmile to bylo možné, pořídil jsem delší lano, vrátil se na místo a houpačku znovu zavěsil, tentokrát už pořádně. Houpačka poté plnila svou funkci po několik týdnů. **Děti z okolí ji používaly, dospělí ji tolerovali.**\n\nIntervence splnila cíl:\n• Upozornila na nevyužitý sušák\n• Nabídla kolemjdoucím nečekanou atrakci\n• Otevřela otázku, proč podobné prvky vymizely\n\n**Trvalá proměna místa**\n\nPo delší době jsem se na místo vrátil a čekalo mě **milé překvapení**:\n\n• Celý kovový mobiliář sušáků byl **obroušen a nově natřen**\n\n• Zásah očividně motivoval obyvatele či správce, aby prostředí zvelebili\n\n• Na konstrukci se objevilo **nové lanko na prádlo**, které tam dříve nebylo\n\n• Sušáky znovu slouží svému původnímu účelu\n\n• Moji provizorní houpačku někdo **šetrně odložil vedle** místo aby ji vyhodil\n\n**Reflexe a úspěch**\n\nToto finále považuji za **velký úspěch**: původní nevyužívané místo nezískalo jen dočasnou atrakci, ale dočkalo se trvalejší proměny a údržby.\n\nMá intervence tak otevřela oči místním, že i starý sušák může mít smysl – a oni ho sami vzali za vlastní, převzali iniciativu. Lepší výsledek jsem si nemohl přát.\n\nOdloženou dřevěnou houpačku mám nyní u sebe a přemýšlím, kam ji zavěsím příště, aby opět rozproudila život jinde.',
+      materials: ['Dřevěná paleta (nalezená)', 'Pevné lano', 'Páčidlo, pila', 'Brusný papír', 'Nátěr/lak', 'Uzly (nová dovednost)'],
+      budget: '~200 Kč (lano, nátěr)',
+      timeline: 'Víkend (instalace) → Několik týdnů (používání) → Trvalá proměna',
+      location: 'Vnitroblok libeňského sídliště, kovové sušáky',
+      images: [
+        {
+          original: import.meta.env.BASE_URL + 'projects/houpacka/IMG_2332.png',
+          thumbnail: import.meta.env.BASE_URL + 'projects/houpacka/IMG_2332.png',
+          description: 'Kovové sušáky ve vnitrobloku - místo instalace houpačky',
+        },
+      ],
     },
   ];
 
