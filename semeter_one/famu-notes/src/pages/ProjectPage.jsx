@@ -10,7 +10,9 @@ import {
   Users,
   Target,
   Film,
-  Calendar
+  Calendar,
+  X,
+  ExternalLink
 } from 'lucide-react';
 
 // Project subpages data
@@ -194,6 +196,8 @@ function OverviewPage() {
 }
 
 function InterventionsPage() {
+  const [selectedProject, setSelectedProject] = useState(null);
+
   const officialProjects = [
     {
       title: 'Betonové banány - lavičky',
@@ -204,6 +208,12 @@ function InterventionsPage() {
       artist: 'Martin Tomek',
       status: 'V plánu',
       details: ['Recyklovaný beton', 'Veřejné sedání', 'Palmovka branding'],
+      fullDescription: 'Inspirováno projektem "Banány pro Palmovku" - vytvoření série betonových laviček ve tvaru banánů jako funkčního urbánního mobiliáře. Každá lavička bude mít personalizovanou "etiketu" s názvem Palmovka.',
+      materials: ['Rychletuhnoucí beton (12x 25kg)', 'Forma na odlévání', 'Pletivo pro výztuž', 'Nátěr/barva'],
+      budget: '~3000 Kč na 1 lavičku',
+      timeline: '2-3 měsíce (návrh, výroba formy, odlití, instalace)',
+      location: 'Křižovatka před KB, okolí Palmovky',
+      images: [],
     },
     {
       title: 'Slunečnice na Palmovce',
@@ -214,6 +224,13 @@ function InterventionsPage() {
       artist: 'Martin Tomek',
       status: 'Realizováno',
       details: ['Komunitní spoluúčast', 'Oživení prostoru', 'Sezónní instalace'],
+      fullDescription: 'První realizovaná intervence - výsadba slunečnic a květin v zanedbaných betonových plochách Palmovky. Projekt spojil estetiku s komunitní aktivitou a přinesl zeleň do šedého prostoru.',
+      materials: ['Semena/sazenice slunečnic', 'Hlína', 'Základní nářadí', 'Zalévačky'],
+      budget: '~500 Kč',
+      timeline: 'Jaro-léto (výsadba, péče, dokumentace)',
+      location: 'Betonové plochy kolem Palmovky',
+      images: [],
+      videoUrl: 'https://youtu.be/AKgS2maI94k',
     },
     {
       title: 'Hlasovací popelníky',
@@ -224,6 +241,12 @@ function InterventionsPage() {
       artist: 'Martin Tomek',
       status: 'V plánu',
       details: ['Gamifikace', 'Zapojení komunity', 'Čistší prostor'],
+      fullDescription: 'Interaktivní popelníky s hlasovacím mechanismem - lidé "hlasují" nedopalky do jedné ze dvou možností. Gamifikace motivuje k čistějšímu prostoru a poskytuje data o preferencích komunity.',
+      materials: ['Dřevo/kov pro konstrukci', 'Průhledný plexisklo', 'Popisky/otázky', 'Montážní materiál'],
+      budget: '~1500 Kč na 1 popelník',
+      timeline: '1 měsíc (výroba, testování, instalace)',
+      location: 'Frekventovaná místa s kuřáky',
+      images: [],
     },
     {
       title: 'Parklety',
@@ -234,6 +257,12 @@ function InterventionsPage() {
       artist: 'Martin Tomek',
       status: 'Realizováno',
       details: ['Dřevěné palety', 'Komunitní náměstí', 'Reversibilní'],
+      fullDescription: 'Přeměna parkovacího místa na dočasné komunitní náměstí pomocí recyklovaných dřevěných palet. Vytvoření prostoru pro setkávání a odpočinek tam, kde předtím stálo pouze auto.',
+      materials: ['Dřevěné EURO palety', 'Polštáře/sedáky', 'Květináče', 'Dekorace'],
+      budget: '~2000 Kč',
+      timeline: '1 týden (sběr palet, stavba, instalace)',
+      location: 'Vybrané parkovací místo na Palmovce',
+      images: [],
     },
     {
       title: 'Křídový Game Jam',
@@ -244,6 +273,13 @@ function InterventionsPage() {
       artist: 'Martin Tomek + Game Design FAMU',
       status: 'V přípravě',
       details: ['Festival Closur', 'Mezioborová spolupráce', 'Hernost ve veřejném prostoru'],
+      fullDescription: 'Mezioborová spolupráce s Katedrou herního designu FAMU. Jednodenní game jam zaměřený na tvorbu her a interaktivních instalací ve veřejném prostoru. Propojení herních principů s guerillovým uměním.',
+      materials: ['Křídy různých barev', 'Interaktivní prvky', 'Dokumentační technika'],
+      budget: '~1000 Kč',
+      timeline: '1 den (game jam) + příprava + dokumentace',
+      location: 'Palmovka, možná festival Closur',
+      images: [],
+      partner: 'Michal z Herního designu FAMU',
     },
   ];
 
@@ -311,7 +347,8 @@ function InterventionsPage() {
           {officialProjects.map((project, index) => (
             <div 
               key={index}
-              className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border-2 border-blue-300 hover:shadow-lg transition-all"
+              onClick={() => setSelectedProject(project)}
+              className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border-2 border-blue-300 hover:shadow-xl transition-all cursor-pointer hover:scale-105"
             >
               <div className="flex items-start justify-between mb-4">
                 <div className="text-5xl">{project.icon}</div>
@@ -366,7 +403,8 @@ function InterventionsPage() {
           {guerillaArt.map((project, index) => (
             <div 
               key={index}
-              className="bg-gradient-to-br from-red-50 to-pink-50 rounded-xl p-6 border-2 border-red-300 hover:shadow-lg transition-all"
+              onClick={() => setSelectedProject(project)}
+              className="bg-gradient-to-br from-red-50 to-pink-50 rounded-xl p-6 border-2 border-red-300 hover:shadow-xl transition-all cursor-pointer hover:scale-105"
             >
               <div className="flex items-start justify-between mb-4">
                 <div className="text-5xl">{project.icon}</div>
@@ -428,6 +466,140 @@ function InterventionsPage() {
           </div>
         </div>
       </div>
+
+      {/* Project Detail Modal */}
+      {selectedProject && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 overflow-y-auto">
+          <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="sticky top-0 bg-gradient-to-r from-teal-600 to-cyan-600 text-white p-6 flex items-start justify-between rounded-t-2xl">
+              <div>
+                <div className="text-6xl mb-3">{selectedProject.icon}</div>
+                <h2 className="text-3xl font-bold mb-2">{selectedProject.title}</h2>
+                <p className="text-cyan-100">{selectedProject.subtitle}</p>
+              </div>
+              <button
+                onClick={() => setSelectedProject(null)}
+                className="p-2 hover:bg-white/20 rounded-lg transition-colors"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+
+            <div className="p-8 space-y-6">
+              {/* Status */}
+              <div className="flex items-center gap-4">
+                <span className={`px-4 py-2 rounded-full text-sm font-bold ${
+                  selectedProject.status === 'Realizováno' ? 'bg-green-200 text-green-800' :
+                  selectedProject.status === 'Probíhá' ? 'bg-yellow-200 text-yellow-800' :
+                  'bg-gray-200 text-gray-800'
+                }`}>
+                  {selectedProject.status}
+                </span>
+                <span className="text-gray-600">
+                  <span className="font-semibold">Autor:</span> {selectedProject.artist}
+                </span>
+              </div>
+
+              {/* Full Description */}
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">📝 Popis projektu</h3>
+                <p className="text-gray-700 leading-relaxed">{selectedProject.fullDescription}</p>
+              </div>
+
+              {/* Video if exists */}
+              {selectedProject.videoUrl && (
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">🎬 Video dokumentace</h3>
+                  <div className="aspect-video rounded-xl overflow-hidden bg-black">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src={selectedProject.videoUrl.replace('youtu.be/', 'youtube.com/embed/').split('?')[0]}
+                      title="YouTube video"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                  <a
+                    href={selectedProject.videoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 mt-3 text-teal-600 hover:text-teal-700 font-medium"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    Otevřít na YouTube
+                  </a>
+                </div>
+              )}
+
+              {/* Details Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {selectedProject.materials && (
+                  <div className="bg-blue-50 rounded-lg p-4">
+                    <h4 className="font-bold text-blue-900 mb-2">🛠️ Materiály</h4>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      {selectedProject.materials.map((mat, i) => (
+                        <li key={i}>• {mat}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {selectedProject.budget && (
+                  <div className="bg-green-50 rounded-lg p-4">
+                    <h4 className="font-bold text-green-900 mb-2">💰 Rozpočet</h4>
+                    <p className="text-gray-700">{selectedProject.budget}</p>
+                  </div>
+                )}
+
+                {selectedProject.timeline && (
+                  <div className="bg-purple-50 rounded-lg p-4">
+                    <h4 className="font-bold text-purple-900 mb-2">⏱️ Časový plán</h4>
+                    <p className="text-gray-700">{selectedProject.timeline}</p>
+                  </div>
+                )}
+
+                {selectedProject.location && (
+                  <div className="bg-orange-50 rounded-lg p-4">
+                    <h4 className="font-bold text-orange-900 mb-2">📍 Lokalita</h4>
+                    <p className="text-gray-700">{selectedProject.location}</p>
+                  </div>
+                )}
+              </div>
+
+              {selectedProject.partner && (
+                <div className="bg-teal-50 rounded-lg p-4">
+                  <h4 className="font-bold text-teal-900 mb-2">🤝 Spolupráce</h4>
+                  <p className="text-gray-700">{selectedProject.partner}</p>
+                </div>
+              )}
+
+              {/* Key Points */}
+              <div className="bg-gray-50 rounded-lg p-4">
+                <h4 className="font-bold text-gray-900 mb-3">✨ Klíčové prvky</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                  {selectedProject.details.map((detail, i) => (
+                    <div key={i} className="flex items-center gap-2 text-gray-700">
+                      <span className="w-2 h-2 bg-teal-500 rounded-full"></span>
+                      {detail}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Photos placeholder */}
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-8 text-center border-2 border-purple-200">
+                <ImageIcon className="w-16 h-16 mx-auto mb-4 text-purple-400" />
+                <h4 className="font-bold text-gray-900 mb-2">📸 Fotodokumentace</h4>
+                <p className="text-gray-600 text-sm">
+                  Fotky budou přidány během realizace projektu
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
