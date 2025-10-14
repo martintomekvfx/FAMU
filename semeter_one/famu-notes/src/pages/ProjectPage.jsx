@@ -55,12 +55,6 @@ const subpages = [
     icon: ImageIcon,
     color: 'pink',
   },
-  {
-    id: 'related',
-    title: 'Související projekty',
-    icon: Users,
-    color: 'yellow',
-  },
 ];
 
 function ProjectPage() {
@@ -154,8 +148,7 @@ function ProjectPage() {
         {currentSubpage === 'methodology' && <MethodologyPage />}
         {currentSubpage === 'outputs' && <OutputsPage />}
         {currentSubpage === 'timeline' && <TimelinePage />}
-        {currentSubpage === 'gallery' && <GalleryPage />}
-        {currentSubpage === 'related' && <RelatedProjectsPage />}
+        {currentSubpage === 'gallery' && <GalleryPage officialProjects={officialProjects} guerillaArt={guerillaArt} />}
       </div>
     </div>
   );
@@ -397,6 +390,18 @@ function InterventionsPage() {
       artist: 'Ptáček',
       status: 'Probíhá',
       details: ['Různé techniky', 'Spontánní instalace', 'Městská galerie'],
+      fullDescription: 'Guerillové lepení autorských tisků, grafik a obrazů na různých materiálech do městského prostoru. Přeměna šedých stěn a prázdných ploch na venkovní galerii dostupnou všem.\n\nCíl: Oživit městský prostor uměním, vytvořit neoficiální veřejnou galerii a přinést umění tam, kde se ho lidé nenadějí.',
+      materials: ['Vlastní tisky/grafiky', 'Lepidlo na plakáty', 'Ochranná vrstva', 'Různé papíry a materiály'],
+      budget: '~300-500 Kč (tisk, materiály)',
+      timeline: 'Průběžně - spontánní instalace',
+      location: 'Palmovka a okolí - prázdné plochy, stěny, vývěsky',
+      images: [
+        {
+          original: import.meta.env.BASE_URL + 'projects/streetart/IMG_4740.jpeg',
+          thumbnail: import.meta.env.BASE_URL + 'projects/streetart/IMG_4740.jpeg',
+          description: 'Street art instalace v Palmovce',
+        },
+      ],
     },
     {
       title: 'Guerillová galerie',
@@ -1290,149 +1295,76 @@ function TimelinePage() {
   );
 }
 
-function GalleryPage() {
+function GalleryPage({ officialProjects, guerillaArt }) {
+  // Collect all images from all projects
+  const allImages = [];
+  
+  // Add images from official projects
+  if (officialProjects) {
+    officialProjects.forEach(project => {
+      if (project.images && project.images.length > 0) {
+        project.images.forEach(img => {
+          allImages.push({
+            ...img,
+            projectTitle: project.title,
+            projectIcon: project.icon,
+          });
+        });
+      }
+    });
+  }
+  
+  // Add images from guerilla art
+  if (guerillaArt) {
+    guerillaArt.forEach(project => {
+      if (project.images && project.images.length > 0) {
+        project.images.forEach(img => {
+          allImages.push({
+            ...img,
+            projectTitle: project.title,
+            projectIcon: project.icon,
+          });
+        });
+      }
+    });
+  }
+
   return (
     <div className="space-y-6">
       <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">📸 Galerie vizualizací</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">📸 Galerie projektů</h2>
+        <p className="text-gray-600 mb-6">Fotodokumentace všech realizovaných intervencí</p>
         
-        <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-12 text-center border-2 border-purple-200">
-          <ImageIcon className="w-24 h-24 mx-auto mb-6 text-purple-400" />
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Galerie bude doplněna</h3>
-          <p className="text-gray-600 mb-6">
-            Zde budou vizualizace, mockupy a fotografie z průzkumu lokality.
-          </p>
-          <p className="text-sm text-gray-500">
-            Můžeš přidat obrázky do složky <code className="bg-purple-100 px-2 py-1 rounded">public/projects/palmovka/</code>
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function RelatedProjectsPage() {
-  const relatedProjects = [
-    {
-      title: 'Banány pro Palmovku',
-      author: 'Tomáš Vrána',
-      description: 'Guerilla instalace na Pražské Palmovce v podobě laviček pro veřejnost ve formě pořádně velkého banánu!',
-      url: 'https://www.startovac.cz/projekty/banany-pro-palmovku',
-      platform: 'Startovač',
-      budget: '~20 000 Kč',
-      features: [
-        'Betonové lavičky ve tvaru banánů',
-        'Crowdfunding kampaň',
-        'Personalizované "etikety" pro podporovatele',
-        'Stejná lokalita: Palmovka',
-      ],
-      color: 'yellow',
-      emoji: '🍌',
-    },
-  ];
-
-  return (
-    <div className="space-y-6">
-      <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">🤝 Související projekty</h2>
-        <p className="text-gray-600 mb-6">
-          Inspirace a podobné guerillové intervence v Palmovce a okolí
-        </p>
-
-        <div className="space-y-6">
-          {relatedProjects.map((project, index) => (
-            <div 
-              key={index}
-              className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-8 border-2 border-yellow-400 hover:shadow-xl transition-all"
-            >
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center gap-4">
-                  <div className="text-6xl">{project.emoji}</div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900">{project.title}</h3>
-                    <p className="text-gray-600">
-                      <span className="font-semibold">Autor:</span> {project.author}
-                    </p>
-                    <div className="flex gap-2 mt-2">
-                      <span className="px-3 py-1 bg-yellow-200 text-yellow-900 rounded-full text-sm font-medium">
-                        {project.platform}
-                      </span>
-                      <span className="px-3 py-1 bg-green-200 text-green-900 rounded-full text-sm font-medium">
-                        {project.budget}
-                      </span>
-                    </div>
+        {allImages.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {allImages.map((image, index) => (
+              <div key={index} className="bg-white rounded-xl overflow-hidden border-2 border-gray-200 hover:border-teal-500 transition-all hover:shadow-xl">
+                <div className="aspect-video bg-gray-100">
+                  <img
+                    src={image.original}
+                    alt={image.description}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-2xl">{image.projectIcon}</span>
+                    <h3 className="font-bold text-gray-900">{image.projectTitle}</h3>
                   </div>
+                  <p className="text-sm text-gray-600">{image.description}</p>
                 </div>
               </div>
-
-              <p className="text-gray-700 mb-4 text-lg">
-                {project.description}
-              </p>
-
-              <div className="mb-4">
-                <h4 className="font-bold text-gray-900 mb-2">Klíčové prvky:</h4>
-                <ul className="space-y-2">
-                  {project.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2 text-gray-700">
-                      <span className="w-2 h-2 bg-yellow-500 rounded-full"></span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="flex gap-3">
-                <a
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-yellow-500 text-white rounded-lg font-bold hover:bg-yellow-600 transition-colors shadow-lg"
-                >
-                  Navštívit projekt →
-                </a>
-              </div>
-            </div>
-          ))}
-
-          {/* Add Your Own Section */}
-          <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-8 border-2 border-dashed border-gray-400">
-            <div className="text-center">
-              <Users className="w-16 h-16 mx-auto mb-4 text-gray-400" />
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Znáš další podobné projekty?</h3>
-              <p className="text-gray-600 mb-4">
-                Palmovka má potenciál pro více guerillových intervencí! Pokud znáš další projekty, přidej je zde.
-              </p>
-              <p className="text-sm text-gray-500">
-                Edit <code className="bg-gray-100 px-2 py-1 rounded">ProjectPage.jsx</code> → RelatedProjectsPage
-              </p>
-            </div>
+            ))}
           </div>
-        </div>
-
-        {/* Comparison */}
-        <div className="mt-8 bg-blue-50 rounded-xl p-6 border-2 border-blue-200">
-          <h3 className="text-xl font-bold text-blue-900 mb-4">🔍 Srovnání s mým projektem</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h4 className="font-bold text-gray-900 mb-2">🍌 Banány pro Palmovku</h4>
-              <ul className="text-sm text-gray-700 space-y-1">
-                <li>• Jeden typ intervence (lavičky)</li>
-                <li>• Crowdfunding (veřejné financování)</li>
-                <li>• Konkrétní produkt</li>
-                <li>• Rychlá realizace</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold text-gray-900 mb-2">🎨 Guerillové intervence (můj projekt)</h4>
-              <ul className="text-sm text-gray-700 space-y-1">
-                <li>• Různé typy intervencí (5+)</li>
-                <li>• Akademický projekt (FAMU)</li>
-                <li>• Dokumentární film + výzkum</li>
-                <li>• Dlouhodobé pozorování (2 roky)</li>
-              </ul>
-            </div>
+        ) : (
+          <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-12 text-center border-2 border-purple-200">
+            <ImageIcon className="w-24 h-24 mx-auto mb-6 text-purple-400" />
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Galerie bude doplněna</h3>
+            <p className="text-gray-600 mb-6">
+              Fotodokumentace bude přidána během realizace projektů.
+            </p>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
