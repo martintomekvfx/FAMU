@@ -161,12 +161,18 @@ function ProjectPage() {
                     <ArrowLeft className="w-5 h-5" />
                   </Link>
                   <div>
-                    <h1 className="text-xl font-bold">🎨 Guerillové intervence</h1>
+                    <div className="flex items-center gap-2">
+                    <Palette className="w-6 h-6" />
+                    <h1 className="text-xl font-bold">Guerillové intervence</h1>
+                  </div>
                   </div>
                 </>
               ) : (
                 <>
-                  <h1 className="text-4xl font-bold mb-2">🎨 Guerillové intervence</h1>
+                  <div className="flex items-center gap-3 mb-2">
+                    <Palette className="w-10 h-10" />
+                    <h1 className="text-4xl font-bold">Guerillové intervence</h1>
+                  </div>
                   <p className="text-xl text-gray-100">ve veřejném prostoru</p>
                   <p className="text-sm text-gray-200 mt-2">Palmovka, Praha | Autorský projekt | Martin Tomek</p>
                 </>
@@ -331,7 +337,7 @@ function OverviewPage() {
           </div>
           <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-5 border-2 border-blue-200">
             <div className="flex items-center gap-3 mb-2">
-              <span className="text-3xl">🎥</span>
+              <Camera className="w-10 h-10 text-blue-600" />
               <div>
                 <h3 className="font-bold text-gray-900">Jiří Kejkula</h3>
                 <p className="text-sm text-blue-700 font-medium">Produkce</p>
@@ -463,27 +469,45 @@ function OverviewPage() {
           
           <div className="space-y-3 mb-4">
             <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-              <span className="text-gray-700">🗳️ Hlasovací popelníky</span>
+              <div className="flex items-center gap-2">
+                <Vote className="w-5 h-5 text-gray-600" />
+                <span className="text-gray-700">Hlasovací popelníky</span>
+              </div>
               <span className="font-bold text-gray-900">1 500 Kč</span>
             </div>
             <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-              <span className="text-gray-700">🍌 Betonové banány - lavičky</span>
+              <div className="flex items-center gap-2">
+                <Banana className="w-5 h-5 text-gray-600" />
+                <span className="text-gray-700">Betonové banány - lavičky</span>
+              </div>
               <span className="font-bold text-gray-900">3 000 Kč</span>
             </div>
             <div className="flex justify-between items-center p-3 bg-green-100 rounded-lg border-2 border-green-300">
-              <span className="text-gray-700">🌻 Slunečnice (realizováno)</span>
+              <div className="flex items-center gap-2">
+                <Sun className="w-5 h-5 text-green-600" />
+                <span className="text-gray-700">Slunečnice (realizováno)</span>
+              </div>
               <span className="font-bold text-green-700">800 Kč</span>
             </div>
             <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-              <span className="text-gray-700">🪑 Parklety</span>
+              <div className="flex items-center gap-2">
+                <Armchair className="w-5 h-5 text-gray-600" />
+                <span className="text-gray-700">Parklety</span>
+              </div>
               <span className="font-bold text-gray-900">3 500 Kč</span>
             </div>
             <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-              <span className="text-gray-700">🎮 Křídový Game Jam</span>
+              <div className="flex items-center gap-2">
+                <Gamepad2 className="w-5 h-5 text-gray-600" />
+                <span className="text-gray-700">Křídový Game Jam</span>
+              </div>
               <span className="font-bold text-gray-900">1 000 Kč</span>
             </div>
             <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-              <span className="text-gray-700">🎮 Interaktivní kamerová hra</span>
+              <div className="flex items-center gap-2">
+                <Camera className="w-5 h-5 text-gray-600" />
+                <span className="text-gray-700">Interaktivní kamerová hra</span>
+              </div>
               <span className="font-bold text-gray-900">5 000 Kč</span>
             </div>
           </div>
@@ -498,23 +522,38 @@ function OverviewPage() {
           <h4 className="font-bold text-gray-900 mb-3 mt-6">Guerilla Art intervence:</h4>
           <div className="space-y-3 mb-4">
             <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-              <span className="text-gray-700">🎭 Detournement - Boj s reklamou</span>
+              <div className="flex items-center gap-2">
+                <Palette className="w-5 h-5 text-gray-600" />
+                <span className="text-gray-700">Detournement - Boj s reklamou</span>
+              </div>
               <span className="font-bold text-gray-900">750 Kč</span>
             </div>
             <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-              <span className="text-gray-700">🎨 Street Art - Obrazy v ulicích</span>
+              <div className="flex items-center gap-2">
+                <Brush className="w-5 h-5 text-gray-600" />
+                <span className="text-gray-700">Street Art - Obrazy v ulicích</span>
+              </div>
               <span className="font-bold text-gray-900">400 Kč</span>
             </div>
             <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-              <span className="text-gray-700">🖼️ Guerillová galerie</span>
+              <div className="flex items-center gap-2">
+                <Gallery className="w-5 h-5 text-gray-600" />
+                <span className="text-gray-700">Guerillová galerie</span>
+              </div>
               <span className="font-bold text-gray-900">350 Kč</span>
             </div>
             <div className="flex justify-between items-center p-3 bg-green-100 rounded-lg border-2 border-green-300">
-              <span className="text-gray-700">🪢 Houpačka (realizováno)</span>
+              <div className="flex items-center gap-2">
+                <Waves className="w-5 h-5 text-green-600" />
+                <span className="text-gray-700">Houpačka (realizováno)</span>
+              </div>
               <span className="font-bold text-green-700">200 Kč</span>
             </div>
             <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-              <span className="text-gray-700">💡 Dočasná solární světla</span>
+              <div className="flex items-center gap-2">
+                <Lamp className="w-5 h-5 text-gray-600" />
+                <span className="text-gray-700">Dočasná solární světla</span>
+              </div>
               <span className="font-bold text-gray-900">750 Kč</span>
             </div>
           </div>
@@ -889,7 +928,10 @@ function InterventionsPage() {
             </div>
             <div className="text-sm text-gray-600">Podpis: Martin Tomek</div>
           </div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">🏗️ Mobiliář & Oficiální intervence</h2>
+          <div className="flex items-center gap-2 mb-2">
+            <Hammer className="w-7 h-7 text-gray-900" />
+            <h2 className="text-2xl font-bold text-gray-900">Mobiliář & Oficiální intervence</h2>
+          </div>
           <p className="text-gray-600">
             Veřejně podepsané projekty zaměřené na urbánní mobiliář, komunitní aktivity a herní instalace
           </p>
@@ -951,7 +993,10 @@ function InterventionsPage() {
             </div>
             <div className="text-sm text-gray-600">Pseudonym: Ptáček</div>
           </div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">🎨 Neoficiální street art & detournement</h2>
+          <div className="flex items-center gap-2 mb-2">
+            <Brush className="w-7 h-7 text-gray-900" />
+            <h2 className="text-2xl font-bold text-gray-900">Neoficiální street art & detournement</h2>
+          </div>
           <p className="text-gray-600">
             Anonymní intervence kritizující vizuální smog a obohacující městský prostor o umění
           </p>
