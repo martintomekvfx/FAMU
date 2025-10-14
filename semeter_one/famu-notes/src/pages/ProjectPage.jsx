@@ -169,58 +169,238 @@ function OverviewPage() {
 }
 
 function InterventionsPage() {
-  const interventions = [
+  const officialProjects = [
     {
-      title: 'Houpačky',
-      icon: '🪢',
-      color: 'blue',
-      description: 'Guerillové houpačky v zanedbaných prostorech – přinesení hravosti do veřejného prostoru',
+      title: 'Betonové banány - lavičky',
+      subtitle: 'Mobiliář',
+      icon: '🍌',
+      color: 'yellow',
+      description: 'Série betonových laviček ve tvaru banánů. Funkční urbánní mobiliář s hravým designem.',
+      artist: 'Martin Tomek',
+      status: 'V plánu',
+      details: ['Recyklovaný beton', 'Veřejné sedání', 'Palmovka branding'],
     },
     {
-      title: 'Guerillová výsadba',
-      icon: '🌸',
+      title: 'Slunečnice na Palmovce',
+      subtitle: 'Mobiliář + Výsadba',
+      icon: '🌻',
       color: 'green',
-      description: 'Výsadba květin a zelené v opuštěných koutech – oživení šedivých ploch',
-    },
-    {
-      title: 'Parklety',
-      icon: '🪑',
-      color: 'orange',
-      description: 'Dočasné veřejné sedání z palet – vytvoření míst pro setkávání',
+      description: 'Guerillová výsadba slunečnic a květin v zanedbaných betonových prostorech',
+      artist: 'Martin Tomek',
+      status: 'Realizováno',
+      details: ['Komunitní spoluúčast', 'Oživení prostoru', 'Sezónní instalace'],
     },
     {
       title: 'Hlasovací popelníky',
+      subtitle: 'Interaktivní mobiliář',
       icon: '🗳️',
       color: 'red',
-      description: 'Interaktivní popelníky s hlasováním – zapojení komunity zábavnou formou',
+      description: 'Experiment s veřejným zapojením skrze herní mechanismus "hlasování nedopalky"',
+      artist: 'Martin Tomek',
+      status: 'V plánu',
+      details: ['Gamifikace', 'Zapojení komunity', 'Čistší prostor'],
+    },
+    {
+      title: 'Parklety',
+      subtitle: 'Mobiliář',
+      icon: '🪑',
+      color: 'orange',
+      description: 'Dočasná přeměna parkovacích míst na prostor pro setkávání - recyklovaný mobiliář z palet',
+      artist: 'Martin Tomek',
+      status: 'Realizováno',
+      details: ['Dřevěné palety', 'Komunitní náměstí', 'Reversibilní'],
     },
     {
       title: 'Křídový Game Jam',
+      subtitle: 'Interaktivní hra',
       icon: '🎮',
       color: 'purple',
-      description: 'Spolupráce s Katedrou herního designu – pouliční hry a interaktivní instalace',
+      description: 'Spolupráce s Herní katedrou FAMU - venkovní interaktivní instalace a pouliční hry',
+      artist: 'Martin Tomek + Game Design FAMU',
+      status: 'V přípravě',
+      details: ['Festival Closur', 'Mezioborová spolupráce', 'Hernost ve veřejném prostoru'],
+    },
+  ];
+
+  const guerillaArt = [
+    {
+      title: 'Detournement - Boj s reklamou',
+      subtitle: 'Guerilla Art',
+      icon: '🎭',
+      color: 'pink',
+      description: 'Přelepování nelegálních reklam uměleckými zásahy. Autorská reakce na vizuální smog.',
+      artist: 'Ptáček',
+      status: 'Probíhá',
+      details: ['Reakce na reklamy', 'Kritické umění', 'Anonymní akce'],
+    },
+    {
+      title: 'Street Art - Obrazy v ulicích',
+      subtitle: 'Guerilla Art',
+      icon: '🎨',
+      color: 'blue',
+      description: 'Lepění autorských tisků, grafik a obrazů na různých materiálech do městského prostoru',
+      artist: 'Ptáček',
+      status: 'Probíhá',
+      details: ['Různé techniky', 'Spontánní instalace', 'Městská galerie'],
+    },
+    {
+      title: 'Guerillová galerie',
+      subtitle: 'Guerilla Art',
+      icon: '🖼️',
+      color: 'teal',
+      description: 'Výlep uměleckých děl do prázdných městských rámů, vývěsek a prázdných ploch',
+      artist: 'Ptáček + další umělci',
+      status: 'Probíhá',
+      details: ['Prázdné plochy', 'Kolektivní akce', 'Neoficiální galerie'],
+    },
+    {
+      title: 'Houpačka na sušáku',
+      subtitle: 'Guerilla Art',
+      icon: '🪢',
+      color: 'cyan',
+      description: 'Aktivace opomíjeného prostoru ve vnitrobloku - spontánní reakce obyvatel',
+      artist: 'Ptáček',
+      status: 'Realizováno',
+      details: ['První intervence', 'Komunitní odezva', 'Neformální'],
     },
   ];
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
+      {/* Official Projects - Martin Tomek */}
       <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">🎨 Typy intervencí</h2>
-        <p className="text-gray-600 mb-6">
-          Projekt zahrnuje různé typy mikro-intervencí, které jsou nekomerční, reversibilní a založené na etice.
-        </p>
+        <div className="mb-6">
+          <div className="flex items-center gap-3 mb-2">
+            <div className="px-4 py-2 bg-blue-600 text-white rounded-lg font-bold">
+              OFICIÁLNÍ
+            </div>
+            <div className="text-sm text-gray-600">Podpis: Martin Tomek</div>
+          </div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">🏗️ Mobiliář & Oficiální intervence</h2>
+          <p className="text-gray-600">
+            Veřejně podepsané projekty zaměřené na urbánní mobiliář, komunitní aktivity a herní instalace
+          </p>
+        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {interventions.map((intervention, index) => (
+          {officialProjects.map((project, index) => (
             <div 
               key={index}
-              className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border-2 border-gray-900 hover:shadow-lg transition-all"
+              className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border-2 border-blue-300 hover:shadow-lg transition-all"
             >
-              <div className="text-5xl mb-4">{intervention.icon}</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{intervention.title}</h3>
-              <p className="text-gray-600">{intervention.description}</p>
+              <div className="flex items-start justify-between mb-4">
+                <div className="text-5xl">{project.icon}</div>
+                <span className={`px-3 py-1 rounded-full text-xs font-bold ${
+                  project.status === 'Realizováno' ? 'bg-green-200 text-green-800' :
+                  project.status === 'Probíhá' ? 'bg-yellow-200 text-yellow-800' :
+                  'bg-gray-200 text-gray-800'
+                }`}>
+                  {project.status}
+                </span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-1">{project.title}</h3>
+              <p className="text-sm text-blue-600 font-semibold mb-3">{project.subtitle}</p>
+              <p className="text-gray-600 mb-4">{project.description}</p>
+              <div className="border-t border-blue-200 pt-3">
+                <p className="text-xs font-bold text-gray-500 mb-2">KLÍČOVÉ PRVKY:</p>
+                <ul className="space-y-1">
+                  {project.details.map((detail, i) => (
+                    <li key={i} className="text-sm text-gray-700 flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="mt-4 pt-3 border-t border-blue-200">
+                <p className="text-xs text-gray-500">
+                  <span className="font-semibold">Autor:</span> {project.artist}
+                </p>
+              </div>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* Guerilla Art - Ptáček */}
+      <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6">
+        <div className="mb-6">
+          <div className="flex items-center gap-3 mb-2">
+            <div className="px-4 py-2 bg-red-600 text-white rounded-lg font-bold">
+              GUERILLA ART
+            </div>
+            <div className="text-sm text-gray-600">Pseudonym: Ptáček</div>
+          </div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">🎨 Neoficiální street art & detournement</h2>
+          <p className="text-gray-600">
+            Anonymní intervence kritizující vizuální smog a obohacující městský prostor o umění
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {guerillaArt.map((project, index) => (
+            <div 
+              key={index}
+              className="bg-gradient-to-br from-red-50 to-pink-50 rounded-xl p-6 border-2 border-red-300 hover:shadow-lg transition-all"
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div className="text-5xl">{project.icon}</div>
+                <span className={`px-3 py-1 rounded-full text-xs font-bold ${
+                  project.status === 'Realizováno' ? 'bg-green-200 text-green-800' :
+                  project.status === 'Probíhá' ? 'bg-yellow-200 text-yellow-800' :
+                  'bg-gray-200 text-gray-800'
+                }`}>
+                  {project.status}
+                </span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-1">{project.title}</h3>
+              <p className="text-sm text-red-600 font-semibold mb-3">{project.subtitle}</p>
+              <p className="text-gray-600 mb-4">{project.description}</p>
+              <div className="border-t border-red-200 pt-3">
+                <p className="text-xs font-bold text-gray-500 mb-2">CHARAKTERISTIKY:</p>
+                <ul className="space-y-1">
+                  {project.details.map((detail, i) => (
+                    <li key={i} className="text-sm text-gray-700 flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-red-500 rounded-full"></span>
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="mt-4 pt-3 border-t border-red-200">
+                <p className="text-xs text-gray-500">
+                  <span className="font-semibold">Street artist:</span> {project.artist}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Legend */}
+      <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl shadow-xl p-6 text-white">
+        <h3 className="text-xl font-bold mb-4">📋 Rozdělení projektu</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h4 className="font-bold text-blue-300 mb-2">🏗️ OFICIÁLNÍ (Martin Tomek)</h4>
+            <ul className="text-sm space-y-1 text-gray-300">
+              <li>• Veřejně podepsané projekty</li>
+              <li>• Urbánní mobiliář</li>
+              <li>• Komunitní aktivity</li>
+              <li>• Spolupráce s institucemi</li>
+              <li>• Legální intervence</li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-bold text-red-300 mb-2">🎨 GUERILLA ART (Ptáček)</h4>
+            <ul className="text-sm space-y-1 text-gray-300">
+              <li>• Anonymní pseudonym</li>
+              <li>• Boj s reklamou & detournement</li>
+              <li>• Street art & lepení obrazů</li>
+              <li>• Kritické umění</li>
+              <li>• Spontánní akce</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
