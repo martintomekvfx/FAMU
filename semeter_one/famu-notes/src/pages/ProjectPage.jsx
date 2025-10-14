@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import ImageGallery from 'react-image-gallery';
+import 'react-image-gallery/styles/css/image-gallery.css';
 import { 
   ArrowLeft, 
   Download, 
@@ -229,7 +231,23 @@ function InterventionsPage() {
       budget: '~500 Kč',
       timeline: 'Jaro-léto (výsadba, péče, dokumentace)',
       location: 'Betonové plochy kolem Palmovky',
-      images: [],
+      images: [
+        {
+          original: '/projects/slunecnice/IMG_4417.jpeg',
+          thumbnail: '/projects/slunecnice/IMG_4417.jpeg',
+          description: 'Slunečnice na Palmovce - výsadba',
+        },
+        {
+          original: '/projects/slunecnice/IMG_4421.jpeg',
+          thumbnail: '/projects/slunecnice/IMG_4421.jpeg',
+          description: 'Slunečnice rostou v betonovém prostoru',
+        },
+        {
+          original: '/projects/slunecnice/IMG_4702.jpeg',
+          thumbnail: '/projects/slunecnice/IMG_4702.jpeg',
+          description: 'Rozkvetlé slunečnice na Palmovce',
+        },
+      ],
       videoUrl: 'https://youtu.be/AKgS2maI94k',
     },
     {
@@ -588,14 +606,29 @@ function InterventionsPage() {
                 </div>
               </div>
 
-              {/* Photos placeholder */}
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-8 text-center border-2 border-purple-200">
-                <ImageIcon className="w-16 h-16 mx-auto mb-4 text-purple-400" />
-                <h4 className="font-bold text-gray-900 mb-2">📸 Fotodokumentace</h4>
-                <p className="text-gray-600 text-sm">
-                  Fotky budou přidány během realizace projektu
-                </p>
-              </div>
+              {/* Photo Gallery */}
+              {selectedProject.images && selectedProject.images.length > 0 ? (
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">📸 Fotodokumentace</h3>
+                  <div className="rounded-xl overflow-hidden border-2 border-gray-200">
+                    <ImageGallery
+                      items={selectedProject.images}
+                      showPlayButton={false}
+                      showFullscreenButton={true}
+                      showIndex={true}
+                      autoPlay={false}
+                    />
+                  </div>
+                </div>
+              ) : (
+                <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-8 text-center border-2 border-purple-200">
+                  <ImageIcon className="w-16 h-16 mx-auto mb-4 text-purple-400" />
+                  <h4 className="font-bold text-gray-900 mb-2">📸 Fotodokumentace</h4>
+                  <p className="text-gray-600 text-sm">
+                    Fotky budou přidány během realizace projektu
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>
