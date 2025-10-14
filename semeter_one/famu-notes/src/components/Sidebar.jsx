@@ -6,23 +6,22 @@ import {
   MessageCircle, 
   CalendarDays, 
   Calendar,
-  StickyNote, 
+  StickyNote,
+  FileText,
   Gamepad2, 
   Menu, 
   X, 
-  ChevronRight,
-  FileText,
-  Clock
+  ChevronRight
 } from 'lucide-react';
 import { subjects, generalNotes } from '../data/subjects';
 
 const menuItems = [
   { path: '/', icon: Home, label: 'Domů' },
   { path: '/bulletin-board', icon: StickyNote, label: 'Nástěnka' },
+  { path: '/notes', icon: FileText, label: 'Poznámky' },
   { path: '/chat', icon: MessageCircle, label: 'Chat' },
   { path: '/timetable', icon: CalendarDays, label: 'Rozvrh' },
   { path: '/calendar', icon: Calendar, label: 'Kalendář' },
-  { path: '/deadlines', icon: Clock, label: 'Deadlines' },
 ];
 
 const colorMap = {
