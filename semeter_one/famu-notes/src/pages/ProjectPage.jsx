@@ -1469,15 +1469,39 @@ function TimelinePage() {
 }
 
 function GalleryPage({ officialProjects, guerillaArt }) {
-  // Collect all images from all projects
-  const allImages = [];
+  // Gallery images
+  const galleryImages = [
+    {
+      src: import.meta.env.BASE_URL + 'projects/gallery/IMG_1694.png',
+      title: 'Palmovka - průzkum lokality',
+      description: 'Dokumentace veřejného prostoru'
+    },
+    {
+      src: import.meta.env.BASE_URL + 'projects/gallery/IMG_1719.png',
+      title: 'Palmovka - urbánní prostředí',
+      description: 'Analýza městského prostoru'
+    },
+    {
+      src: import.meta.env.BASE_URL + 'projects/gallery/IMG_2332.png',
+      title: 'Palmovka - veřejný prostor',
+      description: 'Výzkum lokality a komunity'
+    },
+    {
+      src: import.meta.env.BASE_URL + 'projects/gallery/IMG_4702.png',
+      title: 'Slunečnice na Palmovce',
+      description: 'První realizovaná intervence - guerillová výsadba'
+    },
+  ];
+
+  // Collect all images from projects
+  const projectImages = [];
   
   // Add images from official projects
   if (officialProjects) {
     officialProjects.forEach(project => {
       if (project.images && project.images.length > 0) {
         project.images.forEach(img => {
-          allImages.push({
+          projectImages.push({
             ...img,
             projectTitle: project.title,
             projectIcon: project.icon,
@@ -1492,7 +1516,7 @@ function GalleryPage({ officialProjects, guerillaArt }) {
     guerillaArt.forEach(project => {
       if (project.images && project.images.length > 0) {
         project.images.forEach(img => {
-          allImages.push({
+          projectImages.push({
             ...img,
             projectTitle: project.title,
             projectIcon: project.icon,
@@ -1504,13 +1528,36 @@ function GalleryPage({ officialProjects, guerillaArt }) {
 
   return (
     <div className="space-y-6">
+      {/* Main Gallery */}
       <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">📸 Galerie projektů</h2>
-        <p className="text-gray-600 mb-6">Fotodokumentace všech realizovaných intervencí</p>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">📸 Galerie projektu</h2>
+        <p className="text-gray-600 mb-6">Fotodokumentace lokality Palmovka a realizovaných intervencí</p>
         
-        {allImages.length > 0 ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {galleryImages.map((image, index) => (
+            <div key={index} className="bg-white rounded-xl overflow-hidden border-2 border-gray-200 hover:border-teal-500 transition-all hover:shadow-xl">
+              <div className="aspect-video bg-gray-100">
+                <img
+                  src={image.src}
+                  alt={image.description}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="font-bold text-gray-900 mb-1">{image.title}</h3>
+                <p className="text-sm text-gray-600">{image.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Project-specific images */}
+      {projectImages.length > 0 && (
+        <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">🎨 Detail intervencí</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {allImages.map((image, index) => (
+            {projectImages.map((image, index) => (
               <div key={index} className="bg-white rounded-xl overflow-hidden border-2 border-gray-200 hover:border-teal-500 transition-all hover:shadow-xl">
                 <div className="aspect-video bg-gray-100">
                   <img
@@ -1529,16 +1576,8 @@ function GalleryPage({ officialProjects, guerillaArt }) {
               </div>
             ))}
           </div>
-        ) : (
-          <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-12 text-center border-2 border-purple-200">
-            <ImageIcon className="w-24 h-24 mx-auto mb-6 text-purple-400" />
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Galerie bude doplněna</h3>
-            <p className="text-gray-600 mb-6">
-              Fotodokumentace bude přidána během realizace projektů.
-            </p>
-          </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 }
