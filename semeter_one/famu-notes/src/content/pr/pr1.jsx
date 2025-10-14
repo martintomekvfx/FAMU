@@ -52,6 +52,27 @@ export default function PR1() {
 
       <hr className="my-8" />
 
+      <h2>🏛️ Státní fond kultury ČR</h2>
+
+      <div className="bg-green-50 border-l-4 border-green-400 p-4 my-4">
+        <p className="font-semibold">💡 Doporučení:</p>
+        <p><strong>Státní fond kultury</strong> - prý nejjednodušší způsob jak získat dotaci!</p>
+      </div>
+
+      <h3>📅 Termíny a podmínky</h3>
+      <div className="bg-red-50 border-l-4 border-red-400 p-4 my-4">
+        <p className="font-semibold">🚨 DEADLINE:</p>
+        <p className="text-lg"><strong>11. - 19. prosince</strong> - termín pro podání žádostí!</p>
+      </div>
+
+      <h3>💵 Finanční rozsah</h3>
+      <ul className="space-y-2">
+        <li><strong>Minimální částka:</strong> 2 000 Kč</li>
+        <li><strong>Maximální částka:</strong> až 50 000 Kč</li>
+      </ul>
+
+      <hr className="my-8" />
+
       <h2>🔗 Užitečné odkazy</h2>
 
       <ul>
@@ -75,6 +96,16 @@ export default function PR1() {
             Oborová dotační řízení na rok 2026 - vyhlašovací podmínky
           </a>
         </li>
+        <li>
+          <a 
+            href="https://mk.gov.cz/statni-fond-kultury-cr-cs-42" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:text-blue-800 underline font-semibold"
+          >
+            ⭐ Státní fond kultury ČR - Doporučeno!
+          </a>
+        </li>
       </ul>
 
       <hr className="my-8" />
@@ -83,12 +114,18 @@ export default function PR1() {
 
       <div className="bg-blue-50 border-l-4 border-blue-400 p-4 my-4">
         <ul className="list-none space-y-2">
+          <li>🔥 <strong>PRIORITA: Státní fond kultury - deadline 11.-19. prosince!</strong></li>
           <li>✅ Zkusit podat dvě školní dotace</li>
           <li>✅ Zvážit grant kultury Prahy 8</li>
           <li>✅ Registrace do národního registru umělců (1000 Kč)</li>
           <li>✅ Sledovat výzvy na podzim pro profesionální granty</li>
           <li>✅ Prozkoumat kreativní vouchery</li>
         </ul>
+      </div>
+
+      <div className="bg-purple-50 border-l-4 border-purple-400 p-4 my-4">
+        <p className="font-semibold">💡 Tip na začátek:</p>
+        <p>Státní fond kultury je dobrý na vyzkoušení - jednoduchý proces, dostupné částky od 2k do 50k Kč.</p>
       </div>
     </div>
   );

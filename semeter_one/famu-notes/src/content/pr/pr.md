@@ -33,3 +33,15 @@ profesionální uměí - všechny granty jsou na podzim
 
 
 https://mk.gov.cz/oborova-dotacni-rizeni-na-rok-2026-vyhlasovaci-podminky
+
+
+
+
+státní font kulirry- prej nejjednodušší
+
+https://mk.gov.cz/statni-fond-kultury-cr-cs-42
+
+od 11. do 19 prsoince deadline!!!!!
+
+nejmensi castka kterou muzete platit 2k
+muzem ziskat az 50k
