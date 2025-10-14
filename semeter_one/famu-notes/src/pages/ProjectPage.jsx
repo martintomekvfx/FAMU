@@ -57,6 +57,60 @@ const subpages = [
   },
 ];
 
+// Project Data - shared between InterventionsPage and GalleryPage
+const officialProjects = [
+  {
+    title: 'Betonové banány - lavičky',
+    subtitle: 'Mobiliář',
+    icon: '🍌',
+    color: 'yellow',
+    description: 'Série betonových laviček ve tvaru banánů. Funkční urbánní mobiliář s hravým designem.',
+    artist: 'Martin Tomek',
+    status: 'V plánu',
+    details: ['Recyklovaný beton', 'Veřejné sedání', 'Palmovka branding'],
+    fullDescription: 'Inspirováno projektem "Banány pro Palmovku" - vytvoření série betonových laviček ve tvaru banánů jako funkčního urbánního mobiliáře. Každá lavička bude mít personalizovanou "etiketu" s názvem Palmovka.\n\nČasový harmonogram:\n• **Zima 2025** (leden-březen) - Návrh, výroba formy, postupné odlévání\n• **Jaro-Léto 2026** - Instalace a uvedení do provozu\n\nBeton lze pracovat i v zimě (vnitřní prostory), instalace ideálně v teplém počasí.',
+    materials: ['Rychletuhnoucí beton (12x 25kg)', 'Forma na odlévání', 'Pletivo pro výztuž', 'Nátěr/barva', 'Montážní materiál'],
+    budget: '~3000 Kč na 1 lavičku',
+    timeline: 'Zima 2025 (výroba) → Jaro-Léto 2026 (instalace)',
+    location: 'Křižovatka před KB, okolí Palmovky',
+    images: [],
+  },
+  {
+    title: 'Slunečnice na Palmovce',
+    subtitle: 'Mobiliář + Výsadba',
+    icon: '🌻',
+    color: 'green',
+    description: 'Guerillová výsadba slunečnic a květin v zanedbaných betonových prostorech',
+    artist: 'Martin Tomek',
+    status: 'Realizováno',
+    details: ['Komunitní spoluúčast', 'Oživení prostoru', 'Sezónní instalace'],
+    fullDescription: 'Celoroční projekt výsadby slunečnic v zanedbaných betonových plochách Palmovky. Od předpěstování až po rozkvetlou slunečnici - kompletní cyklus.\n\nČasový plán:\n• **Březen 2025** - Předsadba na balkoně (hlína + sazenice)\n• **Duben 2025** - Přesadba do větších květináčů (10l)\n• **Duben-Květen 2025** - Sadba ven do Palmovky\n• **Léto 2025** - Péče, zalívání, hnojení\n• **Konec léta** - Hnojení na květ\n• **Podzim 2026** - Finální výsledek: rozkvetlé slunečnice!\n\nProjekt spojuje estetiku s komunitní aktivitou a přináší zeleň do šedého prostoru.',
+    materials: ['Semena/sazenice slunečnic', 'Hlína (substrátu)', 'Květináče 10l', 'Hnojivo', 'Zalévačky', 'Nářadí na výsadbu'],
+    budget: '~800 Kč (sazenice, hlína, květináče, hnojivo)',
+    timeline: 'Celoroční projekt: Březen 2025 - Podzim 2026',
+    location: 'Betonové plochy kolem Palmovky',
+    images: [
+      {
+        original: import.meta.env.BASE_URL + 'projects/slunecnice/IMG_4417.jpeg',
+        thumbnail: import.meta.env.BASE_URL + 'projects/slunecnice/IMG_4417.jpeg',
+        description: 'Slunečnice na Palmovce - výsadba',
+      },
+      {
+        original: import.meta.env.BASE_URL + 'projects/slunecnice/IMG_4421.jpeg',
+        thumbnail: import.meta.env.BASE_URL + 'projects/slunecnice/IMG_4421.jpeg',
+        description: 'Slunečnice rostou v betonovém prostoru',
+      },
+      {
+        original: import.meta.env.BASE_URL + 'projects/slunecnice/IMG_4702.jpeg',
+        thumbnail: import.meta.env.BASE_URL + 'projects/slunecnice/IMG_4702.jpeg',
+        description: 'Rozkvetlé slunečnice na Palmovce',
+      },
+    ],
+  },
+];
+
+const guerillaArt = [];
+
 function ProjectPage() {
   const { subpage } = useParams();
   const currentSubpage = subpage || 'overview';
@@ -292,7 +346,8 @@ function InterventionsPage() {
     return () => window.removeEventListener('keydown', handleEscape);
   }, [selectedProject]);
 
-  const officialProjects = [
+  // Note: Data are also defined at module level for GalleryPage
+  const officialProjectsDuplicate = [
     {
       title: 'Betonové banány - lavičky',
       subtitle: 'Mobiliář',
@@ -677,11 +732,11 @@ function InterventionsPage() {
               {/* Full Description */}
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">📝 Popis projektu</h3>
-                <div className="text-gray-700 leading-relaxed space-y-4">
-                  {selectedProject.fullDescription.split('\n\n').map((paragraph, idx) => (
-                    <div key={idx} className="whitespace-pre-line">
-                      {paragraph}
-                    </div>
+                <div className="prose prose-gray max-w-none">
+                  {selectedProject.fullDescription.split('\n').map((line, idx) => (
+                    <p key={idx} className="mb-2 last:mb-0">
+                      {line}
+                    </p>
                   ))}
                 </div>
               </div>
