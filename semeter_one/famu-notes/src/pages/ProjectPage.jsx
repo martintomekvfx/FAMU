@@ -235,24 +235,49 @@ function OverviewPage() {
 
       {/* Research Resources */}
       <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">📚 Výzkumné podklady</h2>
-        <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border-2 border-indigo-200">
-          <div className="flex items-start gap-4">
-            <div className="text-4xl">📄</div>
-            <div className="flex-1">
-              <h3 className="font-bold text-gray-900 mb-2">Sociologicko-antropologický výzkum žitého prostoru v lokalitě Palmovka</h3>
-              <p className="text-gray-700 mb-4">
-                Souhrnná zpráva z antropologického výzkumu Palmovky (Praha 8) - klíčový podklad pro metodologii projektu.
-              </p>
-              <a
-                href="https://m.praha8.cz/file/GbS/Souhrnna-zprava-Sociologicko-antropologicky-vyzkum-ziteho-prost%20oru-v-lokalite-Palmovka.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition-colors"
-              >
-                <ExternalLink className="w-4 h-4" />
-                Stáhnout PDF zprávu
-              </a>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">📚 Výzkumné podklady a dokumenty</h2>
+        
+        <div className="space-y-4">
+          {/* Anthropological Research */}
+          <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border-2 border-indigo-200">
+            <div className="flex items-start gap-4">
+              <div className="text-4xl">📄</div>
+              <div className="flex-1">
+                <h3 className="font-bold text-gray-900 mb-2">Sociologicko-antropologický výzkum žitého prostoru v lokalitě Palmovka</h3>
+                <p className="text-gray-700 mb-4">
+                  Souhrnná zpráva z antropologického výzkumu Palmovky (Praha 8) - klíčový podklad pro metodologii projektu.
+                </p>
+                <a
+                  href="https://m.praha8.cz/file/GbS/Souhrnna-zprava-Sociologicko-antropologicky-vyzkum-ziteho-prost%20oru-v-lokalite-Palmovka.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition-colors"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  Stáhnout PDF zprávu
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Mentoring Plan */}
+          <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-lg p-6 border-2 border-teal-200">
+            <div className="flex items-start gap-4">
+              <div className="text-4xl">📋</div>
+              <div className="flex-1">
+                <h3 className="font-bold text-gray-900 mb-2">Plán mentoringu - Návrh</h3>
+                <p className="text-gray-700 mb-4">
+                  Návrh plánu mentoringu a spolupráce s umělci a komunitou během realizace projektu.
+                </p>
+                <a
+                  href={import.meta.env.BASE_URL + 'documents/plan_mentoringu_navrh.docx'}
+                  download
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg font-medium hover:bg-teal-700 transition-colors"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  Stáhnout dokument
+                </a>
+              </div>
             </div>
           </div>
         </div>
