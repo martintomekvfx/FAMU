@@ -1537,7 +1537,7 @@ function GalleryPage({ officialProjects, guerillaArt }) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {galleryImages.map((image, index) => (
             <div key={index} className="bg-white rounded-xl overflow-hidden border-2 border-gray-200 hover:border-teal-500 transition-all hover:shadow-xl">
-              <div className="aspect-video bg-gray-100">
+              <div className="aspect-square bg-gray-100">
                 <img
                   src={image.src}
                   alt={image.description}
@@ -1560,7 +1560,7 @@ function GalleryPage({ officialProjects, guerillaArt }) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projectImages.map((image, index) => (
               <div key={index} className="bg-white rounded-xl overflow-hidden border-2 border-gray-200 hover:border-teal-500 transition-all hover:shadow-xl">
-                <div className="aspect-video bg-gray-100">
+                <div className="aspect-square bg-gray-100">
                   <img
                     src={image.original}
                     alt={image.description}
