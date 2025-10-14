@@ -166,8 +166,8 @@ function OverviewPage() {
         </div>
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="font-bold text-gray-900 mb-1">Slunečnice na Palmovce</h3>
-            <p className="text-sm text-gray-600">První realizovaná intervence - guerillová výsadba květin</p>
+            <h3 className="font-bold text-gray-900 mb-1">Rozhovory s ulicí</h3>
+            <p className="text-sm text-gray-600">Video dokumentace guerillových intervencí na Palmovce</p>
           </div>
           <a
             href="https://youtu.be/AKgS2maI94k"
@@ -507,6 +507,7 @@ const officialProjects = [
         name: '@oxpostertime',
         url: 'https://www.instagram.com/oxpostertime/',
         description: 'Umělecké posters ve veřejném prostoru',
+        instagram: 'https://www.instagram.com/oxpostertime/',
       },
     },
     {
@@ -1597,18 +1598,18 @@ function GalleryPage({ officialProjects, guerillaArt }) {
   const galleryImages = [
     {
       src: import.meta.env.BASE_URL + 'projects/gallery/IMG_1694.png',
-      title: 'Palmovka - průzkum lokality',
-      description: 'Dokumentace veřejného prostoru'
+      title: 'Křídové chodníky',
+      description: 'Pouliční hry nakreslené křídou na asfaltu'
     },
     {
       src: import.meta.env.BASE_URL + 'projects/gallery/IMG_1719.png',
-      title: 'Palmovka - urbánní prostředí',
-      description: 'Analýza městského prostoru'
+      title: 'Guerillová galerie',
+      description: 'Umělecké výlepy v prázdných městských rámech'
     },
     {
       src: import.meta.env.BASE_URL + 'projects/gallery/IMG_2332.png',
-      title: 'Palmovka - veřejný prostor',
-      description: 'Výzkum lokality a komunity'
+      title: 'Houpačka',
+      description: 'Instalace houpačky na zapomenutém sušáku'
     },
     {
       src: import.meta.env.BASE_URL + 'projects/gallery/IMG_4702.png',
