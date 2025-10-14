@@ -123,7 +123,7 @@ function Sidebar() {
               `}
             >
               <CalendarDays className="w-5 h-5" />
-              <span className="font-medium">📅 Rozvrh</span>
+              <span className="font-medium">Rozvrh</span>
             </Link>
 
             {/* Chat */}
@@ -139,7 +139,7 @@ function Sidebar() {
               `}
             >
               <MessageCircle className="w-5 h-5" />
-              <span className="font-medium">💬 Chat</span>
+              <span className="font-medium">Chat</span>
             </Link>
 
             {/* Bulletin Board */}
@@ -155,7 +155,7 @@ function Sidebar() {
               `}
             >
               <StickyNote className="w-5 h-5" />
-              <span className="font-medium">📌 Nástěnka</span>
+              <span className="font-medium">Nástěnka</span>
             </Link>
 
             {/* Project */}
@@ -171,7 +171,7 @@ function Sidebar() {
               `}
             >
               <Presentation className="w-5 h-5" />
-              <span className="font-medium">🎨 Můj Projekt</span>
+              <span className="font-medium">Můj Projekt</span>
             </Link>
 
             {/* General Notes */}
