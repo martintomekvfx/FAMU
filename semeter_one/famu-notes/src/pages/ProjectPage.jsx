@@ -1255,7 +1255,7 @@ function OutputsPage() {
 function TimelinePage() {
   const timeline = [
     { 
-      phase: 'Zima 2025', 
+      phase: '❄️ Zima 2025', 
       period: 'Leden - Březen 2025', 
       title: 'Příprava a výroba', 
       color: 'from-blue-500 to-cyan-500',
@@ -1263,55 +1263,71 @@ function TimelinePage() {
         '🗳️ Hlasovací popelníky - design, výroba, jarní klauzurní práce',
         '🍌 Betonové banány - návrh, výroba formy, odlévání',
         '🌻 Slunečnice - předsadba na balkoně (březen)',
-        '📋 Mapping lokality a výběr míst'
+        '📋 Mapping lokality a výběr míst',
+        '🎭 Detournement - mapping nelegálních reklam'
       ] 
     },
     { 
-      phase: 'Jaro 2026', 
+      phase: '🌸 Jaro 2026', 
       period: 'Duben - Červen 2026', 
       title: 'Instalace a sadba', 
       color: 'from-green-500 to-teal-500',
       tasks: [
-        '🌻 Slunečnice - přesadba do 10l květináčů a sadba ven',
+        '🌻 Slunečnice - přesadba do 10l květináčů (duben)',
+        '🌻 Slunečnice - sadba ven do Palmovky (duben-květen)',
         '🗳️ Hlasovací popelníky - instalace a testování',
         '🍌 Betonové banány - instalace laviček',
         '🪑 Parklety - sběr palet a příprava materiálů'
       ] 
     },
     { 
-      phase: 'Léto 2026', 
+      phase: '☀️ Léto 2026', 
       period: 'Červenec - Září 2026', 
       title: 'Realizace a péče', 
       color: 'from-yellow-500 to-orange-500',
       tasks: [
         '🌻 Slunečnice - péče, zalévání, hnojení',
+        '🌻 Slunečnice - hnojení na květ (konec léta)',
         '🪑 Parklety - stavba a instalace obývacího pokoje',
         '🎮 Game Jam - venkovní interaktivní instalace',
         '📸 Kontinuální dokumentace všech intervencí'
       ] 
     },
     { 
-      phase: 'Podzim 2026', 
+      phase: '🍂 Podzim 2026', 
       period: 'Říjen - Prosinec 2026', 
-      title: 'Finalizace a výsledky', 
-      color: 'from-red-500 to-pink-500',
+      title: 'Finální výsledky a sběr dat', 
+      color: 'from-orange-600 to-red-500',
       tasks: [
         '🌻 Slunečnice - rozkvetlé! Finální dokumentace',
         '📊 Sběr dat z všech intervencí (before/after)',
-        '🎬 Postprodukce dokumentárního filmu',
-        '📝 Příprava magisterské práce'
+        '📊 Vyhodnocení KPI (aktivace, vytrvalost, čistota)',
+        '🎬 Začátek postprodukce dokumentárního filmu'
       ] 
     },
     { 
-      phase: 'Jaro 2027', 
-      period: 'Leden - Červen 2027', 
+      phase: '❄️ Zima 2027', 
+      period: 'Leden - Březen 2027', 
+      title: 'Postprodukce a psaní', 
+      color: 'from-indigo-500 to-blue-600',
+      tasks: [
+        '🎬 Postprodukce experimentálního dokumentárního filmu',
+        '📝 Psaní magisterské práce',
+        '📊 Analýza dat a teoretické shrnutí',
+        '📝 Příprava prezentací'
+      ] 
+    },
+    { 
+      phase: '🌸 Jaro 2027', 
+      period: 'Duben - Červen 2027', 
       title: 'Dokončení a prezentace', 
-      color: 'from-purple-500 to-indigo-500',
+      color: 'from-purple-500 to-pink-500',
       tasks: [
         '🎬 Dokončení experimentálního dokumentárního filmu (20-30 min)',
         '📝 Finalizace magisterské práce',
         '🎥 Festivaly: Anifilm, Ji.hlava IDFF',
-        '🎉 Komunitní projekce na Palmovce'
+        '🎉 Komunitní projekce na Palmovce',
+        '🎓 Obhajoba magisterské práce'
       ] 
     },
   ];
