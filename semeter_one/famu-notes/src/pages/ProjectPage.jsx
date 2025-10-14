@@ -569,6 +569,22 @@ const officialProjects = [
         },
       ],
     },
+    {
+      title: 'Dočasná solární světla',
+      subtitle: 'Guerilla Art / Tactical Urbanism',
+      icon: '💡',
+      color: 'yellow',
+      description: 'Instalace recyklovaných LED světel na tmavá místa - kritika konzumní kultury a zlepšení bezpečnosti',
+      artist: 'Ptáček',
+      status: 'V přípravě',
+      details: ['Recyklace baterií', 'Bezpečnost', 'Ekologický aktivismus', 'DIY elektronika'],
+      fullDescription: '**Dočasná solární světla**\n\nDalším připravovaným projektem reagujícím na konkrétní problém Palmovky je instalace dočasných pouličních světel na tmavá místa. Některé podchody, vchody do metra nebo zákoutí jsou nedostatečně osvětlené, což snižuje pocit bezpečí. Zároveň jsem si všiml ekologického paradoxu: objevily se jednorázové elektronické cigarety, které obsahují malé Li-ion akumulátory, ale po jednom použití se vyhazují. Tyto baterie lze přitom snadno vyjmout a znovu využít.\n\n**Trojí motivace**\n\nMotivace je tedy trojí:\n\n1. **Zlepšit bezpečnost a orientaci** v nočním prostoru\n\n2. **Prakticky demonstrovat možnosti recyklace** elektronického odpadu\n\n3. **Kriticky poukázat na absurditu konzumní kultury**, která vyhazuje funkční baterie po jediném použití\n\n**Realizace**\n\nPlánuji sestrojit jednoduché LED lampičky napájené buď solárním panelem a baterií, nebo jen baterií nabíjecí (kterou bych nabíjel ručně jednou za čas). Tyto lampy umístím na místa, kde chybí světlo – například ke schodům u výstupu z metra Palmovka, nebo u zastávky tramvaje. Světlo bude slabší než veřejné osvětlení, spíše orientační, ale i to může pomoci.\n\nKe světlu umístím malou cedulku nebo QR kód s vysvětlením projektu: že jde o recyklované baterie a dočasné řešení, které upozorňuje na problém (tmu v místě a plýtvání zdroji).\n\n**Očekávaný dopad - Dvě roviny**\n\n**1. Praktická rovina:**\n\nLidé chodící tudy večer si možná s úlevou všimnou, že „někdo to tu nasvítil" – a třeba to přiměje odpovědné činitele k trvalému řešení, když uvidí zájem.\n\n**2. Environmentální rovina:**\n\nTi, kdo prozkoumají cedulku, se dozvědí o environmentálním aspektu: že jejich elektronická cigareta mohla třeba svítit ještě dál sloužit, místo aby skončila na skládce.\n\n**Aktivismus + Praktičnost**\n\nProjekt je tedy lehce aktivistický (kritika korporací prodávajících jednorázové baterie) a zároveň praktický. Samozřejmě budu opět sledovat životnost – jak dlouho lampy vydrží, než je někdo ukradne či poškodí, nebo než se vybije baterie. To vše zapíšu a použiji jako argumenty, proč či proč ne takové věci dělat v oficiálním měřítku.\n\n**Recyklace jednorázových cigaret**\n\nJednorázové elektronické cigarety obsahují:\n\n• **Li-ion akumulátory** - plně funkční baterie\n\n• **LED diody** - využitelné pro světla\n\n• **Elektronické komponenty** - možnost dalšího využití\n\nVšechny tyto komponenty končí na skládce po jediném použití - absurdní plýtvání zdroji.\n\n**Sledování a dokumentace**\n\n• Jak dlouho lampy vydrží?\n\n• Budou ukradeny nebo poškozeny?\n\n• Jak často je třeba nabíjet baterie?\n\n• Všimnou si lidé? Změní to jejich chování?\n\n• Zareagují odpovědné orgány?',
+      materials: ['Recyklované Li-ion baterie (z e-cigaret)', 'LED diody', 'Solární panely (malé)', 'Voděodolné krabičky', 'Nabíjecí obvody', 'Cedulky/QR kódy', 'Montážní materiál'],
+      budget: '~500-1000 Kč (solární panely, krabičky, komponenty)',
+      timeline: 'Zima 2025-2026 (stavba) → Jaro 2026 (instalace) → Sledování',
+      location: 'Tmavá místa na Palmovce - schody u metra, zastávky tramvaje, podchody',
+      images: [],
+    },
   ];
 
 function InterventionsPage() {
