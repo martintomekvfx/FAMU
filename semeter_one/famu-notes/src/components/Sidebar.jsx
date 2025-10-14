@@ -115,10 +115,10 @@ function Sidebar() {
               to="/timetable"
               onClick={() => setIsOpen(false)}
               className={`
-                flex items-center gap-3 px-4 py-3 rounded-lg transition-all
+                flex items-center gap-3 px-3 py-2 rounded-lg transition-colors mt-2
                 ${location.pathname === '/timetable'
-                  ? 'bg-gray-900 text-white shadow-lg'
-                  : 'text-gray-700 hover:bg-gray-100'
+                  ? 'bg-gray-900 text-white border border-gray-900'
+                  : 'text-gray-700 hover:bg-gray-100 border border-gray-300'
                 }
               `}
             >
