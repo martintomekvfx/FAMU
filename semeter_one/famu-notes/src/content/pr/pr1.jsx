@@ -73,6 +73,54 @@ export default function PR1() {
 
       <hr className="my-8" />
 
+      <h2>🎬 Fondy audiovize a kinematografie</h2>
+
+      <h3>📽️ Státní fond kinematografie</h3>
+      <p>
+        Fond zaměřený na podporu filmové a audiovizuální tvorby.
+      </p>
+      <ul>
+        <li>
+          <a 
+            href="https://fondkinematografie.cz" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:text-blue-800 underline"
+          >
+            fondkinematografie.cz
+          </a>
+        </li>
+      </ul>
+
+      <h3>📺 Nový fond audiovize (MK ČR)</h3>
+      <p>
+        Další možnosti grantů v oblasti médií a audiovize.
+      </p>
+      <ul>
+        <li>
+          <a 
+            href="https://www.mk.gov.cz/media-a-audiovize-cs-13" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:text-blue-800 underline"
+          >
+            Media a audiovize - MK ČR
+          </a>
+        </li>
+      </ul>
+
+      <div className="bg-orange-50 border-l-4 border-orange-400 p-4 my-4">
+        <p className="font-semibold">⚠️ Pozor - Poplatky:</p>
+        <p>U některých fondů se musí platit poplatky:</p>
+        <ul className="list-disc list-inside mt-2">
+          <li>Některé granty: <strong>10 000 Kč</strong></li>
+          <li>Jiné granty: <strong>20 000 Kč</strong></li>
+        </ul>
+        <p className="mt-2 text-sm">Vždy si ověřte podmínky před podáním žádosti!</p>
+      </div>
+
+      <hr className="my-8" />
+
       <h2>🔗 Užitečné odkazy</h2>
 
       <ul>
@@ -104,6 +152,26 @@ export default function PR1() {
             className="text-blue-600 hover:text-blue-800 underline font-semibold"
           >
             ⭐ Státní fond kultury ČR - Doporučeno!
+          </a>
+        </li>
+        <li>
+          <a 
+            href="https://fondkinematografie.cz" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:text-blue-800 underline"
+          >
+            Státní fond kinematografie
+          </a>
+        </li>
+        <li>
+          <a 
+            href="https://www.mk.gov.cz/media-a-audiovize-cs-13" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:text-blue-800 underline"
+          >
+            Nový fond audiovize - MK ČR
           </a>
         </li>
       </ul>
