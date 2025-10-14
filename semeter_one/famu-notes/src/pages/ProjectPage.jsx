@@ -166,6 +166,37 @@ function ProjectPage() {
 function OverviewPage() {
   return (
     <div className="space-y-6">
+      {/* Video Documentation */}
+      <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">🎬 Video dokumentace projektu</h2>
+        <div className="aspect-video rounded-xl overflow-hidden bg-black mb-4">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://youtube.com/embed/AKgS2maI94k"
+            title="YouTube video"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+        <div className="flex items-center justify-between">
+          <div>
+            <h3 className="font-bold text-gray-900 mb-1">Slunečnice na Palmovce</h3>
+            <p className="text-sm text-gray-600">První realizovaná intervence - guerillová výsadba květin</p>
+          </div>
+          <a
+            href="https://youtu.be/AKgS2maI94k"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition-colors"
+          >
+            <ExternalLink className="w-4 h-4" />
+            YouTube
+          </a>
+        </div>
+      </div>
+
       {/* Project Summary SVG */}
       <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">📋 Přehled projektu</h2>
@@ -248,7 +279,6 @@ function InterventionsPage() {
           description: 'Rozkvetlé slunečnice na Palmovce',
         },
       ],
-      videoUrl: 'https://youtu.be/AKgS2maI94k',
     },
     {
       title: 'Hlasovací popelníky',
