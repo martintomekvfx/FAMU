@@ -750,26 +750,75 @@ function MethodologyPage() {
         <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-300 mb-6">
           <h3 className="text-2xl font-bold text-purple-900 mb-4">🎨 Typologie intervencí</h3>
           <p className="text-gray-600 mb-4 text-sm">Pro srovnatelnost – každý typ testován min. na 2 místech (replikace)</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            <div className="bg-white rounded-lg p-4 border-l-4 border-purple-500">
-              <p className="font-bold text-purple-900">🎮 Hra / aktivizace</p>
-              <p className="text-sm text-gray-600">Křídové hry, panák, herní prvky</p>
+          
+          <div className="space-y-4">
+            {/* Mobiliář */}
+            <div className="bg-white rounded-lg p-5 border-l-4 border-blue-500">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-3xl">🪑</span>
+                <h4 className="font-bold text-blue-900 text-lg">1. Mobiliář</h4>
+              </div>
+              <p className="text-sm text-gray-700 mb-3">Urbánní mobiliář měnící využití a komfort prostoru</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">
+                  Lavičky (banány, palety)
+                </span>
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">
+                  Solární světla
+                </span>
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">
+                  Hlasovací popelníky
+                </span>
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">
+                  Květiny (slunečnice)
+                </span>
+              </div>
             </div>
-            <div className="bg-white rounded-lg p-4 border-l-4 border-blue-500">
-              <p className="font-bold text-blue-900">🪑 Komfort / pobyt</p>
-              <p className="text-sm text-gray-600">Lavička z palet, parklet</p>
+
+            {/* Street Art */}
+            <div className="bg-white rounded-lg p-5 border-l-4 border-pink-500">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-3xl">🎨</span>
+                <h4 className="font-bold text-pink-900 text-lg">2. Street Art</h4>
+              </div>
+              <p className="text-sm text-gray-700 mb-3">Umělecké intervence obohacující městský prostor</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-xs font-medium">
+                  Obrazy v ulicích
+                </span>
+                <span className="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-xs font-medium">
+                  Výplň prázdných ploch
+                </span>
+                <span className="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-xs font-medium">
+                  Street art sprejem
+                </span>
+                <span className="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-xs font-medium">
+                  Guerillová galerie
+                </span>
+              </div>
             </div>
-            <div className="bg-white rounded-lg p-4 border-l-4 border-green-500">
-              <p className="font-bold text-green-900">🌸 Estetika / pozornost</p>
-              <p className="text-sm text-gray-600">Guerillová galerie, slunečnice</p>
-            </div>
-            <div className="bg-white rounded-lg p-4 border-l-4 border-red-500">
-              <p className="font-bold text-red-900">🗳️ Čistota / etika</p>
-              <p className="text-sm text-gray-600">Hlasovací popelník na špačky</p>
-            </div>
-            <div className="bg-white rounded-lg p-4 border-l-4 border-yellow-500">
-              <p className="font-bold text-yellow-900">💡 Bezpečí / orientace</p>
-              <p className="text-sm text-gray-600">Dočasná solární světla</p>
+
+            {/* Boj s reklamou */}
+            <div className="bg-white rounded-lg p-5 border-l-4 border-red-500">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-3xl">🎭</span>
+                <h4 className="font-bold text-red-900 text-lg">3. Boj s reklamou (Detournement)</h4>
+              </div>
+              <p className="text-sm text-gray-700 mb-3">Kritická reakce na vizuální smog a nelegální reklamy</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs font-medium">
+                  Přelepování reklam
+                </span>
+                <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs font-medium">
+                  Subvertising
+                </span>
+                <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs font-medium">
+                  Kritické umění
+                </span>
+                <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs font-medium">
+                  Anonymní akce (Ptáček)
+                </span>
+              </div>
             </div>
           </div>
         </div>
