@@ -81,7 +81,8 @@ const CLASSES = [
     room: 'LAZ-124',
     time: '18:10 - 19:45',
     color: '#CCEEFF',
-    note: 'Lichý',
+    note: 'Lichý týden',
+    weeks: 'Týdny: 1, 3, 5, 7, 9, 11, 13',
     link: '/subject/av',
   },
   // Čtvrtek (Ct) - row 3
@@ -109,7 +110,8 @@ const CLASSES = [
     room: 'LAZ-107',
     time: '17:20 - 19:45',
     color: '#CCEEFF',
-    note: 'Sudý',
+    note: 'Sudý týden',
+    weeks: 'Týdny: 2, 4, 6, 8, 10, 12',
     link: '/subject/ai',
   },
 ];
@@ -251,6 +253,9 @@ function TimetableWidget() {
                   <div className="mt-1">{classItem.teacher}</div>
                   <div className="mt-1">{classItem.room} /</div>
                   <div className="mt-1">{classItem.time}</div>
+                  {classItem.weeks && (
+                    <div className="text-xs mt-1 italic">{classItem.weeks}</div>
+                  )}
                 </div>
               </Link>
             ))}
@@ -258,15 +263,20 @@ function TimetableWidget() {
 
           {/* Legend */}
           <div className="mt-4 border border-black p-3" style={{ width: '1085px', marginLeft: '53px' }}>
-            <div className="flex items-center gap-4 text-xs">
-              <span className="font-bold">Legenda:</span>
-              <div className="flex items-center gap-2">
-                <span>Přednáška:</span>
-                <div className="w-8 h-4 border border-black" style={{ backgroundColor: '#DDEEFF' }}></div>
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-4 text-xs">
+                <span className="font-bold">Legenda:</span>
+                <div className="flex items-center gap-2">
+                  <span>Přednáška:</span>
+                  <div className="w-8 h-4 border border-black" style={{ backgroundColor: '#DDEEFF' }}></div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span>Cvičení:</span>
+                  <div className="w-8 h-4 border border-black" style={{ backgroundColor: '#CCCCCC' }}></div>
+                </div>
               </div>
-              <div className="flex items-center gap-2">
-                <span>Cvičení:</span>
-                <div className="w-8 h-4 border border-black" style={{ backgroundColor: '#CCCCCC' }}></div>
+              <div className="text-xs text-gray-600">
+                <span className="font-semibold">Poznámka:</span> Předměty s označením "Lichý týden" probíhají v lichých týdnech (1, 3, 5...), předměty s označením "Sudý týden" v sudých týdnech (2, 4, 6...)
               </div>
             </div>
           </div>
