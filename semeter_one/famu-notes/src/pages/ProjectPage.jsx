@@ -305,22 +305,8 @@ function OverviewPage() {
   );
 }
 
-function InterventionsPage() {
-  const [selectedProject, setSelectedProject] = useState(null);
-
-  // ESC key handler to close modal
-  useEffect(() => {
-    const handleEscape = (e) => {
-      if (e.key === 'Escape' && selectedProject) {
-        setSelectedProject(null);
-      }
-    };
-
-    window.addEventListener('keydown', handleEscape);
-    return () => window.removeEventListener('keydown', handleEscape);
-  }, [selectedProject]);
-
-  const officialProjects = [
+// Project data - shared between InterventionsPage and GalleryPage
+const officialProjects = [
     {
       title: 'Betonové banány - lavičky',
       subtitle: 'Mobiliář',
@@ -508,6 +494,21 @@ function InterventionsPage() {
       details: ['První intervence', 'Komunitní odezva', 'Neformální'],
     },
   ];
+
+function InterventionsPage() {
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  // ESC key handler to close modal
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape' && selectedProject) {
+        setSelectedProject(null);
+      }
+    };
+
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, [selectedProject]);
 
   return (
     <div className="space-y-8">
