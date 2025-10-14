@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 
-// Rozvrh z KOS - přesně jako v originále
+// Rozvrh z KOS - Grid: 1032px wide, 9:00-20:00 (11 hours), 93.82px per hour
 const CLASSES = [
   // Pondělí (Po) - row 0
   {
     day: 0,
-    left: 430, // 14:00 position (adjusted for 9:00 start)
-    width: 280, // duration 3h 15min
+    left: 469, // 14:00 (5 hours from 9:00)
+    width: 305, // 3h 15min duration
     top: 0,
     height: 119,
     code: '373AVTE1',
@@ -14,13 +14,13 @@ const CLASSES = [
     room: 'LAZ-423',
     time: '14:00 - 17:15',
     color: '#CCEEFF',
-    link: '/subject/av', // Link to AV subject
+    link: '/subject/av',
   },
   // Úterý (Ut) - row 1
   {
     day: 1,
-    left: 16, // 9:50 position
-    width: 274, // duration 3h 10min (9:50 - 13:00)
+    left: 78, // 9:50 (0.833 hours from 9:00)
+    width: 297, // 3h 10min duration
     top: 120,
     height: 119,
     code: 'Dílna',
@@ -32,8 +32,8 @@ const CLASSES = [
   },
   {
     day: 1,
-    left: 430,
-    width: 215,
+    left: 469, // 14:00 (5 hours from 9:00)
+    width: 227, // 2h 25min duration
     top: 120,
     height: 119,
     code: '373PAD1',
@@ -45,8 +45,8 @@ const CLASSES = [
   },
   {
     day: 1,
-    left: 726,
-    width: 141,
+    left: 782, // 17:20 (8.333 hours from 9:00)
+    width: 148, // 1h 35min duration
     top: 120,
     height: 119,
     code: '373PR',
@@ -59,8 +59,8 @@ const CLASSES = [
   // Středa (St) - row 2
   {
     day: 2,
-    left: 504,
-    width: 280,
+    left: 547, // 14:50 (5.833 hours from 9:00)
+    width: 305, // 3h 15min duration
     top: 240,
     height: 119,
     code: '303DDF1',
@@ -72,9 +72,9 @@ const CLASSES = [
   },
   {
     day: 2,
-    left: 800,
-    width: 141,
-    top: 300, // starts at 18:10
+    left: 860, // 18:10 (9.167 hours from 9:00)
+    width: 148, // 1h 35min duration
+    top: 300,
     height: 59,
     code: '373AS7',
     teacher: 'KLAJBANOVÁ N.',
@@ -87,8 +87,8 @@ const CLASSES = [
   // Čtvrtek (Ct) - row 3
   {
     day: 3,
-    left: 430,
-    width: 141,
+    left: 469, // 14:00 (5 hours from 9:00)
+    width: 148, // 1h 35min duration
     top: 360,
     height: 119,
     code: '373AVTE1',
@@ -100,8 +100,8 @@ const CLASSES = [
   },
   {
     day: 3,
-    left: 726,
-    width: 215,
+    left: 782, // 17:20 (8.333 hours from 9:00)
+    width: 227, // 2h 25min duration
     top: 360,
     height: 59,
     code: '373UI',
