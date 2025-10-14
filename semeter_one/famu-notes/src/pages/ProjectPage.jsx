@@ -375,11 +375,11 @@ const officialProjects = [
       subtitle: 'Mobiliář',
       icon: '🍌',
       color: 'yellow',
-      description: 'Série betonových laviček ve tvaru banánů. Funkční urbánní mobiliář s hravým designem.',
+      description: 'Série betonových laviček ve tvaru banánů. Funkční urbánní mobiliář s hravým designem inspirovaný "Tropical Palmbeach".',
       artist: 'Martin Tomek',
       status: 'V plánu',
-      details: ['Recyklovaný beton', 'Veřejné sedání', 'Palmovka branding'],
-      fullDescription: 'Inspirováno projektem "Banány pro Palmovku" - vytvoření série betonových laviček ve tvaru banánů jako funkčního urbánního mobiliáře. Každá lavička bude mít personalizovanou "etiketu" s názvem Palmovka.\n\nČasový harmonogram:\n• **Zima 2025** (leden-březen) - Návrh, výroba formy, postupné odlévání\n• **Jaro-Léto 2026** - Instalace a uvedení do provozu\n\nBeton lze pracovat i v zimě (vnitřní prostory), instalace ideálně v teplém počasí.',
+      details: ['Recyklovaný beton', 'Veřejné sedání', 'Tropical Palmbeach'],
+      fullDescription: '**Koncept: Tropical Palmbeach**\n\nProjekt vychází z lokální identity Palmovky. Podle antropologické zprávy místní obyvatelé říkají této čtvrti "Tropical Palmbeach" - inspirováno graffiti, které zde dříve bylo. Koncept tropického lesa: palmy, banány... tropická Palmovka.\n\nSérie betonových laviček ve tvaru banánů jako funkční urbánní mobiliář. Každá lavička bude mít personalizovanou "etiketu" s názvem Palmovka, připomínající banánové etikety z obchodu.\n\n**Časový harmonogram:**\n\n• **Zima 2025** (leden-březen) - Návrh, výroba formy, postupné odlévání\n• **Jaro-Léto 2026** - Instalace a uvedení do provozu\n\nBeton lze pracovat i v zimě (vnitřní prostory), instalace ideálně v teplém počasí.',
       materials: ['Rychletuhnoucí beton (12x 25kg)', 'Forma na odlévání', 'Pletivo pro výztuž', 'Nátěr/barva', 'Montážní materiál'],
       budget: '~3000 Kč na 1 lavičku',
       timeline: 'Zima 2025 (výroba) → Jaro-Léto 2026 (instalace)',
@@ -769,8 +769,32 @@ function InterventionsPage() {
               {/* Full Description */}
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">📝 Popis projektu</h3>
-                <div className="text-gray-700 leading-relaxed whitespace-pre-line">
-                  {selectedProject.fullDescription}
+                <div className="text-gray-700 leading-relaxed space-y-3">
+                  {selectedProject.fullDescription.split('\n\n').map((paragraph, idx) => {
+                    // Handle bullet points
+                    if (paragraph.trim().startsWith('•')) {
+                      return (
+                        <ul key={idx} className="list-disc list-inside space-y-1 ml-4">
+                          {paragraph.split('\n').filter(line => line.trim()).map((line, i) => (
+                            <li key={i} className="text-gray-700">
+                              {line.replace('•', '').trim().split('**').map((part, j) => 
+                                j % 2 === 1 ? <strong key={j}>{part}</strong> : part
+                              )}
+                            </li>
+                          ))}
+                        </ul>
+                      );
+                    }
+                    
+                    // Handle regular paragraphs with bold text
+                    return (
+                      <p key={idx} className="text-gray-700">
+                        {paragraph.split('**').map((part, i) => 
+                          i % 2 === 1 ? <strong key={i} className="font-semibold text-gray-900">{part}</strong> : part
+                        )}
+                      </p>
+                    );
+                  })}
                 </div>
               </div>
 
