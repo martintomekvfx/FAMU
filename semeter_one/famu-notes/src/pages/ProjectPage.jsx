@@ -690,6 +690,54 @@ function InterventionsPage() {
 
   return (
     <div className="space-y-8">
+      {/* Explanation Box */}
+      <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-xl border-2 border-purple-300 p-6">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">ℹ️ O typech intervencí</h2>
+        <div className="space-y-4">
+          <div className="bg-white rounded-lg p-4 border-2 border-blue-200">
+            <div className="flex items-start gap-3">
+              <div className="text-3xl">🏗️</div>
+              <div>
+                <h3 className="font-bold text-blue-900 mb-2">OFICIÁLNÍ projekty</h3>
+                <p className="text-gray-700 mb-2">
+                  Veřejně podepsané intervence pod <strong>reálným jménem Martin Tomek</strong>. Tyto projekty jsou transparentní, 
+                  zaměřené na urbánní mobiliář, komunitní aktivity a herní instalace. Cílem je pozitivní změna prostoru 
+                  s možností oficiální spolupráce s městem.
+                </p>
+                <p className="text-sm text-gray-600 italic">
+                  Příklady: Hlasovací popelníky, Betonové lavičky, Parklety, Křídový Game Jam
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-lg p-4 border-2 border-pink-200">
+            <div className="flex items-start gap-3">
+              <div className="text-3xl">🎭</div>
+              <div>
+                <h3 className="font-bold text-pink-900 mb-2">GUERILLA ART projekty</h3>
+                <p className="text-gray-700 mb-2">
+                  Neoficiální intervence pod <strong>pseudonymem "Ptáček"</strong>. Tyto akce jsou anonymní, spontánní 
+                  a často kritické vůči současnému stavu veřejného prostoru. Guerilla art umožňuje svobodnější vyjádření 
+                  bez nutnosti oficiálních povolení.
+                </p>
+                <p className="text-sm text-gray-600 italic">
+                  Příklady: Detournement reklam, Street Art, Guerillová galerie, Houpačka, Solární světla
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded">
+            <p className="text-sm text-gray-700">
+              <strong>Proč dva přístupy?</strong> Oficiální projekty umožňují legální spolupráci a trvalé změny. 
+              Guerilla art poskytuje svobodu experimentovat, kritizovat a reagovat rychle bez byrokratických překážek. 
+              Oba přístupy se vzájemně doplňují a společně tvoří komplexní pohled na možnosti intervencí ve veřejném prostoru.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Official Projects - Martin Tomek */}
       <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6">
         <div className="mb-6">
