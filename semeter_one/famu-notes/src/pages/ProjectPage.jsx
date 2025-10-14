@@ -609,11 +609,7 @@ const officialProjects = [
       budget: '~300-500 Kč (tisk, materiály)',
       timeline: 'Průběžně - spontánní instalace + Anifilm projekce',
       location: 'Palmovka a okolí - prázdné plochy, stěny, vývěsky + Anifilm Třeboň',
-      video: {
-        url: 'https://youtu.be/P-Wx6zbYfiE',
-        title: 'Stop Motion Animace - Linoritové samolepky',
-        description: 'Stop motion animace vytvořená ze skenů linoritových samolepek před jejich distribucí do veřejného prostoru',
-      },
+      videoUrl: 'https://youtu.be/P-Wx6zbYfiE',
       images: [
         {
           original: import.meta.env.BASE_URL + 'projects/streetart/IMG_4740.jpeg',
