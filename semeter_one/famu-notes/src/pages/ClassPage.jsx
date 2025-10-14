@@ -7,6 +7,7 @@ import AV1Content from '../content/av/av1';
 import AV2Content from '../content/av/av2';
 import AI1Content from '../content/ai/ai1';
 import General1Content from '../content/general/general1';
+import PR1Content from '../content/pr/pr1';
 
 // Map of content components
 const contentMap = {
@@ -16,6 +17,7 @@ const contentMap = {
   'av-2': AV2Content,
   'ai-1': AI1Content,
   'general-1': General1Content,
+  'pr-1': PR1Content,
 };
 
 const colorMap = {
