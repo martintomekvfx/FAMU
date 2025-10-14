@@ -289,12 +289,18 @@ function InterventionsPage() {
       artist: 'Martin Tomek',
       status: 'V plánu',
       details: ['Gamifikace', 'Zapojení komunity', 'Čistší prostor'],
-      fullDescription: 'Interaktivní popelníky s hlasovacím mechanismem - lidé "hlasují" nedopalky do jedné ze dvou možností. Gamifikace motivuje k čistějšímu prostoru a poskytuje data o preferencích komunity.',
+      fullDescription: 'Interaktivní popelníky s hlasovacím mechanismem - lidé "hlasují" nedopalky do jedné ze dvou možností. Gamifikace motivuje k čistějšímu prostoru a poskytuje data o preferencích komunity.\n\nMetodologie výzkumu:\n1. Najít místo hodně znečištěné od nedopalků\n2. Vyčistit místo a dokumentovat (baseline)\n3. Počkat měsíc bez intervence\n4. Znovu vyčistit a počítat nedopalky\n5. Instalovat hlasovací popelník\n6. Sledovat:\n   • Volby lidí (jaké odpovědi vyhrávají)\n   • Míru znečištění místa (počet nedopalků mimo popelník)\n   • Zda intervence měla smysl (before/after data)',
       materials: ['Dřevo/kov pro konstrukci', 'Průhledný plexisklo', 'Popisky/otázky', 'Montážní materiál'],
       budget: '~1500 Kč na 1 popelník',
-      timeline: '1 měsíc (výroba, testování, instalace)',
-      location: 'Frekventovaná místa s kuřáky',
-      images: [],
+      timeline: '2 měsíce (baseline měsíc + výroba + testování měsíc)',
+      location: 'Frekventovaná místa s kuřáky na Palmovce',
+      images: [
+        {
+          original: '/projects/hlasovaci-popelnik/design.jpeg',
+          thumbnail: '/projects/hlasovaci-popelnik/design.jpeg',
+          description: 'Design hlasovacího popelníku',
+        },
+      ],
     },
     {
       title: 'Parklety',
