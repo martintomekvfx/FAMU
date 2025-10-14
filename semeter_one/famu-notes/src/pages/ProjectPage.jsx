@@ -322,7 +322,7 @@ function OverviewPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-lg p-5 border-2 border-teal-200">
             <div className="flex items-center gap-3 mb-2">
-              <span className="text-3xl">🎬</span>
+              <Film className="w-10 h-10 text-teal-600" />
               <div>
                 <h3 className="font-bold text-gray-900">Martin Tomek</h3>
                 <p className="text-sm text-teal-700 font-medium">Režisér, autor projektu</p>
@@ -340,7 +340,7 @@ function OverviewPage() {
           </div>
           <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-lg p-5 border-2 border-yellow-200">
             <div className="flex items-center gap-3 mb-2">
-              <span className="text-3xl">🍌</span>
+              <Banana className="w-10 h-10 text-yellow-600" />
               <div>
                 <h3 className="font-bold text-gray-900">Tomáš Vrána</h3>
                 <p className="text-sm text-yellow-700 font-medium">Spolupracující umělec</p>
@@ -349,7 +349,7 @@ function OverviewPage() {
           </div>
           <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-5 border-2 border-purple-200">
             <div className="flex items-center gap-3 mb-2">
-              <span className="text-3xl">🎮</span>
+              <Gamepad2 className="w-10 h-10 text-purple-600" />
               <div>
                 <h3 className="font-bold text-gray-900">Michal Tancjura</h3>
                 <p className="text-sm text-purple-700 font-medium">Spolupracující umělec - Game Design FAMU</p>
