@@ -265,18 +265,51 @@ function OverviewPage() {
             <div className="flex items-start gap-4">
               <div className="text-4xl">📋</div>
               <div className="flex-1">
-                <h3 className="font-bold text-gray-900 mb-2">Plán mentoringu - Návrh</h3>
-                <p className="text-gray-700 mb-4">
-                  Návrh plánu mentoringu a spolupráce s umělci a komunitou během realizace projektu.
-                </p>
-                <a
-                  href={import.meta.env.BASE_URL + 'documents/plan_mentoringu_navrh.docx'}
-                  download
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg font-medium hover:bg-teal-700 transition-colors"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                  Stáhnout dokument
-                </a>
+                <h3 className="font-bold text-gray-900 mb-4">Plán mentoringu - Magisterský program</h3>
+                
+                <div className="space-y-4 text-sm">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <p className="font-semibold text-teal-900">Student:</p>
+                      <p className="text-gray-700">Martin Tomek</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-teal-900">Obor / Program:</p>
+                      <p className="text-gray-700">CAS FAMU - Magisterský program</p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <p className="font-semibold text-teal-900 mb-2">Anotace praktického projektu:</p>
+                    <p className="text-gray-700">
+                      Experimentální dokumentární film o guerillových intervencích ve veřejném prostoru Palmovky. 
+                      Projekt zahrnuje participativní umění, tactical urbanism a komunitní aktivaci prostoru.
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="font-semibold text-teal-900 mb-2">Mentor/ka pro praktický projekt:</p>
+                    <p className="text-gray-700">TBD</p>
+                  </div>
+
+                  <div>
+                    <p className="font-semibold text-teal-900 mb-2">Anotace teoretického projektu:</p>
+                    <p className="text-gray-700">
+                      Výzkum vlivu participativního umění na aktivaci zanedbaných veřejných prostorů. 
+                      Analýza metodologie tactical urbanism a komunitního zapojení.
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="font-semibold text-teal-900 mb-2">Mentor/ka pro teoretickou práci:</p>
+                    <p className="text-gray-700">TBD</p>
+                  </div>
+
+                  <div>
+                    <p className="font-semibold text-teal-900 mb-2">Harmonogram:</p>
+                    <p className="text-gray-700">2 roky (2025-2027) - Viz časový plán projektu</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
