@@ -110,7 +110,7 @@ function NotesPage() {
             <div className="flex items-center gap-4">
               <FileText className="w-10 h-10" />
               <div>
-                <h1 className="text-3xl font-bold">📝 Poznámky</h1>
+                <h1 className="text-3xl font-bold">Poznámky</h1>
                 <p className="text-gray-100 text-sm">Vytvářej, edituj a organizuj své poznámky</p>
               </div>
             </div>

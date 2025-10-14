@@ -171,7 +171,7 @@ export const generalNotes = {
   name: 'Obecné poznámky',
   shortName: 'Poznámky',
   description: 'Různé důležité informace',
-  icon: '📝',
+  icon: '',
   classes: [
     {
       id: 1,
