@@ -262,8 +262,8 @@ Please change the parent <Route path="${R}"> to <Route path="${R==="/"?"*":`${R}
                 flex items-center gap-3 px-3 py-2 rounded-lg transition-colors
                 ${d("/")?"bg-gray-900 text-white border border-gray-900":"text-gray-700 hover:bg-gray-100"}
               `,children:[u.jsx($4,{className:"w-5 h-5"}),u.jsx("span",{className:"font-medium",children:"Přehled předmětů"})]}),u.jsxs(st,{to:"/timetable",onClick:()=>e(!1),className:`
-                flex items-center gap-3 px-4 py-3 rounded-lg transition-all
-                ${a.pathname==="/timetable"?"bg-gray-900 text-white shadow-lg":"text-gray-700 hover:bg-gray-100"}
+                flex items-center gap-3 px-3 py-2 rounded-lg transition-colors mt-2
+                ${a.pathname==="/timetable"?"bg-gray-900 text-white border border-gray-900":"text-gray-700 hover:bg-gray-100 border border-gray-300"}
               `,children:[u.jsx(WS,{className:"w-5 h-5"}),u.jsx("span",{className:"font-medium",children:"📅 Rozvrh"})]}),u.jsxs(st,{to:"/chat",onClick:()=>e(!1),className:`
                 flex items-center gap-3 px-3 py-2 rounded-lg transition-colors mt-2
                 ${d("/chat")?"bg-gray-900 text-white border border-gray-900":"text-gray-700 hover:bg-gray-100 border border-gray-300"}
