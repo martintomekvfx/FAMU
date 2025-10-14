@@ -66,7 +66,7 @@ function ProjectPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 text-white shadow-lg sticky top-0 z-10">
+      <header className="bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 text-white shadow-lg sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <Link
             to="/"
@@ -410,36 +410,231 @@ function InterventionsPage() {
 function MethodologyPage() {
   return (
     <div className="space-y-6">
-      <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">🔬 Metodologie</h2>
-        
-        <div className="space-y-6">
-          <div className="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-600">
-            <h3 className="text-xl font-bold text-blue-900 mb-3">Akční participativní výzkum</h3>
+      {/* Main Overview */}
+      <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-8">
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">🔬 Metodologie výzkumu</h2>
+        <p className="text-lg text-gray-600 mb-8">
+          Smíšený výzkumný design kombinující kvalitativní a kvantitativní přístupy pro ověření dopadu guerillových intervencí.
+        </p>
+
+        {/* Research Objectives */}
+        <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border-2 border-blue-300 mb-6">
+          <h3 className="text-2xl font-bold text-blue-900 mb-4">🎯 Cíl a výzkumné otázky</h3>
+          <div className="bg-white rounded-lg p-5 mb-4">
+            <p className="font-bold text-gray-900 mb-2">Hlavní cíl:</p>
             <p className="text-gray-700">
-              Založeno na antropologické zprávě lokality. Aktivní zapojení komunity do procesu plánování a realizace.
+              Ověřit, jak drobné nekomerční zásahy mění užívání, vnímání a kvalitu pobytu ve „neviditelných" místech Palmovky a Kolbenky.
             </p>
           </div>
-
-          <div className="bg-green-50 rounded-lg p-6 border-l-4 border-green-600">
-            <h3 className="text-xl font-bold text-green-900 mb-3">Experimentální dokumentace</h3>
-            <p className="text-gray-700">
-              Kombinace 8mm, VHS estetiky, digitálu a animace pro vytvoření unikátního vizuálního jazyka.
-            </p>
+          <div className="space-y-3">
+            <p className="font-bold text-blue-900">Klíčové výzkumné otázky:</p>
+            <div className="space-y-2">
+              <div className="flex gap-3 items-start">
+                <span className="text-blue-600 font-bold">1.</span>
+                <p className="text-gray-700">Jak se po intervenci mění chování a setrvání lidí v místě (dwell time, typ aktivit)?</p>
+              </div>
+              <div className="flex gap-3 items-start">
+                <span className="text-blue-600 font-bold">2.</span>
+                <p className="text-gray-700">Jak se promění vnímaná „čitelnost" a hodnota místa (sentiment, témata v komentářích)?</p>
+              </div>
+              <div className="flex gap-3 items-start">
+                <span className="text-blue-600 font-bold">3.</span>
+                <p className="text-gray-700">Jak dlouho zásah přežije a jaké zásahy vyvolá (údržba, adaptace, odpor)?</p>
+              </div>
+              <div className="flex gap-3 items-start">
+                <span className="text-blue-600 font-bold">4.</span>
+                <p className="text-gray-700">Jaké jsou limity/vedlejší efekty (vandalismus, komercionalizace, konflikty)?</p>
+              </div>
+            </div>
           </div>
+        </div>
 
-          <div className="bg-purple-50 rounded-lg p-6 border-l-4 border-purple-600">
-            <h3 className="text-xl font-bold text-purple-900 mb-3">Pozorování reakcí komunity</h3>
-            <p className="text-gray-700">
-              Systematické sledování a zaznamenávání reakcí obyvatel na jednotlivé intervence.
-            </p>
+        {/* Research Design */}
+        <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6 border-2 border-green-300 mb-6">
+          <h3 className="text-2xl font-bold text-green-900 mb-4">📊 Výzkumný design (Mixed-Methods)</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div className="bg-white rounded-lg p-4">
+              <p className="font-bold text-green-900 mb-2">Kvalitativně:</p>
+              <ul className="text-sm text-gray-700 space-y-1">
+                <li>• Účastnické pozorování</li>
+                <li>• Autoetnografie</li>
+                <li>• Neformální rozhovory</li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-lg p-4">
+              <p className="font-bold text-green-900 mb-2">Kvantitativně:</p>
+              <ul className="text-sm text-gray-700 space-y-1">
+                <li>• Sčítání průchodů/užití</li>
+                <li>• Měření doby setrvání</li>
+                <li>• "Survival time" intervence</li>
+                <li>• A/B porovnání míst</li>
+              </ul>
+            </div>
           </div>
+          <div className="bg-white rounded-lg p-4">
+            <p className="font-bold text-green-900 mb-2">Typ srovnání:</p>
+            <ul className="text-gray-700 space-y-1">
+              <li><span className="font-semibold">Before–After:</span> před vs. po zásahu</li>
+              <li><span className="font-semibold">A/B lokality:</span> 1) místo s intervencí, 2) podobné kontrolní místo bez zásahu</li>
+            </ul>
+          </div>
+        </div>
 
-          <div className="bg-orange-50 rounded-lg p-6 border-l-4 border-orange-600">
-            <h3 className="text-xl font-bold text-orange-900 mb-3">Etika a inkluze</h3>
-            <p className="text-gray-700">
-              Všechny intervence jsou nekomerční, reversibilní a respektující místní komunitu.
-            </p>
+        {/* Intervention Types */}
+        <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-300 mb-6">
+          <h3 className="text-2xl font-bold text-purple-900 mb-4">🎨 Typologie intervencí</h3>
+          <p className="text-gray-600 mb-4 text-sm">Pro srovnatelnost – každý typ testován min. na 2 místech (replikace)</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div className="bg-white rounded-lg p-4 border-l-4 border-purple-500">
+              <p className="font-bold text-purple-900">🎮 Hra / aktivizace</p>
+              <p className="text-sm text-gray-600">Křídové hry, panák, herní prvky</p>
+            </div>
+            <div className="bg-white rounded-lg p-4 border-l-4 border-blue-500">
+              <p className="font-bold text-blue-900">🪑 Komfort / pobyt</p>
+              <p className="text-sm text-gray-600">Lavička z palet, parklet</p>
+            </div>
+            <div className="bg-white rounded-lg p-4 border-l-4 border-green-500">
+              <p className="font-bold text-green-900">🌸 Estetika / pozornost</p>
+              <p className="text-sm text-gray-600">Guerillová galerie, slunečnice</p>
+            </div>
+            <div className="bg-white rounded-lg p-4 border-l-4 border-red-500">
+              <p className="font-bold text-red-900">🗳️ Čistota / etika</p>
+              <p className="text-sm text-gray-600">Hlasovací popelník na špačky</p>
+            </div>
+            <div className="bg-white rounded-lg p-4 border-l-4 border-yellow-500">
+              <p className="font-bold text-yellow-900">💡 Bezpečí / orientace</p>
+              <p className="text-sm text-gray-600">Dočasná solární světla</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Protocol */}
+        <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 border-2 border-orange-300 mb-6">
+          <h3 className="text-2xl font-bold text-orange-900 mb-4">📋 Protokol „před–během–po"</h3>
+          
+          <div className="space-y-4">
+            {/* Before */}
+            <div className="bg-white rounded-lg p-5">
+              <h4 className="font-bold text-orange-900 mb-3 text-lg">📍 PŘED (T-7 až T-1 dní)</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-500">•</span>
+                  <span>Mapování místa (fotomapa 360°, náčrt proudů pohybu)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-500">•</span>
+                  <span>Baseline měření (2× 60 min v různých časech): počty průchodů, zastavení, aktivity</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-500">•</span>
+                  <span>Mikro-rozhovory s 5–8 kolemjdoucími („Co tady děláte? Co vám tu chybí?")</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-500">•</span>
+                  <span className="text-sm italic">Etika: vyhnout se škodám, nezakrývat oficiální info, bez identifikace osob</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* During */}
+            <div className="bg-white rounded-lg p-5">
+              <h4 className="font-bold text-orange-900 mb-3 text-lg">🔧 BĚHEM (den instalace)</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-500">•</span>
+                  <span>Vedení Intervenční karty: datum, čas, materiály, náklady, kdo pomáhal</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-500">•</span>
+                  <span>Foto/video záznam (detail + celek, den/noc)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-500">•</span>
+                  <span>30–60 min observační okno hned po instalaci</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* After */}
+            <div className="bg-white rounded-lg p-5">
+              <h4 className="font-bold text-orange-900 mb-3 text-lg">📈 PO (T+1 až T+21 dní)</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-500">•</span>
+                  <span>Opakovaná měření v 5 fixních slotech (různé dny/časy, 30–60 min)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-500">•</span>
+                  <span>Evidence "survival time": vandalismus, opravy, adopce komunitou</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-500">•</span>
+                  <span>5–8 neformálních rozhovorů o změně vnímání místa</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-500">•</span>
+                  <span>A/B srovnání s kontrolní lokalitou</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* KPIs */}
+        <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl p-6 border-2 border-cyan-300">
+          <h3 className="text-2xl font-bold text-cyan-900 mb-4">📊 Hodnoticí ukazatele (KPI)</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="bg-white rounded-lg p-4">
+              <p className="font-bold text-cyan-900 mb-1">K1 – Aktivace</p>
+              <p className="text-sm text-gray-700">+X % zastavení / +X % sezení/hry vs. baseline</p>
+            </div>
+            <div className="bg-white rounded-lg p-4">
+              <p className="font-bold text-cyan-900 mb-1">K2 – Vydrž</p>
+              <p className="text-sm text-gray-700">Dny do zásahu/poškození; komunitní adopce</p>
+            </div>
+            <div className="bg-white rounded-lg p-4">
+              <p className="font-bold text-cyan-900 mb-1">K3 – Čistota</p>
+              <p className="text-sm text-gray-700">Pokles nedopalků; subjektivní bezpečí</p>
+            </div>
+            <div className="bg-white rounded-lg p-4">
+              <p className="font-bold text-cyan-900 mb-1">K4 – Viditelnost</p>
+              <p className="text-sm text-gray-700">Počet interakcí; spontánní vylepšení</p>
+            </div>
+            <div className="bg-white rounded-lg p-4">
+              <p className="font-bold text-cyan-900 mb-1">K5 – Přenositelnost</p>
+              <p className="text-sm text-gray-700">Replikovatelnost na jiné lokaci</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Timeline */}
+      <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-8">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">📅 Harmonogram (12 týdnů)</h3>
+        <div className="space-y-3">
+          <div className="flex gap-4 items-start">
+            <div className="px-3 py-1 bg-teal-600 text-white rounded-lg font-bold text-sm min-w-[80px] text-center">
+              T1–2
+            </div>
+            <p className="text-gray-700 flex-1">Výběr míst, baseline měření, příprava materiálů</p>
+          </div>
+          <div className="flex gap-4 items-start">
+            <div className="px-3 py-1 bg-blue-600 text-white rounded-lg font-bold text-sm min-w-[80px] text-center">
+              T3–8
+            </div>
+            <p className="text-gray-700 flex-1">Instalace 5–7 intervencí (po 1 týdnu), průběžná měření</p>
+          </div>
+          <div className="flex gap-4 items-start">
+            <div className="px-3 py-1 bg-purple-600 text-white rounded-lg font-bold text-sm min-w-[80px] text-center">
+              T9–10
+            </div>
+            <p className="text-gray-700 flex-1">Doplňkové rozhovory, A/B validace</p>
+          </div>
+          <div className="flex gap-4 items-start">
+            <div className="px-3 py-1 bg-green-600 text-white rounded-lg font-bold text-sm min-w-[80px] text-center">
+              T11–12
+            </div>
+            <p className="text-gray-700 flex-1">Analýza, syntéza, komunitní prezentace, metodická zpráva</p>
           </div>
         </div>
       </div>
