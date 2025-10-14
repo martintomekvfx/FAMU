@@ -21,7 +21,7 @@ const menuItems = [
   { path: '/bulletin-board', icon: StickyNote, label: 'Nástěnka' },
   { path: '/chat', icon: MessageCircle, label: 'Chat' },
   { path: '/timetable', icon: CalendarDays, label: 'Rozvrh' },
-  { path: '/calendar', icon: Calendar, label: '📅 Kalendář (Notion)' },
+  { path: '/calendar', icon: Calendar, label: 'Kalendář' },
   { path: '/deadlines', icon: Clock, label: 'Deadlines' },
 ];
 

@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react';
 import { Calendar as CalendarIcon, Plus, X, Edit2, Trash2 } from 'lucide-react';
 import { db } from '../firebase';
 import { collection, addDoc, query, orderBy, onSnapshot, deleteDoc, doc, updateDoc, serverTimestamp } from 'firebase/firestore';
-import SyncedCalendar from '../components/SyncedCalendar';
-import { calendarSyncService } from '../services/calendarSyncService';
 
 function CalendarPage() {
   const [events, setEvents] = useState([]);
@@ -44,40 +42,16 @@ function CalendarPage() {
     e.preventDefault();
     
     try {
-      const eventData = {
-        ...formData,
-        start: `${formData.date}T${formData.time || '00:00'}:00`,
-        end: `${formData.date}T${formData.time ? `${parseInt(formData.time.split(':')[0]) + 1}:${formData.time.split(':')[1]}` : '01:00'}:00`,
-      };
-
       if (editingEvent) {
         await updateDoc(doc(db, 'calendarEvents', editingEvent.id), {
           ...formData,
           updatedAt: serverTimestamp(),
         });
-        
-        // Update in Notion + Google
-        try {
-          await calendarSyncService.updateEvent(editingEvent.id, formData);
-        } catch (syncError) {
-          console.log('Sync update failed (will sync later):', syncError);
-        }
       } else {
-        const docRef = await addDoc(collection(db, 'calendarEvents'), {
+        await addDoc(collection(db, 'calendarEvents'), {
           ...formData,
           createdAt: serverTimestamp(),
         });
-        
-        // Sync to Notion + Google
-        try {
-          await calendarSyncService.createEvent({
-            id: docRef.id,
-            ...eventData,
-          });
-          console.log('✅ Event synced to Notion + Google');
-        } catch (syncError) {
-          console.log('Sync failed (will retry on next auto-sync):', syncError);
-        }
       }
       
       setFormData({
@@ -99,14 +73,6 @@ function CalendarPage() {
     if (window.confirm('Opravdu chceš smazat tuto událost?')) {
       try {
         await deleteDoc(doc(db, 'calendarEvents', eventId));
-        
-        // Delete from Notion + Google
-        try {
-          await calendarSyncService.deleteEvent(eventId);
-          console.log('✅ Event deleted from Notion + Google');
-        } catch (syncError) {
-          console.log('Sync delete failed (will clean up on next auto-sync):', syncError);
-        }
       } catch (error) {
         console.error('Chyba při mazání události:', error);
       }
@@ -174,40 +140,19 @@ function CalendarPage() {
                 <p className="text-gray-200 text-sm">Deadlines, zkoušky a další události</p>
               </div>
             </div>
-            <div className="flex gap-3">
-              <a
-                href="https://axiomatic-range-b04.notion.site/ebd/2892f121ab5f80c486c4f603df4dcc24"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-white text-gray-900 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-              >
-                <Plus className="w-5 h-5" />
-                Přidat v Notion
-              </a>
-              <button
-                onClick={() => setIsModalOpen(true)}
-                className="flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-lg font-medium hover:bg-gray-800 transition-colors"
-              >
-                <Plus className="w-5 h-5" />
-                Přidat lokálně
-              </button>
-            </div>
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="flex items-center gap-2 bg-white text-gray-900 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+            >
+              <Plus className="w-5 h-5" />
+              Přidat událost
+            </button>
           </div>
         </div>
       </header>
 
-      {/* Notion Calendar Embed */}
-      <div className="w-full h-[calc(100vh-200px)] bg-white">
-        <iframe
-          src="https://axiomatic-range-b04.notion.site/ebd/2892f121ab5f80c486c4f603df4dcc24"
-          className="w-full h-full border-0"
-          allowFullScreen
-          title="Notion Calendar"
-        />
-      </div>
-
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 hidden">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {events.length === 0 ? (
           <div className="text-center py-12 bg-white rounded-lg shadow-lg border-2 border-gray-900">
             <CalendarIcon className="w-16 h-16 mx-auto mb-4 text-gray-400" />
