@@ -264,18 +264,18 @@ function InterventionsPage() {
       location: 'Betonové plochy kolem Palmovky',
       images: [
         {
-          original: '/projects/slunecnice/IMG_4417.jpeg',
-          thumbnail: '/projects/slunecnice/IMG_4417.jpeg',
+          original: '/FAMU/projects/slunecnice/IMG_4417.jpeg',
+          thumbnail: '/FAMU/projects/slunecnice/IMG_4417.jpeg',
           description: 'Slunečnice na Palmovce - výsadba',
         },
         {
-          original: '/projects/slunecnice/IMG_4421.jpeg',
-          thumbnail: '/projects/slunecnice/IMG_4421.jpeg',
+          original: '/FAMU/projects/slunecnice/IMG_4421.jpeg',
+          thumbnail: '/FAMU/projects/slunecnice/IMG_4421.jpeg',
           description: 'Slunečnice rostou v betonovém prostoru',
         },
         {
-          original: '/projects/slunecnice/IMG_4702.jpeg',
-          thumbnail: '/projects/slunecnice/IMG_4702.jpeg',
+          original: '/FAMU/projects/slunecnice/IMG_4702.jpeg',
+          thumbnail: '/FAMU/projects/slunecnice/IMG_4702.jpeg',
           description: 'Rozkvetlé slunečnice na Palmovce',
         },
       ],
@@ -296,8 +296,8 @@ function InterventionsPage() {
       location: 'Frekventovaná místa s kuřáky na Palmovce',
       images: [
         {
-          original: '/projects/hlasovaci-popelnik/design.jpeg',
-          thumbnail: '/projects/hlasovaci-popelnik/design.jpeg',
+          original: '/FAMU/projects/hlasovaci-popelnik/design.jpeg',
+          thumbnail: '/FAMU/projects/hlasovaci-popelnik/design.jpeg',
           description: 'Design hlasovacího popelníku',
         },
       ],
