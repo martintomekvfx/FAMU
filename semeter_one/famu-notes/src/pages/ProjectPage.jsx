@@ -258,6 +258,34 @@ function OverviewPage() {
         </div>
       </div>
 
+      {/* Grants & Funding */}
+      <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">💰 Financování projektu</h2>
+        <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-6 border-2 border-green-200">
+          <div className="flex items-start gap-4">
+            <div className="text-4xl">📋</div>
+            <div className="flex-1">
+              <h3 className="font-bold text-gray-900 mb-2">Granty Praha 8 - Kultura 2025</h3>
+              <p className="text-gray-700 mb-3">
+                Grantový program pro kulturní a komunitní projekty na území Prahy 8.
+              </p>
+              <div className="mb-4 p-3 bg-yellow-50 border-l-4 border-yellow-500 rounded">
+                <p className="text-sm font-bold text-yellow-900">⚠️ Deadline: Do konce roku 2025</p>
+              </div>
+              <a
+                href="https://www.praha8.cz/Granty-Kultura-2025"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-colors"
+              >
+                <ExternalLink className="w-4 h-4" />
+                Více informací o grantech
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Quick Info Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border-2 border-blue-200">
@@ -1330,6 +1358,7 @@ function TimelinePage() {
       title: 'Příprava a výroba', 
       color: 'from-blue-500 to-cyan-500',
       tasks: [
+        '💰 Žádost o grant Praha 8 - Kultura 2025 (deadline do konce roku)',
         '🗳️ Hlasovací popelníky - design, výroba, jarní klauzurní práce',
         '🍌 Betonové banány - návrh, výroba formy, odlévání',
         '📋 Mapping lokality a výběr míst',
