@@ -608,7 +608,10 @@ function OverviewPage() {
       {/* Quick Info Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border-2 border-blue-200">
-          <h3 className="font-bold text-lg text-blue-900 mb-2">🎯 Cíl</h3>
+          <div className="flex items-center gap-2 mb-2">
+            <Target className="w-6 h-6 text-blue-900" />
+            <h3 className="font-bold text-lg text-blue-900">Cíl</h3>
+          </div>
           <p className="text-gray-700">Oživit zanedbaná místa Palmovky pomocí participativního umění a mikro-intervencí</p>
         </div>
         <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6 border-2 border-green-200">
@@ -873,11 +876,14 @@ function InterventionsPage() {
     <div className="space-y-8">
       {/* Explanation Box */}
       <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-xl border-2 border-purple-300 p-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">ℹ️ O typech intervencí</h2>
+        <div className="flex items-center gap-2 mb-4">
+          <Info className="w-7 h-7 text-purple-600" />
+          <h2 className="text-2xl font-bold text-gray-900">O typech intervencí</h2>
+        </div>
         <div className="space-y-4">
           <div className="bg-white rounded-lg p-4 border-2 border-blue-200">
             <div className="flex items-start gap-3">
-              <div className="text-3xl">🏗️</div>
+              <Hammer className="w-10 h-10 text-blue-600" />
               <div>
                 <h3 className="font-bold text-blue-900 mb-2">OFICIÁLNÍ projekty</h3>
                 <p className="text-gray-700 mb-2">
@@ -894,7 +900,7 @@ function InterventionsPage() {
 
           <div className="bg-white rounded-lg p-4 border-2 border-pink-200">
             <div className="flex items-start gap-3">
-              <div className="text-3xl">🎭</div>
+              <Palette className="w-10 h-10 text-pink-600" />
               <div>
                 <h3 className="font-bold text-pink-900 mb-2">GUERILLA ART projekty</h3>
                 <p className="text-gray-700 mb-2">
@@ -1158,7 +1164,10 @@ function InterventionsPage() {
               {/* Video if exists */}
               {selectedProject.videoUrl && (
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">🎬 Video dokumentace</h3>
+                  <div className="flex items-center gap-2 mb-3">
+            <Video className="w-6 h-6 text-gray-900" />
+            <h3 className="text-xl font-bold text-gray-900">Video dokumentace</h3>
+          </div>
                   <div className="aspect-video rounded-xl overflow-hidden bg-black">
                     <iframe
                       width="100%"
