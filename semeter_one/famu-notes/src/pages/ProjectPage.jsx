@@ -615,11 +615,17 @@ function OverviewPage() {
           <p className="text-gray-700">Oživit zanedbaná místa Palmovky pomocí participativního umění a mikro-intervencí</p>
         </div>
         <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6 border-2 border-green-200">
-          <h3 className="font-bold text-lg text-green-900 mb-2">⏱️ Délka</h3>
+          <div className="flex items-center gap-2 mb-2">
+            <Clock className="w-6 h-6 text-green-900" />
+            <h3 className="font-bold text-lg text-green-900">Délka</h3>
+          </div>
           <p className="text-gray-700">2 roky průběžných intervencí s dokumentací celého procesu</p>
         </div>
         <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-200">
-          <h3 className="font-bold text-lg text-purple-900 mb-2">💰 Rozpočet</h3>
+          <div className="flex items-center gap-2 mb-2">
+            <DollarSign className="w-6 h-6 text-purple-900" />
+            <h3 className="font-bold text-lg text-purple-900">Rozpočet</h3>
+          </div>
           <p className="text-gray-700">~20 000 Kč (materiál, film, technika)</p>
         </div>
       </div>
@@ -1316,7 +1322,10 @@ function MethodologyPage() {
 
         {/* Research Objectives */}
         <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border-2 border-blue-300 mb-6">
-          <h3 className="text-2xl font-bold text-blue-900 mb-4">🎯 Cíl a výzkumné otázky</h3>
+          <div className="flex items-center gap-2 mb-4">
+            <Target className="w-7 h-7 text-blue-900" />
+            <h3 className="text-2xl font-bold text-blue-900">Cíl a výzkumné otázky</h3>
+          </div>
           <div className="bg-white rounded-lg p-5 mb-4">
             <p className="font-bold text-gray-900 mb-2">Hlavní cíl:</p>
             <p className="text-gray-700">
@@ -1348,7 +1357,10 @@ function MethodologyPage() {
 
         {/* Research Design */}
         <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6 border-2 border-green-300 mb-6">
-          <h3 className="text-2xl font-bold text-green-900 mb-4">📊 Výzkumný design (Mixed-Methods)</h3>
+          <div className="flex items-center gap-2 mb-4">
+            <TrendingUp className="w-7 h-7 text-green-900" />
+            <h3 className="text-2xl font-bold text-green-900">Výzkumný design (Mixed-Methods)</h3>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <div className="bg-white rounded-lg p-4">
               <p className="font-bold text-green-900 mb-2">Kvalitativně:</p>
@@ -1528,7 +1540,10 @@ function MethodologyPage() {
 
         {/* KPIs */}
         <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl p-6 border-2 border-cyan-300">
-          <h3 className="text-2xl font-bold text-cyan-900 mb-4">📊 Hodnoticí ukazatele (KPI)</h3>
+          <div className="flex items-center gap-2 mb-4">
+            <TrendingUp className="w-7 h-7 text-cyan-900" />
+            <h3 className="text-2xl font-bold text-cyan-900">Hodnotcí ukazatele (KPI)</h3>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-white rounded-lg p-4">
               <p className="font-bold text-cyan-900 mb-1">K1 – Aktivace</p>
@@ -1556,7 +1571,10 @@ function MethodologyPage() {
 
       {/* Timeline */}
       <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-8">
-        <h3 className="text-2xl font-bold text-gray-900 mb-6">📅 Harmonogram (12 týdnů)</h3>
+        <div className="flex items-center gap-2 mb-6">
+          <Calendar className="w-7 h-7 text-gray-900" />
+          <h3 className="text-2xl font-bold text-gray-900">Harmonogram (12 týdnů)</h3>
+        </div>
         <div className="space-y-3">
           <div className="flex gap-4 items-start">
             <div className="px-3 py-1 bg-teal-600 text-white rounded-lg font-bold text-sm min-w-[80px] text-center">
@@ -1592,7 +1610,10 @@ function OutputsPage() {
   return (
     <div className="space-y-6">
       <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">🎬 Hlavní výstupy projektu</h2>
+        <div className="flex items-center gap-2 mb-2">
+          <Film className="w-7 h-7 text-gray-900" />
+          <h2 className="text-2xl font-bold text-gray-900">Hlavní výstupy projektu</h2>
+        </div>
         <p className="text-gray-600 mb-8">Tři hlavní pilíře výzkumu a umělecké tvorby</p>
         
         {/* Output 1 - Interventions Documentation */}
@@ -1783,7 +1804,10 @@ function OutputsPage() {
 
         {/* Additional Outputs */}
         <div className="bg-gray-50 rounded-xl p-6 border-2 border-gray-300">
-          <h3 className="text-xl font-bold text-gray-900 mb-4">📦 Doplňkové výstupy</h3>
+          <div className="flex items-center gap-2 mb-4">
+            <Package className="w-6 h-6 text-gray-900" />
+            <h3 className="text-xl font-bold text-gray-900">Doplněkové výstupy</h3>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="bg-white rounded-lg p-4">
               <h4 className="font-bold text-gray-900 mb-2">Otevřené manuály</h4>
@@ -1888,7 +1912,10 @@ function TimelinePage() {
   return (
     <div className="space-y-6">
       <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">📅 Časový plán projektu</h2>
+        <div className="flex items-center gap-2 mb-4">
+          <Calendar className="w-7 h-7 text-gray-900" />
+          <h2 className="text-2xl font-bold text-gray-900">Časový plán projektu</h2>
+        </div>
         <p className="text-gray-600 mb-6">Kompletní timeline od přípravy po finální prezentaci (2 roky)</p>
         
         {/* Visual Timeline */}
