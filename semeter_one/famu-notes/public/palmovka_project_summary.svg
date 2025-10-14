@@ -1,0 +1,182 @@
+<svg viewBox="0 0 800 1100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="1100" fill="#f8f9fa"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="120" fill="#2c5f7c"/>
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">
+    GUERILLOVÉ INTERVENCE
+  </text>
+  <text x="400" y="80" font-family="Arial, sans-serif" font-size="20" fill="#e8f4f8" text-anchor="middle">
+    ve veřejném prostoru
+  </text>
+  <text x="400" y="105" font-family="Arial, sans-serif" font-size="14" fill="#b8d4e0" text-anchor="middle">
+    Autorský projekt | Martin Tomek | CAS FAMU
+  </text>
+  
+  <!-- Main Info Box -->
+  <rect x="40" y="150" width="720" height="140" fill="white" stroke="#2c5f7c" stroke-width="2" rx="8"/>
+  <text x="400" y="180" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c5f7c" text-anchor="middle">
+    LOKALITA: PALMOVKA, PRAHA
+  </text>
+  <text x="60" y="210" font-family="Arial, sans-serif" font-size="13" fill="#333">
+    <tspan x="60" dy="0">Participativní umění + urbanismus + dokumentární film</tspan>
+    <tspan x="60" dy="22">Mikro-intervence v zanedbaných prostorech (2 roky)</tspan>
+    <tspan x="60" dy="22">Založeno na antropologické zprávě lokality</tspan>
+    <tspan x="60" dy="22">Cíl: Oživit místa, zapojit obyvatele, právo na město</tspan>
+  </text>
+  
+  <!-- Interventions Icons -->
+  <text x="400" y="330" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c5f7c" text-anchor="middle">
+    TYPY INTERVENCÍ
+  </text>
+  
+  <!-- Icon 1: Swing -->
+  <circle cx="120" cy="390" r="35" fill="#4a90a4" opacity="0.2"/>
+  <path d="M 105 385 Q 120 375 135 385 L 135 400 L 105 400 Z" fill="#4a90a4"/>
+  <line x1="110" y1="375" x2="110" y2="365" stroke="#4a90a4" stroke-width="2"/>
+  <line x1="130" y1="375" x2="130" y2="365" stroke="#4a90a4" stroke-width="2"/>
+  <text x="120" y="440" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">Houpačky</text>
+  
+  <!-- Icon 2: Flowers -->
+  <circle cx="280" cy="390" r="35" fill="#6ba368" opacity="0.2"/>
+  <circle cx="275" cy="385" r="5" fill="#e85d75"/>
+  <circle cx="285" cy="385" r="5" fill="#ffd166"/>
+  <circle cx="280" cy="395" r="5" fill="#8b5cf6"/>
+  <line x1="280" y1="395" x2="280" y2="405" stroke="#6ba368" stroke-width="2"/>
+  <text x="280" y="440" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">Guerillová výsadba</text>
+  
+  <!-- Icon 3: Parklet -->
+  <circle cx="440" cy="390" r="35" fill="#f4a261" opacity="0.2"/>
+  <rect x="420" y="385" width="40" height="15" fill="#f4a261" rx="2"/>
+  <line x1="425" y1="400" x2="425" y2="405" stroke="#f4a261" stroke-width="2"/>
+  <line x1="435" y1="400" x2="435" y2="405" stroke="#f4a261" stroke-width="2"/>
+  <line x1="445" y1="400" x2="445" y2="405" stroke="#f4a261" stroke-width="2"/>
+  <line x1="455" y1="400" x2="455" y2="405" stroke="#f4a261" stroke-width="2"/>
+  <text x="440" y="440" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">Parklety</text>
+  
+  <!-- Icon 4: Voting bin -->
+  <circle cx="600" cy="390" r="35" fill="#e76f51" opacity="0.2"/>
+  <rect x="585" y="380" width="30" height="25" fill="#e76f51" rx="2"/>
+  <circle cx="590" cy="390" r="3" fill="white"/>
+  <circle cx="610" cy="390" r="3" fill="white"/>
+  <text x="600" y="440" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">Hlasovací popelníky</text>
+  
+  <!-- Methodology Box -->
+  <rect x="40" y="470" width="340" height="140" fill="#e8f4f8" stroke="#2c5f7c" stroke-width="1" rx="6"/>
+  <text x="210" y="495" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c5f7c" text-anchor="middle">
+    METODOLOGIE
+  </text>
+  <text x="60" y="520" font-family="Arial, sans-serif" font-size="11" fill="#333">
+    <tspan x="60" dy="0">• Akční participativní výzkum</tspan>
+    <tspan x="60" dy="18">• Experimentální dokumentace</tspan>
+    <tspan x="60" dy="18">• Pozorování reakcí komunity</tspan>
+    <tspan x="60" dy="18">• Etika a inkluze</tspan>
+    <tspan x="60" dy="18">• Nekomerční, reversibilní zásahy</tspan>
+  </text>
+  
+  <!-- Game Jam Box -->
+  <rect x="420" y="470" width="340" height="140" fill="#fff4e6" stroke="#f4a261" stroke-width="1" rx="6"/>
+  <text x="590" y="495" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#f4a261" text-anchor="middle">
+    KŘÍDOVÝ GAME JAM
+  </text>
+  <text x="440" y="520" font-family="Arial, sans-serif" font-size="11" fill="#333">
+    <tspan x="440" dy="0">Spolupráce: Katedra herního</tspan>
+    <tspan x="440" dy="18">designu FAMU</tspan>
+    <tspan x="440" dy="18">• Pouliční hry</tspan>
+    <tspan x="440" dy="18">• Interaktivní instalace</tspan>
+    <tspan x="440" dy="18">• Zapojení studentů</tspan>
+  </text>
+  
+  <!-- Outputs Section -->
+  <text x="400" y="650" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c5f7c" text-anchor="middle">
+    HLAVNÍ VÝSTUPY
+  </text>
+  
+  <!-- Film Output -->
+  <rect x="60" y="670" width="680" height="70" fill="white" stroke="#e85d75" stroke-width="2" rx="6"/>
+  <rect x="70" y="680" width="50" height="50" fill="#e85d75" opacity="0.2" rx="4"/>
+  <path d="M 85 695 L 105 705 L 85 715 Z" fill="#e85d75"/>
+  <text x="140" y="695" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">
+    Experimentální dokumentární film (20–30 min)
+  </text>
+  <text x="140" y="715" font-family="Arial, sans-serif" font-size="11" fill="#666">
+    8mm + VHS estetika + digitál + animace | Festivaly: Anifilm, Ji.hlava | Projekce na Palmovce
+  </text>
+  <text x="140" y="730" font-family="Arial, sans-serif" font-size="11" fill="#666">
+    Zachycení atmosféry, proměn a komunitních reakcí
+  </text>
+  
+  <!-- Other Outputs -->
+  <rect x="60" y="760" width="210" height="90" fill="#f0f9ff" stroke="#4a90a4" stroke-width="1" rx="6"/>
+  <text x="165" y="785" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c5f7c" text-anchor="middle">
+    ZÁVĚREČNÁ ZPRÁVA
+  </text>
+  <text x="75" y="805" font-family="Arial, sans-serif" font-size="10" fill="#333">
+    <tspan x="75" dy="0">• Vyhodnocení intervencí</tspan>
+    <tspan x="75" dy="15">• Doporučení pro město</tspan>
+    <tspan x="75" dy="15">• Data a poznatky</tspan>
+  </text>
+  
+  <rect x="295" y="760" width="210" height="90" fill="#f0fdf4" stroke="#6ba368" stroke-width="1" rx="6"/>
+  <text x="400" y="785" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c5f7c" text-anchor="middle">
+    OTEVŘENÉ MANUÁLY
+  </text>
+  <text x="310" y="805" font-family="Arial, sans-serif" font-size="10" fill="#333">
+    <tspan x="310" dy="0">• Návody mikro-intervencí</tspan>
+    <tspan x="310" dy="15">• Inspirace pro komunity</tspan>
+    <tspan x="310" dy="15">• Open-source přístup</tspan>
+  </text>
+  
+  <rect x="530" y="760" width="210" height="90" fill="#fef3f2" stroke="#e76f51" stroke-width="1" rx="6"/>
+  <text x="635" y="785" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c5f7c" text-anchor="middle">
+    FOTODOKUMENTACE
+  </text>
+  <text x="545" y="805" font-family="Arial, sans-serif" font-size="10" fill="#333">
+    <tspan x="545" dy="0">• Před/po záběry</tspan>
+    <tspan x="545" dy="15">• Proces a reakce</tspan>
+    <tspan x="545" dy="15">• Vizuální archiv</tspan>
+  </text>
+  
+  <!-- Budget & Timeline -->
+  <rect x="60" y="870" width="340" height="80" fill="white" stroke="#2c5f7c" stroke-width="1" rx="6"/>
+  <text x="230" y="895" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2c5f7c" text-anchor="middle">
+    ROZPOČET & ČASOVÝ RÁMEC
+  </text>
+  <text x="80" y="915" font-family="Arial, sans-serif" font-size="11" fill="#333">
+    <tspan x="80" dy="0">Rozpočet: ~20 000 Kč</tspan>
+    <tspan x="80" dy="18">(materiál, film, technika)</tspan>
+    <tspan x="80" dy="18">Délka projektu: 2 roky</tspan>
+  </text>
+  
+  <rect x="420" y="870" width="340" height="80" fill="white" stroke="#2c5f7c" stroke-width="1" rx="6"/>
+  <text x="590" y="895" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2c5f7c" text-anchor="middle">
+    HODNOTA PROJEKTU
+  </text>
+  <text x="440" y="915" font-family="Arial, sans-serif" font-size="11" fill="#333">
+    <tspan x="440" dy="0">Kreativita + občanská angažovanost</tspan>
+    <tspan x="440" dy="18">Modelový příklad pro FAMU i komunitu</tspan>
+  </text>
+  
+  <!-- Footer -->
+  <rect x="0" y="970" width="800" height="130" fill="#2c5f7c"/>
+  <text x="400" y="1000" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">
+    KLÍČOVÉ PRINCIPY
+  </text>
+  <text x="100" y="1030" font-family="Arial, sans-serif" font-size="11" fill="#e8f4f8">
+    <tspan x="100" dy="0">✓ Participativní</tspan>
+    <tspan x="100" dy="18">✓ Experimentální</tspan>
+  </text>
+  <text x="280" y="1030" font-family="Arial, sans-serif" font-size="11" fill="#e8f4f8">
+    <tspan x="280" dy="0">✓ Etické</tspan>
+    <tspan x="280" dy="18">✓ Dokumentované</tspan>
+  </text>
+  <text x="460" y="1030" font-family="Arial, sans-serif" font-size="11" fill="#e8f4f8">
+    <tspan x="460" dy="0">✓ Komunitní</tspan>
+    <tspan x="460" dy="18">✓ Inspirativní</tspan>
+  </text>
+  <text x="640" y="1030" font-family="Arial, sans-serif" font-size="11" fill="#e8f4f8">
+    <tspan x="640" dy="0">✓ Umělecké</tspan>
+    <tspan x="640" dy="18">✓ Urbánní</tspan>
+  </text>
+</svg>
