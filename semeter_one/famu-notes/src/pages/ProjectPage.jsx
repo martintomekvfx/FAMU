@@ -72,6 +72,27 @@ import {
   Menu
 } from 'lucide-react';
 
+// Icon mapping helper - converts emoji to Lucide icons
+const getProjectIcon = (iconKey, className = "w-6 h-6") => {
+  const iconMap = {
+    '🗳️': Vote,
+    '🍌': Banana,
+    '🌻': Sun,
+    '🪑': Armchair,
+    '🎮': Gamepad2,
+    '🎭': Palette,
+    '🎨': Brush,
+    '🖼️': Gallery,
+    '🪢': Waves,
+    '💡': Lamp,
+    '🎬': Film,
+    '🏗️': Hammer,
+  };
+  
+  const IconComponent = iconMap[iconKey] || Circle;
+  return <IconComponent className={className} />;
+};
+
 // Project subpages data
 const subpages = [
   {
@@ -882,7 +903,7 @@ function InterventionsPage() {
               className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border-2 border-blue-300 hover:shadow-xl transition-all cursor-pointer hover:scale-105"
             >
               <div className="flex items-start justify-between mb-4">
-                <div className="text-5xl">{project.icon}</div>
+                <div>{getProjectIcon(project.icon, "w-12 h-12 text-blue-600")}</div>
                 <span className={`px-3 py-1 rounded-full text-xs font-bold ${
                   project.status === 'Realizováno' ? 'bg-green-200 text-green-800' :
                   project.status === 'Probíhá' ? 'bg-yellow-200 text-yellow-800' :
@@ -944,7 +965,7 @@ function InterventionsPage() {
               className="bg-gradient-to-br from-red-50 to-pink-50 rounded-xl p-6 border-2 border-red-300 hover:shadow-xl transition-all cursor-pointer hover:scale-105"
             >
               <div className="flex items-start justify-between mb-4">
-                <div className="text-5xl">{project.icon}</div>
+                <div>{getProjectIcon(project.icon, "w-12 h-12 text-pink-600")}</div>
                 <span className={`px-3 py-1 rounded-full text-xs font-bold ${
                   project.status === 'Realizováno' ? 'bg-green-200 text-green-800' :
                   project.status === 'Probíhá' ? 'bg-yellow-200 text-yellow-800' :
