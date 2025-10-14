@@ -306,6 +306,11 @@ function OverviewPage() {
                   </div>
 
                   <div>
+                    <p className="font-semibold text-teal-900 mb-2">Externí konzultace:</p>
+                    <p className="text-gray-700">Turner</p>
+                  </div>
+
+                  <div>
                     <p className="font-semibold text-teal-900 mb-2">Harmonogram:</p>
                     <p className="text-gray-700">2 roky (2025-2027) - Viz časový plán projektu</p>
                   </div>
@@ -764,9 +769,17 @@ function InterventionsPage() {
               {/* Full Description */}
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">📝 Popis projektu</h3>
-                <div className="text-gray-700 leading-relaxed whitespace-pre-line">
-                  {selectedProject.fullDescription}
-                </div>
+                <div 
+                  className="text-gray-700 leading-relaxed prose prose-sm max-w-none"
+                  dangerouslySetInnerHTML={{
+                    __html: selectedProject.fullDescription
+                      .replace(/\n\n/g, '</p><p class="mt-3">')
+                      .replace(/\n/g, '<br />')
+                      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+                      .replace(/^(\d+)\.\s/gm, '<br />$1. ')
+                      .replace(/•\s/g, '<br />• ')
+                  }}
+                />
               </div>
 
               {/* Video if exists */}
