@@ -8,6 +8,7 @@ import AV2Content from '../content/av/av2';
 import AI1Content from '../content/ai/ai1';
 import General1Content from '../content/general/general1';
 import PR1Content from '../content/pr/pr1';
+import NoteTaker from '../components/NoteTaker';
 
 // Map of content components
 const contentMap = {
@@ -94,22 +95,26 @@ function ClassPage() {
 
       {/* Main Content */}
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="bg-white rounded-lg shadow-md p-6 md:p-10">
-          {ContentComponent ? (
-            <div className="prose-custom">
-              <ContentComponent />
-            </div>
-          ) : (
-            <div className="text-center py-12">
-              <p className="text-gray-600 mb-4">
-                Poznámky k této hodině ještě nejsou k dispozici.
-              </p>
-              <p className="text-sm text-gray-500">
-                Poznámky budou přidány během semestru.
-              </p>
-            </div>
-          )}
-        </div>
+        {classItem.isNoteTaker ? (
+          <NoteTaker />
+        ) : (
+          <div className="bg-white rounded-lg shadow-md p-6 md:p-10">
+            {ContentComponent ? (
+              <div className="prose-custom">
+                <ContentComponent />
+              </div>
+            ) : (
+              <div className="text-center py-12">
+                <p className="text-gray-600 mb-4">
+                  Poznámky k této hodině ještě nejsou k dispozici.
+                </p>
+                <p className="text-sm text-gray-500">
+                  Poznámky budou přidány během semestru.
+                </p>
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Navigation */}
         <div className="mt-8 flex justify-between items-center gap-4">

@@ -180,6 +180,14 @@ export const generalNotes = {
       title: 'Důležité termíny a informace',
       description: 'Konzultační díla, pedagogická praxe, termíny akcí.',
     },
+    {
+      id: 2,
+      date: '2025/26',
+      lecturer: 'Cloud Notes',
+      title: 'Moje poznámky',
+      description: 'Cloud-based poznámkový blok - piš si poznámky odkudkoliv',
+      isNoteTaker: true,
+    },
   ],
 };
 
