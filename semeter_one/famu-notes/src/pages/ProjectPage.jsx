@@ -190,6 +190,49 @@ function OverviewPage() {
         </div>
       </div>
 
+      {/* Team */}
+      <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">👥 Tým projektu</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-lg p-5 border-2 border-teal-200">
+            <div className="flex items-center gap-3 mb-2">
+              <span className="text-3xl">🎬</span>
+              <div>
+                <h3 className="font-bold text-gray-900">Martin Tomek</h3>
+                <p className="text-sm text-teal-700 font-medium">Režisér, autor projektu</p>
+              </div>
+            </div>
+          </div>
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-5 border-2 border-blue-200">
+            <div className="flex items-center gap-3 mb-2">
+              <span className="text-3xl">🎥</span>
+              <div>
+                <h3 className="font-bold text-gray-900">Jiří Kejkula</h3>
+                <p className="text-sm text-blue-700 font-medium">Produkce</p>
+              </div>
+            </div>
+          </div>
+          <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-lg p-5 border-2 border-yellow-200">
+            <div className="flex items-center gap-3 mb-2">
+              <span className="text-3xl">🍌</span>
+              <div>
+                <h3 className="font-bold text-gray-900">Tomáš Vrána</h3>
+                <p className="text-sm text-yellow-700 font-medium">Spolupracující umělec</p>
+              </div>
+            </div>
+          </div>
+          <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-5 border-2 border-purple-200">
+            <div className="flex items-center gap-3 mb-2">
+              <span className="text-3xl">🎮</span>
+              <div>
+                <h3 className="font-bold text-gray-900">Michal Tancjura</h3>
+                <p className="text-sm text-purple-700 font-medium">Spolupracující umělec - Game Design FAMU</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Quick Info Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border-2 border-blue-200">
@@ -1262,7 +1305,6 @@ function TimelinePage() {
       tasks: [
         '🗳️ Hlasovací popelníky - design, výroba, jarní klauzurní práce',
         '🍌 Betonové banány - návrh, výroba formy, odlévání',
-        '🌻 Slunečnice - předsadba na balkoně (březen)',
         '📋 Mapping lokality a výběr míst',
         '🎭 Detournement - mapping nelegálních reklam'
       ] 
@@ -1273,6 +1315,7 @@ function TimelinePage() {
       title: 'Instalace a sadba', 
       color: 'from-green-500 to-teal-500',
       tasks: [
+        '🌻 Slunečnice - předsadba na balkoně (březen-duben)',
         '🌻 Slunečnice - přesadba do 10l květináčů (duben)',
         '🌻 Slunečnice - sadba ven do Palmovky (duben-květen)',
         '🗳️ Hlasovací popelníky - instalace a testování',
