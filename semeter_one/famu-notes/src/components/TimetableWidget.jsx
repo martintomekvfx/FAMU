@@ -87,19 +87,6 @@ const CLASSES = [
   // Čtvrtek (Ct) - row 3
   {
     day: 3,
-    left: 102,
-    width: 133,
-    top: 360,
-    height: 119,
-    code: '702FAOU3',
-    teacher: 'BOHUSLAVOVÁ L.',
-    room: 'LAZ-241',
-    time: '10:45 - 12:15',
-    color: '#CCCCCC',
-    link: '/subject/general',
-  },
-  {
-    day: 3,
     left: 430,
     width: 141,
     top: 360,
