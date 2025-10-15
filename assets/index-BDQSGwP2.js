@@ -2483,81 +2483,43 @@ Můžeš sem psát cokoliv:
                   ${a?"bg-gradient-to-br from-teal-500 to-cyan-500 text-white border-teal-600 shadow-lg":"bg-white text-gray-700 border-gray-300 hover:border-teal-400"}
                 `,children:[o.jsx(s,{className:`w-8 h-8 mx-auto mb-2 ${a?"text-white":"text-teal-600"}`}),o.jsx("p",{className:"text-center text-sm font-medium",children:n.title})]},n.id)})}),e==="overview"&&o.jsx(cU,{}),e==="interventions"&&o.jsx(uU,{}),e==="methodology"&&o.jsx(dU,{}),e==="outputs"&&o.jsx(hU,{}),e==="timeline"&&o.jsx(fU,{}),e==="gallery"&&o.jsx(mU,{officialProjects:YA,guerillaArt:XA})]})]})}function cU(){return o.jsxs("div",{className:"space-y-6",children:[o.jsxs("div",{className:"bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl shadow-xl border-2 border-purple-300 p-8",children:[o.jsxs("div",{className:"flex items-center gap-3 mb-6",children:[o.jsx(Ro,{className:"w-8 h-8 text-purple-600"}),o.jsx("h2",{className:"text-3xl font-bold text-gray-900",children:"Úvod"})]}),o.jsxs("div",{className:"space-y-4 text-gray-700 leading-relaxed",children:[o.jsxs("p",{className:"text-lg",children:[o.jsx("strong",{className:"text-purple-900",children:"Zásadním východiskem mého současného uvažování je koncept města jako galerie."})," Ulice a veřejná prostranství chápu jako otevřený výstavní prostor, kde stěny domů mohou fungovat podobně jako galerijní zdi. Svá díla proto záměrně situuji do městských zákoutí a na opomíjená místa – tak, aby je mohlo objevit náhodné kolemjdoucí publikum, nejen návštěvníci oficiálních kulturních institucí."]}),o.jsxs("p",{children:["Chci tím jednak ",o.jsx("strong",{children:"zpřístupnit umění širší veřejnosti"}),", jednak ",o.jsx("strong",{children:"povzbudit obyvatele, aby si svého okolí více všímali"}),'. Současná městská zkušenost je totiž často charakterizována vizuálním přetížením a návykovou slepotou: lidé si vlivem záplavy reklam a informací podvědomě „vypínají" vnímání veřejného prostoru, nebo ho celé projdou s pohledem upřeným do mobilu.']}),o.jsx("div",{className:"bg-white rounded-lg p-6 border-l-4 border-purple-500",children:o.jsxs("p",{className:"italic",children:[o.jsx("strong",{children:"Mým cílem je tuto apatii narušit"})," – nalézat místa, která zdánlivě k ničemu nejsou a ničemu už neslouží, a vdechnout jim druhý život tak, aby znovu přinášela hodnotu."]})}),o.jsxs("p",{children:["Je fascinující, že je ",o.jsx("strong",{className:"text-red-700",children:"společensky přijatelnější veřejný prostor ničit, než ho svévolně vylepšovat či opravovat"}),". Svými zásahy tuto normu zpochybňuji."]}),o.jsxs("div",{className:"grid grid-cols-1 md:grid-cols-3 gap-4 mt-6",children:[o.jsxs("div",{className:"bg-white rounded-lg p-4 text-center border-2 border-purple-200",children:[o.jsx(Hz,{className:"w-10 h-10 text-purple-600 mb-2 mx-auto"}),o.jsx("h3",{className:"font-bold text-purple-900 mb-1",children:"Město jako galerie"}),o.jsx("p",{className:"text-sm text-gray-600",children:"Ulice = výstavní prostor"})]}),o.jsxs("div",{className:"bg-white rounded-lg p-4 text-center border-2 border-blue-200",children:[o.jsx(lM,{className:"w-10 h-10 text-blue-600 mb-2 mx-auto"}),o.jsx("h3",{className:"font-bold text-blue-900 mb-1",children:"Narušení apatii"}),o.jsx("p",{className:"text-sm text-gray-600",children:"Probuzení vnímání prostoru"})]}),o.jsxs("div",{className:"bg-white rounded-lg p-4 text-center border-2 border-pink-200",children:[o.jsx($M,{className:"w-10 h-10 text-pink-600 mb-2 mx-auto"}),o.jsx("h3",{className:"font-bold text-pink-900 mb-1",children:"Druhý život míst"}),o.jsx("p",{className:"text-sm text-gray-600",children:"Opomíjená místa → hodnota"})]})]})]})]}),o.jsxs("div",{className:"bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6",children:[o.jsxs("div",{className:"flex items-center gap-3 mb-6",children:[o.jsx(pN,{className:"w-7 h-7 text-gray-900"}),o.jsx("h2",{className:"text-2xl font-bold text-gray-900",children:"Video dokumentace projektu"})]}),o.jsx("div",{className:"aspect-video rounded-xl overflow-hidden bg-black mb-4",children:o.jsx("iframe",{width:"100%",height:"100%",src:"https://youtube.com/embed/AKgS2maI94k",title:"YouTube video",frameBorder:"0",allow:"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",allowFullScreen:!0})}),o.jsxs("div",{className:"flex items-center justify-between",children:[o.jsxs("div",{children:[o.jsx("h3",{className:"font-bold text-gray-900 mb-1",children:"Rozhovory s ulicí"}),o.jsx("p",{className:"text-sm text-gray-600",children:"Video dokumentace guerillových intervencí na Palmovce"})]}),o.jsxs("a",{href:"https://youtu.be/AKgS2maI94k",target:"_blank",rel:"noopener noreferrer",className:"inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition-colors",children:[o.jsx(Ou,{className:"w-4 h-4"}),"YouTube"]})]})]}),o.jsxs("div",{className:"bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6",children:[o.jsxs("div",{className:"flex items-center gap-3 mb-6",children:[o.jsx(Hl,{className:"w-7 h-7 text-gray-900"}),o.jsx("h2",{className:"text-2xl font-bold text-gray-900",children:"Tým projektu"})]}),o.jsxs("div",{className:"grid grid-cols-1 md:grid-cols-2 gap-4",children:[o.jsx("div",{className:"bg-gradient-to-br from-teal-50 to-cyan-50 rounded-lg p-5 border-2 border-teal-200",children:o.jsxs("div",{className:"flex items-center gap-3 mb-2",children:[o.jsx(Ju,{className:"w-10 h-10 text-teal-600"}),o.jsxs("div",{children:[o.jsx("h3",{className:"font-bold text-gray-900",children:"Martin Tomek"}),o.jsx("p",{className:"text-sm text-teal-700 font-medium",children:"Režisér, autor projektu"})]})]})}),o.jsx("div",{className:"bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-5 border-2 border-blue-200",children:o.jsxs("div",{className:"flex items-center gap-3 mb-2",children:[o.jsx(Kz,{className:"w-10 h-10 text-blue-600"}),o.jsxs("div",{children:[o.jsx("h3",{className:"font-bold text-gray-900",children:"Jiří Kejkula"}),o.jsx("p",{className:"text-sm text-blue-700 font-medium",children:"Produkce"})]})]})}),o.jsx("div",{className:"bg-gradient-to-br from-yellow-50 to-orange-50 rounded-lg p-5 border-2 border-yellow-200",children:o.jsxs("div",{className:"flex items-center gap-3 mb-2",children:[o.jsx(uN,{className:"w-10 h-10 text-yellow-600"}),o.jsxs("div",{children:[o.jsx("h3",{className:"font-bold text-gray-900",children:"Tomáš Vrána"}),o.jsx("p",{className:"text-sm text-yellow-700 font-medium",children:"Spolupracující umělec"})]})]})}),o.jsx("div",{className:"bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-5 border-2 border-purple-200",children:o.jsxs("div",{className:"flex items-center gap-3 mb-2",children:[o.jsx(zv,{className:"w-10 h-10 text-purple-600"}),o.jsxs("div",{children:[o.jsx("h3",{className:"font-bold text-gray-900",children:"Michal Tancjura"}),o.jsx("p",{className:"text-sm text-purple-700 font-medium",children:"Spolupracující umělec - Game Design FAMU"})]})]})}),o.jsx("div",{className:"bg-gradient-to-br from-orange-50 to-red-50 rounded-lg p-5 border-2 border-orange-200",children:o.jsxs("div",{className:"flex items-center gap-3 mb-2",children:[o.jsx(h5,{className:"w-10 h-10 text-orange-600"}),o.jsxs("div",{children:[o.jsx("h3",{className:"font-bold text-gray-900",children:"Tomáš Koníček"}),o.jsx("p",{className:"text-sm text-orange-700 font-medium",children:"Řemeslný spoluautor"})]})]})})]})]}),o.jsxs("div",{className:"bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6",children:[o.jsxs("div",{className:"flex items-center gap-3 mb-6",children:[o.jsx(Ro,{className:"w-7 h-7 text-gray-900"}),o.jsx("h2",{className:"text-2xl font-bold text-gray-900",children:"Výzkumné podklady a dokumenty"})]}),o.jsxs("div",{className:"space-y-4",children:[o.jsx("div",{className:"bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border-2 border-indigo-200",children:o.jsxs("div",{className:"flex items-start gap-4",children:[o.jsx(Vn,{className:"w-12 h-12 text-indigo-600"}),o.jsxs("div",{className:"flex-1",children:[o.jsx("h3",{className:"font-bold text-gray-900 mb-2",children:"Sociologicko-antropologický výzkum žitého prostoru v lokalitě Palmovka"}),o.jsx("p",{className:"text-gray-700 mb-4",children:"Souhrnná zpráva z antropologického výzkumu Palmovky (Praha 8) - klíčový podklad pro metodologii projektu."}),o.jsxs("a",{href:"https://m.praha8.cz/file/GbS/Souhrnna-zprava-Sociologicko-antropologicky-vyzkum-ziteho-prost%20oru-v-lokalite-Palmovka.pdf",target:"_blank",rel:"noopener noreferrer",className:"inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition-colors",children:[o.jsx(Ou,{className:"w-4 h-4"}),"Stáhnout PDF zprávu"]})]})]})}),o.jsx("div",{className:"bg-gradient-to-br from-teal-50 to-cyan-50 rounded-lg p-6 border-2 border-teal-200",children:o.jsxs("div",{className:"flex items-start gap-4",children:[o.jsx(Vn,{className:"w-12 h-12 text-teal-600"}),o.jsxs("div",{className:"flex-1",children:[o.jsx("h3",{className:"font-bold text-gray-900 mb-4",children:"Plán mentoringu - Magisterský program"}),o.jsxs("div",{className:"space-y-4 text-sm",children:[o.jsxs("div",{className:"grid grid-cols-2 gap-4",children:[o.jsxs("div",{children:[o.jsx("p",{className:"font-semibold text-teal-900",children:"Student:"}),o.jsx("p",{className:"text-gray-700",children:"Martin Tomek"})]}),o.jsxs("div",{children:[o.jsx("p",{className:"font-semibold text-teal-900",children:"Obor / Program:"}),o.jsx("p",{className:"text-gray-700",children:"CAS FAMU - Magisterský program"})]})]}),o.jsxs("div",{children:[o.jsx("p",{className:"font-semibold text-teal-900 mb-2",children:"Anotace praktického projektu:"}),o.jsx("p",{className:"text-gray-700",children:"Experimentální dokumentární film o guerillových intervencích ve veřejném prostoru Palmovky. Projekt zahrnuje participativní umění, tactical urbanism a komunitní aktivaci prostoru."})]}),o.jsxs("div",{children:[o.jsx("p",{className:"font-semibold text-teal-900 mb-2",children:"Mentor/ka pro praktický projekt:"}),o.jsx("p",{className:"text-gray-700",children:"Georgy Bagdasarov"})]}),o.jsxs("div",{children:[o.jsx("p",{className:"font-semibold text-teal-900 mb-2",children:"Anotace teoretického projektu:"}),o.jsx("p",{className:"text-gray-700",children:"Výzkum vlivu participativního umění na aktivaci zanedbaných veřejných prostorů. Analýza metodologie tactical urbanism a komunitního zapojení."})]}),o.jsxs("div",{children:[o.jsx("p",{className:"font-semibold text-teal-900 mb-2",children:"Mentor/ka pro teoretickou práci:"}),o.jsx("p",{className:"text-gray-700",children:"Georgy Bagdasarov"})]}),o.jsxs("div",{children:[o.jsx("p",{className:"font-semibold text-teal-900 mb-2",children:"Harmonogram:"}),o.jsx("p",{className:"text-gray-700",children:"2 roky (2025-2027) - Viz časový plán projektu"})]}),o.jsxs("div",{children:[o.jsx("p",{className:"font-semibold text-teal-900 mb-2",children:"Externí konzultace:"}),o.jsx("p",{className:"text-gray-700",children:"Bývalý student Časů Turner - veřejně prospěšné práce"})]})]})]})]})})]})]}),o.jsxs("div",{className:"bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6",children:[o.jsx("h2",{className:"text-2xl font-bold text-gray-900 mb-6",children:"Financování projektu"}),o.jsxs("div",{className:"bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6 border-2 border-blue-200 mb-6",children:[o.jsx("h3",{className:"font-bold text-gray-900 mb-4",children:"Rozpočet jednotlivých intervencí"}),o.jsxs("div",{className:"space-y-3 mb-4",children:[o.jsxs("div",{className:"flex justify-between items-center p-3 bg-white rounded-lg",children:[o.jsx("span",{className:"text-gray-700",children:"Hlasovací popelníky"}),o.jsx("span",{className:"font-bold text-gray-900",children:"1 500 Kč"})]}),o.jsxs("div",{className:"flex justify-between items-center p-3 bg-white rounded-lg",children:[o.jsx("span",{className:"text-gray-700",children:"Betonové banány - lavičky"}),o.jsx("span",{className:"font-bold text-gray-900",children:"3 000 Kč"})]}),o.jsxs("div",{className:"flex justify-between items-center p-3 bg-green-100 rounded-lg border-2 border-green-300",children:[o.jsx("span",{className:"text-gray-700",children:"Slunečnice (realizováno)"}),o.jsx("span",{className:"font-bold text-green-700",children:"800 Kč"})]}),o.jsxs("div",{className:"flex justify-between items-center p-3 bg-white rounded-lg",children:[o.jsx("span",{className:"text-gray-700",children:"Parklety"}),o.jsx("span",{className:"font-bold text-gray-900",children:"3 500 Kč"})]}),o.jsxs("div",{className:"flex justify-between items-center p-3 bg-white rounded-lg",children:[o.jsx("span",{className:"text-gray-700",children:"Křídový Game Jam"}),o.jsx("span",{className:"font-bold text-gray-900",children:"1 000 Kč"})]}),o.jsxs("div",{className:"flex justify-between items-center p-3 bg-white rounded-lg",children:[o.jsx("span",{className:"text-gray-700",children:"Interaktivní kamerová hra"}),o.jsx("span",{className:"font-bold text-gray-900",children:"5 000 Kč"})]})]}),o.jsx("div",{className:"border-t-2 border-blue-300 pt-3 mb-4",children:o.jsxs("div",{className:"flex justify-between items-center p-3 bg-blue-100 rounded-lg",children:[o.jsx("span",{className:"text-lg font-bold text-blue-900",children:"Oficiální projekty celkem:"}),o.jsx("span",{className:"text-xl font-bold text-blue-900",children:"14 800 Kč"})]})}),o.jsx("h4",{className:"font-bold text-gray-900 mb-3 mt-6",children:"Guerilla Art intervence:"}),o.jsxs("div",{className:"space-y-3 mb-4",children:[o.jsxs("div",{className:"flex justify-between items-center p-3 bg-white rounded-lg",children:[o.jsx("span",{className:"text-gray-700",children:"Detournement - Boj s reklamou"}),o.jsx("span",{className:"font-bold text-gray-900",children:"750 Kč"})]}),o.jsxs("div",{className:"flex justify-between items-center p-3 bg-white rounded-lg",children:[o.jsx("span",{className:"text-gray-700",children:"Street Art - Obrazy v ulicích"}),o.jsx("span",{className:"font-bold text-gray-900",children:"400 Kč"})]}),o.jsxs("div",{className:"flex justify-between items-center p-3 bg-white rounded-lg",children:[o.jsx("span",{className:"text-gray-700",children:"Guerillová galerie"}),o.jsx("span",{className:"font-bold text-gray-900",children:"350 Kč"})]}),o.jsxs("div",{className:"flex justify-between items-center p-3 bg-green-100 rounded-lg border-2 border-green-300",children:[o.jsx("span",{className:"text-gray-700",children:"Houpačka (realizováno)"}),o.jsx("span",{className:"font-bold text-green-700",children:"200 Kč"})]}),o.jsxs("div",{className:"flex justify-between items-center p-3 bg-white rounded-lg",children:[o.jsx("span",{className:"text-gray-700",children:"Dočasná solární světla"}),o.jsx("span",{className:"font-bold text-gray-900",children:"750 Kč"})]})]}),o.jsx("div",{className:"border-t-2 border-blue-300 pt-3 mb-4",children:o.jsxs("div",{className:"flex justify-between items-center p-3 bg-purple-100 rounded-lg",children:[o.jsx("span",{className:"text-lg font-bold text-purple-900",children:"Guerilla Art celkem:"}),o.jsx("span",{className:"text-xl font-bold text-purple-900",children:"2 450 Kč"})]})}),o.jsx("div",{className:"border-t-4 border-blue-500 pt-4",children:o.jsxs("div",{className:"flex justify-between items-center p-4 bg-gradient-to-r from-green-100 to-emerald-100 rounded-xl border-2 border-green-400",children:[o.jsxs("div",{className:"flex items-center gap-2",children:[o.jsx(a0,{className:"w-6 h-6 text-gray-900"}),o.jsx("span",{className:"text-xl font-bold text-gray-900",children:"CELKOVÝ ROZPOČET:"})]}),o.jsx("span",{className:"text-2xl font-bold text-green-700",children:"17 250 Kč"})]})}),o.jsx("div",{className:"mt-4 p-3 bg-yellow-50 border-l-4 border-yellow-400 rounded",children:o.jsxs("p",{className:"text-sm text-gray-700",children:[o.jsx("strong",{children:"Poznámka:"})," Rozpočet nezahrnuje náklady na filmovou dokumentaci a techniku (~3 000 Kč). Celkový rozpočet projektu včetně dokumentace: ",o.jsx("strong",{children:"~20 000 Kč"})]})})]}),o.jsx("div",{className:"bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-6 border-2 border-green-200",children:o.jsxs("div",{className:"flex items-start gap-4",children:[o.jsx(Vn,{className:"w-12 h-12 text-green-600"}),o.jsxs("div",{className:"flex-1",children:[o.jsx("h3",{className:"font-bold text-gray-900 mb-2",children:"Granty Praha 8 - Kultura 2025"}),o.jsx("p",{className:"text-gray-700 mb-3",children:"Grantový program pro kulturní a komunitní projekty na území Prahy 8."}),o.jsx("div",{className:"mb-4 p-3 bg-yellow-50 border-l-4 border-yellow-500 rounded",children:o.jsxs("div",{className:"flex items-center gap-2",children:[o.jsx(fN,{className:"w-4 h-4 text-yellow-900"}),o.jsx("p",{className:"text-sm font-bold text-yellow-900",children:"Deadline: Do konce roku 2025"})]})}),o.jsxs("a",{href:"https://www.praha8.cz/Granty-Kultura-2025",target:"_blank",rel:"noopener noreferrer",className:"inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-colors",children:[o.jsx(Ou,{className:"w-4 h-4"}),"Více informací o grantech"]})]})]})})]}),o.jsxs("div",{className:"grid grid-cols-1 md:grid-cols-3 gap-6",children:[o.jsxs("div",{className:"bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border-2 border-blue-200",children:[o.jsxs("div",{className:"flex items-center gap-2 mb-2",children:[o.jsx(td,{className:"w-6 h-6 text-blue-900"}),o.jsx("h3",{className:"font-bold text-lg text-blue-900",children:"Cíl"})]}),o.jsx("p",{className:"text-gray-700",children:"Oživit zanedbaná místa Palmovky pomocí participativního umění a mikro-intervencí"})]}),o.jsxs("div",{className:"bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6 border-2 border-green-200",children:[o.jsxs("div",{className:"flex items-center gap-2 mb-2",children:[o.jsx(Wl,{className:"w-6 h-6 text-green-900"}),o.jsx("h3",{className:"font-bold text-lg text-green-900",children:"Délka"})]}),o.jsx("p",{className:"text-gray-700",children:"2 roky průběžných intervencí s dokumentací celého procesu"})]}),o.jsxs("div",{className:"bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-200",children:[o.jsxs("div",{className:"flex items-center gap-2 mb-2",children:[o.jsx(a0,{className:"w-6 h-6 text-purple-900"}),o.jsx("h3",{className:"font-bold text-lg text-purple-900",children:"Rozpočet"})]}),o.jsx("p",{className:"text-gray-700",children:"~20 000 Kč (materiál, film, technika)"})]})]})]})}const YA=[{title:"Hlasovací popelníky",subtitle:"Interaktivní mobiliář",icon:"🗳️",color:"red",description:'Experiment s veřejným zapojením skrze herní mechanismus "hlasování nedopalky"',artist:"Martin Tomek, Tomáš Koníček",status:"V plánu",details:["Gamifikace","Zapojení komunity","Čistší prostor"],researchPdf:"/FAMU/research/hlasovaci-popelniky-research.pdf",fullDescription:`**Pozorování a problém**
 
-
-
 Cigaretové nedopalky jsou jedním z nejběžnějších odpadků na ulici. Mnoho lidí (zejména starší generace) ani nevnímá nedopalky jako odpad – odhodit ho na zem je pro ně normální. Přitom nedopalky znečišťují prostředí a jejich úklid stojí nemalé peníze.
-
-
 
 **Koncept hlasovacího popelníku**
 
-
-
 Popelník rozdělený na dvě přihrádky s otázkou, na kterou kuřák "hlasuje" tím, že vhodí nedopalek do jedné či druhé části.
-
-
 
 **Příklad:** "Je lepší káva, nebo čaj?" – jedna strana "káva", druhá "čaj"; lidé házejí špačky podle svého názoru.
 
-
-
 Tento hravý prvek motivuje kuřáky dávat nedopalek do popelníku, ne na zem, a zároveň je to anketa.
 
-
-
 ---
-
-
 
 ## Účinnost ve světě (orientační rozpětí efektů)
 
+• **UK (Londýn, první pilot):** ~–20 % kuřáků házejících oharek na zem
 
+• **Více instalací (UK/svět):** až –46 % (max. pozorované; běžný průměr bývá nižší)
 
-**UK (Londýn, první pilot):** ~–20 % kuřáků házejících oharek na zem
+• **Nezávislé měření (Ellipsis Earth, UK):** až –73 % (v optimálních podmínkách)
 
+• **Švýcarsko (Nyon, škola):** –25 % po přidání hlasovacího popelníku ke stávajícím
 
+• **Japonsko (Shibuya):** cca –90 % do týdne; navíc ubyl i jiný odpad
 
-**Více instalací (UK/svět):** až –46 % (max. pozorované; běžný průměr bývá nižší)
+• **Japonsko (Nagano):** –40 % během pilotu
 
+• **USA (programy více opatření):** v průměru –50 až –60 % po 4–6 měsících
 
-
-**Nezávislé měření (Ellipsis Earth, UK):** až –73 % (v optimálních podmínkách)
-
-
-
-**Švýcarsko (Nyon, škola):** –25 % po přidání hlasovacího popelníku ke stávajícím
-
-
-
-**Japonsko (Shibuya):** cca –90 % do týdne; navíc ubyl i jiný odpad
-
-
-
-**Japonsko (Nagano):** –40 % během pilotu
-
-
-
-**USA (programy více opatření):** v průměru –50 až –60 % po 4–6 měsících
-
-
-
-**Kontrafakt - Bratislava:** bez zlepšení, naopak nárůst (33→70/den); klíčová je volba místa a integrace
-
-
+• **Kontrafakt - Bratislava:** bez zlepšení, naopak nárůst (33→70/den); klíčová je volba místa a integrace
 
 **Klíčová interpretace:** Nejvyšší efekty vznikají v rušných „hotspotech" bez dřívější vhodné infrastruktury a při kombinaci s úklidem/organizací kouření. Tam, kde už popelníky jsou, přidání hlasovacího zlepšuje stav spíše o desítky procent.
 
-
-
 ---
-
-
 
 ## Doporučení pro výrobu (design & konstrukce)
 
-
-
-### Materiály a tělo
+**Materiály a tělo:**
 
 • Kovová, nehořlavá konstrukce: pozinkovaná ocel / nerez
 
@@ -2567,9 +2529,7 @@ Tento hravý prvek motivuje kuřáky dávat nedopalek do popelníku, ne na zem, 
 
 • Průhled: tvrzené sklo nebo polykarbonát ≥ 4–5 mm, ideálně s anti-graffiti úpravou
 
-
-
-### Vhazovací otvory
+**Vhazovací otvory:**
 
 • Výška 90–110 cm, štěrbina cca 2–3 cm (pro oharek, ne pro odpad)
 
@@ -2577,9 +2537,7 @@ Tento hravý prvek motivuje kuřáky dávat nedopalek do popelníku, ne na zem, 
 
 • Štíhlý půdorys, aby nepřekážel
 
-
-
-### Požárně-hygienické řešení
+**Požárně-hygienické řešení:**
 
 • Uzavřený objem omezuje kyslík
 
@@ -2587,9 +2545,7 @@ Tento hravý prvek motivuje kuřáky dávat nedopalek do popelníku, ne na zem, 
 
 • Hladké vnitřní plochy pro snadné čištění
 
-
-
-### Uzamykání a odolnost
+**Uzamykání a odolnost:**
 
 • Uzamykatelná dvířka
 
@@ -2597,17 +2553,13 @@ Tento hravý prvek motivuje kuřáky dávat nedopalek do popelníku, ne na zem, 
 
 • Počítejte s UV, mrazem, deštěm
 
-
-
-### Montážní možnosti
+**Montážní možnosti:**
 
 • Standard: sloup (objímky/třmeny) i stěna (4 hmoždinky)
 
 • Umístit s ohledem na sníh/průchod a „předsazené" místo pro hlasování
 
-
-
-### Rozměry a kapacita
+**Rozměry a kapacita:**
 
 • Výška ~50–60 cm, šířka ~20 cm, hloubka < 10 cm
 
@@ -2615,23 +2567,15 @@ Tento hravý prvek motivuje kuřáky dávat nedopalek do popelníku, ne na zem, 
 
 • Pro akce zvažte větší modul / sčítání hlasů
 
-
-
-### Vizualita a obsah
+**Vizualita a obsah:**
 
 • Výrazné barvy a průhledné „sloupce hlasů" podporují soutěživost
 
 • Snadná výměna potisku otázky (A4)
 
-
-
 ---
 
-
-
 ## Provozní body, které zvyšují účinnost
-
-
 
 • **Volba místa:** skutečné hotspoty kouření (vstupy, kluby, MHD, kanceláře) + krátká docházková vzdálenost
 
@@ -2641,99 +2585,51 @@ Tento hravý prvek motivuje kuřáky dávat nedopalek do popelníku, ne na zem, 
 
 • **Bezpečnost a hygiena:** rukavice/respirátor při vysypávání; odpad jako potenciálně nebezpečný
 
-
-
 ---
-
-
 
 ## Quick checklist pro výrobu
 
+• Nerez/pozink + práškový lak; průhled z tvrzeného skla/polykarbonátu 4–5 mm
 
+• Dvě komory s jasnými popisky A/B, výměnný tisk A4 za průhledem
 
-✓ Nerez/pozink + práškový lak; průhled z tvrzeného skla/polykarbonátu 4–5 mm
+• Štěrbiny 2–3 cm ve výšce 90–110 cm, krytí proti dešti
 
+• Zamykání, skryté spojovací prvky, příprava pro montáž na sloup i stěnu
 
-
-✓ Dvě komory s jasnými popisky A/B, výměnný tisk A4 za průhledem
-
-
-
-✓ Štěrbiny 2–3 cm ve výšce 90–110 cm, krytí proti dešti
-
-
-
-✓ Zamykání, skryté spojovací prvky, příprava pro montáž na sloup i stěnu
-
-
-
-✓ Rozměry cca 50–60 × 20 × < 10 cm; objem 300–500 ml/komora
-
-
+• Rozměry cca 50–60 × 20 × < 10 cm; objem 300–500 ml/komora
 
 ---
 
-
-
 **Metodologie výzkumu - Srovnání dvou lokalit**
-
-
 
 • **Experimentální místo** - s hlasovacím popelníkem
 
-
-
 • **Kontrolní místo** - bez hlasovacího popelníku
-
-
 
 **Postup měření:**
 
-
-
 1. Najít místo hodně znečištěné od nedopalků
-
-
 
 2. Vyčistit místo a dokumentovat (baseline)
 
-
-
 3. Počkat měsíc bez intervence
-
-
 
 4. Znovu vyčistit a **spočítat/zvážit nedopalky**
 
-
-
 5. Instalovat hlasovací popelník
-
-
 
 6. Po týdnu sesbírat nedopalky z obou lokalit a zvážit či spočítat
 
-
-
 **Sledované parametry:**
-
-
 
 • Volby lidí (jaké odpovědi vyhrávají)
 
-
-
 • Míru znečištění (počet/hmotnost nedopalků)
-
-
 
 • Reakce komunity (fotky, komentáře)
 
-
-
 **Očekávaný dopad**
-
-
 
 Pokud se ukáže, že hlasovací popelník skutečně snižuje počet nedopalků na zemi, může to být argument pro radnici, aby podobné prvky instalovala trvale. Zároveň to bude důkaz, že hravost a gamifikace fungují lépe než zákazy a pokuty.`,materials:["Dřevo/kov pro konstrukci","Průhledný plexisklo","Popisky/otázky","Montážní materiál","Ochranný lak"],budget:"~1500 Kč na 1 popelník",timeline:"Zima 2025 (příprava) → Jaro 2026 (instalace) → 2 měsíce testování",location:"Frekventovaná místa s kuřáky na Palmovce",images:[{original:"/FAMU/projects/hlasovaci-popelnik/design.jpeg",thumbnail:"/FAMU/projects/hlasovaci-popelnik/design.jpeg",description:"Design hlasovacího popelníku"}]},{title:"Betonové banány - lavičky",subtitle:"Mobiliář",icon:"🍌",color:"yellow",description:'Série betonových laviček ve tvaru banánů. Funkční urbánní mobiliář s hravým designem inspirovaný "Tropical Palmbeach".',artist:"Martin Tomek",status:"V plánu",details:["Recyklovaný beton","Veřejné sedání","Tropical Palmbeach"],fullDescription:`**Koncept: Tropical Palmbeach**
 
