@@ -262,21 +262,120 @@ function DDF3Content() {
         </div>
       </section>
 
-      {/* Jean Rouch */}
+      {/* Cinéma vérité - technologický vývoj */}
+      <section className="bg-gradient-to-br from-indigo-50 to-purple-50 p-6 rounded-lg shadow-lg border-2 border-indigo-300">
+        <h2 className="text-3xl font-bold text-indigo-900 mb-4">Přelom 50/60 - Technologický vývoj</h2>
+        
+        <div className="space-y-4 text-gray-700">
+          <div className="bg-white p-4 rounded-lg">
+            <h3 className="font-bold text-lg mb-2">Profesní využití 16mm kamer</h3>
+            <p>Původně amatérský formát - předtím se používal 35mm</p>
+          </div>
+
+          <div className="bg-indigo-100 p-4 rounded-lg">
+            <p className="font-semibold mb-2">Nový přístup:</p>
+            <ul className="space-y-2 ml-4">
+              <li>• Nearanžovat, nerekonstruovat</li>
+              <li>• Nechávat se překvapit</li>
+              <li>• Být nerušeně u toho pravého momentu</li>
+            </ul>
+          </div>
+
+          <div className="bg-gradient-to-r from-blue-100 to-cyan-100 p-6 rounded-lg border-2 border-blue-400">
+            <h3 className="text-2xl font-bold text-blue-900 mb-3">= Cinéma vérité (Film pravda)</h3>
+            <p className="text-lg mb-2">Přímý film v anglofonním světě</p>
+            <p className="mt-2">Důležitost zachytit autentickou realitu - lehká ruční kamera</p>
+            <p className="mt-3 font-semibold">→ Vyústění do Kroniky jednoho léta</p>
+          </div>
+
+          <div className="bg-white p-4 rounded-lg">
+            <h4 className="font-bold mb-2">Vliv režisérů francouzské nové vlny (Godard):</h4>
+            <p>Osvobodil film od těžkopádnosti 35mm kamer, svobodná práce se zvukem</p>
+            <p className="mt-2 font-semibold text-indigo-900">→ Rouch aplikoval na etnografický film</p>
+          </div>
+
+          <p className="bg-indigo-50 p-4 rounded-lg text-lg font-bold text-center">
+            = Obrat ve vnímání etnografického antropologického filmu
+          </p>
+        </div>
+      </section>
+
+      {/* Jean Rouch - život a tvorba */}
       <section className="bg-gradient-to-br from-cyan-50 to-blue-50 p-6 rounded-lg shadow-lg border-2 border-cyan-300">
-        <h2 className="text-3xl font-bold text-cyan-900 mb-4">Souběžně - Francie</h2>
+        <h2 className="text-3xl font-bold text-cyan-900 mb-4">Jean Rouch - Život a tvorba</h2>
         
         <div className="space-y-4 text-gray-700">
           <div className="bg-white p-6 rounded-lg">
             <h3 className="text-xl font-bold mb-2">Musée de l'Homme v Paříži</h3>
             <p className="text-lg">1952 - Výbor etnografického filmu</p>
+            <p className="mt-2 font-semibold">Založil to Jean Rouch</p>
           </div>
 
           <div className="bg-cyan-100 p-6 rounded-lg">
             <h3 className="text-2xl font-bold text-cyan-900 mb-3">Jean Rouch</h3>
             <p className="text-lg mb-2">Filmař a vědec</p>
-            <p className="font-semibold text-xl">Průkopník vizuální antropologie</p>
-            <p className="mt-4 text-2xl font-bold text-blue-900">Cinéma vérité</p>
+            <p className="font-semibold text-xl mb-3">Průkopník vizuální antropologie</p>
+            <p className="text-2xl font-bold text-blue-900">Cinéma vérité</p>
+          </div>
+
+          <div className="bg-white p-4 rounded-lg">
+            <p className="font-semibold mb-2">Etnograf s hlubokou znalostí terénu</p>
+            <p>Film = nástroj pro etnografický výzkum</p>
+          </div>
+
+          <div className="bg-blue-50 p-4 rounded-lg">
+            <h4 className="font-bold mb-2">Životní cesta:</h4>
+            <ul className="space-y-2 ml-4">
+              <li>• Ve válce v Africe - stavební inženýr</li>
+              <li>• Po válce - studium etnografie</li>
+              <li>• V 50. letech experimentuje se zvukem</li>
+              <li>• Etnografická práce v Nigérii</li>
+            </ul>
+          </div>
+
+          <div className="bg-cyan-50 p-4 rounded-lg border-l-4 border-cyan-600">
+            <p className="font-bold text-cyan-900 mb-2">Průlom:</p>
+            <p>Poprvé vzal 16mm kameru a magnetofon do Nigérie</p>
+            <p className="mt-2 text-sm italic">→ Vědecká kredibilita</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Šílení mistři */}
+      <section className="bg-gradient-to-br from-red-50 to-orange-50 p-6 rounded-lg shadow-lg border-2 border-red-400">
+        <h2 className="text-3xl font-bold text-red-900 mb-4">Film: Šílení mistři (1955)</h2>
+        
+        <div className="space-y-4 text-gray-700">
+          <div className="bg-white p-6 rounded-lg">
+            <h3 className="text-xl font-bold mb-3">Kněží kultu Hauka</h3>
+            <p className="text-lg mb-2">Rituál v okamžicích transu - postavy v realitě</p>
+            <p className="mt-3">Účastníci rituálu zde přebírají identity kolonialistů</p>
+          </div>
+
+          <div className="bg-orange-100 p-4 rounded-lg border-l-4 border-orange-500">
+            <h4 className="font-bold text-orange-900 mb-2">Inovativní přístup:</h4>
+            <p>
+              Komentář poloimprovizovaný - při namlouvání nachází stejný stav vytržení jako měl u natáčení
+            </p>
+            <p className="mt-2 font-semibold text-orange-900">= Filmový trans</p>
+          </div>
+
+          <div className="bg-red-100 p-6 rounded-lg border-2 border-red-500">
+            <h3 className="text-2xl font-bold text-red-900 mb-3">= SKANDÁL</h3>
+            <div className="space-y-2">
+              <p>❌ Odpor u etnografů i Afričanů</p>
+              <p>❌ Mnoho zákazů</p>
+              <p className="mt-3">✓ Ale cena v Benátkách</p>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-lg">
+            <h4 className="font-bold text-lg mb-3">Rouchův záměr:</h4>
+            <ul className="space-y-2 ml-4">
+              <li>• Přání točit dopad kolonialismu na 3. svět</li>
+              <li>• Urbánní antropologie</li>
+              <li>• Zpochybnil rituály Evropanů</li>
+            </ul>
           </div>
         </div>
       </section>

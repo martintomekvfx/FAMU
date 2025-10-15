@@ -281,5 +281,83 @@ cienma verité
 
 
 ¨
+přelom 50/60 technolgicky vyvoj 
+
+profes vyuziti 16 mm kamer
+
+puvodne amaterskyformat - predtim se pouzival o35mm
 
 
+nearažovatm nerekonstruovat, nechavat se prekvapit
+bt nerusene u toho praveho maonetu
+
+
+
+
+ = cinema verité  neboli film pravda 
+
+ přímy film v anglofonni msvete 
+
+
+ dulezostost zachytit autentickou ralitu  - lehak rucni kamera 
+
+ vyusteni do Krinitky jednoho léta
+
+ vliv rezisery francouske nove vlny ( godart) 
+ osvobodil film od tezkopadnosti 35 m mkamer , svobodna prace se zvukem
+
+ Rouch aplikoval na entograficky film
+
+
+
+  = obrat se ve vnimani entografickeho antropologickeho filmu
+
+
+  zvot a tvorba 
+
+
+  etnograf s hlubokou znalsoti trerenu 
+
+  fim = nastroj pro entgraficky vyzkum
+
+  ve valce v affrice stavenim inzenyrem
+
+
+  po valce studium entografie 
+
+  v 50 letech experimentuje se zviukem 
+  etnograficka prace v nigerii
+
+  porpve vzal 16mm a magnetofon do nigerie
+
+  - vedecka kredibilita
+
+
+
+  film šíle ní mistři 1955
+
+  knezi kultu Hauka - rituál v okamžicích transu 
+ - postavy v realtiě
+
+
+ ucastnici ritualu zde prebiraji identity kolonialistů
+
+ komentar poloimprovizovaný, pri namlivanní nachazi stejny stav vytrzeni jako mel u nataceni = filmvý trans
+
+
+
+ = skandál
+
+ odpor u enografů i afričqanů
+ mnoho zakazu ale cena v benátkách
+
+
+
+ prani tocit doapd koloniamlismu na 3. svět
+
+ urbalmmí antropologie
+
+ zpochybnil rituály evropanů
+
+
+ 
