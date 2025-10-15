@@ -3,6 +3,7 @@ import { ArrowLeft, Calendar, User, ChevronLeft, ChevronRight } from 'lucide-rea
 import { getSubjectById, getClassById } from '../data/subjects';
 import DDF1Content from '../content/ddf/class-01';
 import DDF2Content from '../content/ddf/class-02';
+import DDF3Content from '../content/ddf/class-03';
 import AV1Content from '../content/av/av1';
 import AV2Content from '../content/av/av2';
 import AI1Content from '../content/ai/ai1';
@@ -14,6 +15,7 @@ import NoteTaker from '../components/NoteTaker';
 const contentMap = {
   'ddf-1': DDF1Content,
   'ddf-2': DDF2Content,
+  'ddf-3': DDF3Content,
   'av-1': AV1Content,
   'av-2': AV2Content,
   'ai-1': AI1Content,
