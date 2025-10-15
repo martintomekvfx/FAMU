@@ -1,0 +1,44 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Povolit přístup k poznámkám
+    match /notes/{document=**} {
+      allow read, write: if true;
+    }
+    
+    // Povolit přístup k rychlým poznámkám (NoteTaker)
+    match /quickNotes/{document=**} {
+      allow read, write: if true;
+    }
+    
+    // Povolit přístup k chat zprávám
+    match /messages/{message} {
+      allow read, write: if true;
+    }
+    
+    // Povolit přístup k online users (presence)
+    match /onlineUsers/{user} {
+      allow read, write: if true;
+    }
+    
+    // Povolit přístup ke kalendáři
+    match /calendarEvents/{event} {
+      allow read, write: if true;
+    }
+    
+    // Povolit přístup k nástěnce (sticky notes)
+    match /stickyNotes/{document=**} {
+      allow read, write: if true;
+    }
+    
+    // Povolit přístup k mind maps (pozice nodů a custom nody)
+    match /mindMaps/{document=**} {
+      allow read, write: if true;
+    }
+    
+    // Povolit přístup k deadlines (úkoly a termíny)
+    match /deadlines/{deadline} {
+      allow read, write: if true;
+    }
+  }
+}
