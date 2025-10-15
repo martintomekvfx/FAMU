@@ -120,14 +120,43 @@ function TimetableWidget() {
   const today = new Date().getDay();
   const todayIndex = today === 0 ? -1 : today - 1;
 
+  // Calculate week number (ISO week)
+  const getWeekNumber = (date) => {
+    const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+    const dayNum = d.getUTCDay() || 7;
+    d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+    const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+    return Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
+  };
+
+  const currentWeek = getWeekNumber(new Date());
+  const isOddWeek = currentWeek % 2 === 1;
+
   return (
     <div className="bg-white rounded-xl shadow-lg border-2 border-gray-900 overflow-hidden">
       {/* Header */}
       <div className="bg-gradient-to-r from-gray-900 to-gray-800 px-6 py-4">
-        <h2 className="text-xl font-bold text-white flex items-center gap-2">
-          📅 Týdenní rozvrh
-        </h2>
-        <p className="text-sm text-gray-300 mt-1">Zimní semestr 2025/26</p>
+        <div className="flex items-center justify-between">
+          <div>
+            <h2 className="text-xl font-bold text-white flex items-center gap-2">
+              📅 Týdenní rozvrh
+            </h2>
+            <p className="text-sm text-gray-300 mt-1">Zimní semestr 2025/26</p>
+          </div>
+          <div className="text-right">
+            <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg font-bold ${
+              isOddWeek 
+                ? 'bg-blue-500 text-white' 
+                : 'bg-green-500 text-white'
+            }`}>
+              <span className="text-2xl">{currentWeek}</span>
+              <div className="text-left">
+                <div className="text-xs opacity-90">Týden</div>
+                <div className="text-sm">{isOddWeek ? 'Lichý' : 'Sudý'}</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Schedule - KOS Style */}
