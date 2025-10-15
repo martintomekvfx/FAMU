@@ -294,7 +294,8 @@ function OverviewPage() {
         </div>
         <div className="space-y-4 text-gray-700 leading-relaxed">
           <p className="text-lg">
-            Pro své intervence jsem si záměrně vybral místa <strong className="text-orange-900">Palmovky a okolí Kolbenovy ulice ve Vysočanech</strong>.
+            Pro své intervence jsem si záměrně vybral <strong className="text-orange-900">Palmovku</strong>. Proto také pracuji s <strong className="text-orange-900">antropologickým výzkumem Palmovky</strong>, 
+            abych lépe porozuměl specifickému kontextu této lokality a potřebám jejích obyvatel.
           </p>
           
           <p>
