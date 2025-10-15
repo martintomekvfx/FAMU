@@ -286,6 +286,63 @@ function OverviewPage() {
         </div>
       </div>
 
+      {/* Souhrn lokality */}
+      <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl shadow-xl border-2 border-orange-300 p-8">
+        <div className="flex items-center gap-3 mb-6">
+          <MapPin className="w-8 h-8 text-orange-600" />
+          <h2 className="text-3xl font-bold text-gray-900">Souhrn lokality</h2>
+        </div>
+        <div className="space-y-4 text-gray-700 leading-relaxed">
+          <p className="text-lg">
+            Pro své intervence jsem si záměrně vybral místa <strong className="text-orange-900">Palmovky a okolí Kolbenovy ulice ve Vysočanech</strong>.
+          </p>
+          
+          <p>
+            <strong>Palmovka (dolní Libeň v Praze 8)</strong> je čtvrť, která navzdory své poloze poblíž dynamicky se rozvíjejících
+            Holešovic a Karlína zůstává zanedbaná. Je to svým způsobem <strong className="text-red-700">„opomenutý svět"</strong>: prostranství Palmovky
+            nesou stopy někdejších urbanistických plánů z 90. let, které však nebyly dotaženy.
+          </p>
+          
+          <div className="bg-white rounded-lg p-6 border-l-4 border-orange-500">
+            <p className="font-semibold text-orange-900 mb-2">Co tam dnes najdeme:</p>
+            <ul className="space-y-2 text-gray-700">
+              <li className="flex items-start gap-2">
+                <span className="text-orange-600 mt-1">•</span>
+                <span>Mnoho prázdných betonových záhonů bez květin</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-orange-600 mt-1">•</span>
+                <span>Ostrůvky rozpáleného asfaltu bez účelu</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-orange-600 mt-1">•</span>
+                <span>Opuštěné vývěsní tabule a objekty městského mobiliáře, které ztratily smysl</span>
+              </li>
+            </ul>
+          </div>
+          
+          <p>
+            Místní radnice sice plánuje velkou rekonstrukci (např. tzv. Libeňský most a jeho okolí se v současnosti rekonstruuje), 
+            jenže celková proměna čtvrti je stále v nedohlednu. Veřejný prostor Palmovky mezitím fakticky <strong className="text-red-700">„neexistuje"</strong>
+            – je považován za dočasně ztracený, odsunutý do režimu provizoria s příslibem, že jednou bude lépe.
+          </p>
+          
+          <div className="bg-gradient-to-r from-orange-100 to-yellow-100 rounded-lg p-6 border-2 border-orange-300">
+            <p className="text-lg font-bold text-orange-900 mb-2">
+              Tento přístup „počkáme na nový development" však znamená, že aktuální kvalita života místních je nízká.
+            </p>
+            <p className="text-xl font-bold text-gray-900 italic">
+              Co teď a tady?
+            </p>
+          </div>
+          
+          <p className="text-lg">
+            <strong className="text-orange-900">Na tuto otázku mé zásahy reagují:</strong> snažím se do čekající, stagnující Palmovky vnést alespoň
+            drobná zlepšení, která oživí každodennost obyvatel v mezidobí.
+          </p>
+        </div>
+      </div>
+
       {/* Video Documentation */}
       <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6">
         <div className="flex items-center gap-3 mb-6">

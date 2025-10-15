@@ -540,3 +540,7 @@ eticke ohleda:
 
 hlas:
     silně osobním zaujatám řečníkem, soustavně hledajícím pravud o tom jake je prozivat svet urcitym zpusobem,
+
+
+
+    
