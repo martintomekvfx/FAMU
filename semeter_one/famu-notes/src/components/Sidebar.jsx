@@ -21,7 +21,6 @@ const menuItems = [
   { path: '/bulletin-board', icon: StickyNote, label: 'Nástěnka' },
   { path: '/notes', icon: FileText, label: 'Poznámky' },
   { path: '/project', icon: Presentation, label: '🎨 Můj Projekt' },
-  { path: '/chat', icon: MessageCircle, label: 'Chat' },
   { path: '/timetable', icon: CalendarDays, label: 'Rozvrh' },
   { path: '/calendar', icon: Calendar, label: 'Kalendář' },
 ];

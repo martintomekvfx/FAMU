@@ -75,34 +75,6 @@ function Home() {
             }
           }}
         >
-          {/* Chat */}
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: { opacity: 1, y: 0 }
-            }}
-            whileHover={{ scale: 1.05, y: -5 }}
-            whileTap={{ scale: 0.98 }}
-          >
-          <Link
-            to="/chat"
-            className="block bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border-2 border-gray-900 h-full"
-          >
-            <div className="p-4">
-              <div className="flex items-center gap-3">
-                <div className="bg-gray-900 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
-                  <MessageCircle className="w-6 h-6 text-white" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-gray-900">Chat</h3>
-                  <p className="text-sm text-gray-600">Real-time komunikace</p>
-                </div>
-                <MessageCircle className="w-6 h-6 text-gray-400" />
-              </div>
-            </div>
-          </Link>
-          </motion.div>
-
           {/* Bulletin Board */}
           <motion.div
             variants={{
