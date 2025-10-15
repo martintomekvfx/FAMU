@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { X } from 'lucide-react';
 
 // Rozvrh z KOS - Grid: 1032px wide, 9:00-20:00 (11 hours), 93.82px per hour
 const CLASSES = [
@@ -69,6 +71,16 @@ const CLASSES = [
     time: '14:50 - 18:05',
     color: '#CCEEFF',
     link: '/subject/ddf',
+    details: {
+      fullName: 'Dějiny dokumentárního filmu 1',
+      credits: 3,
+      completion: 'ZK',
+      scope: '4PT',
+      language: 'česky',
+      department: 'Katedra dokumentární tvorby',
+      capacity: 25,
+      enrolled: 24,
+    },
   },
   {
     day: 2,
@@ -117,6 +129,7 @@ const CLASSES = [
 ];
 
 function TimetableWidget() {
+  const [selectedClass, setSelectedClass] = useState(null);
   const today = new Date().getDay();
   const todayIndex = today === 0 ? -1 : today - 1;
 
@@ -255,39 +268,47 @@ function TimetableWidget() {
             )}
 
             {/* Classes */}
-            {CLASSES.map((classItem, index) => (
-              <Link
-                key={index}
-                to={classItem.link}
-                className="absolute border border-black text-center cursor-pointer hover:shadow-xl hover:scale-105 transition-all"
-                style={{
-                  position: 'absolute',
-                  top: `${classItem.top}px`,
-                  left: `${classItem.left}px`,
-                  width: `${classItem.width}px`,
-                  height: `${classItem.height}px`,
-                  backgroundColor: classItem.color,
-                  fontFamily: 'Helvetica, Arial, sans-serif',
-                  color: '#000000',
-                  fontSize: '11px',
-                  overflow: 'hidden',
-                  textOverflow: 'ellipsis',
-                }}
-              >
-                <div className="p-2">
-                  <div className="font-bold">{classItem.code}</div>
-                  {classItem.note && (
-                    <div className="text-xs font-bold">- {classItem.note} -</div>
-                  )}
-                  <div className="mt-1">{classItem.teacher}</div>
-                  <div className="mt-1">{classItem.room} /</div>
-                  <div className="mt-1">{classItem.time}</div>
-                  {classItem.weeks && (
-                    <div className="text-xs mt-1 italic">{classItem.weeks}</div>
-                  )}
-                </div>
-              </Link>
-            ))}
+            {CLASSES.map((classItem, index) => {
+              const hasDetails = classItem.details;
+              const Component = hasDetails ? 'div' : Link;
+              const componentProps = hasDetails 
+                ? { onClick: () => setSelectedClass(classItem) }
+                : { to: classItem.link };
+              
+              return (
+                <Component
+                  key={index}
+                  {...componentProps}
+                  className="absolute border border-black text-center cursor-pointer hover:shadow-xl hover:scale-105 transition-all"
+                  style={{
+                    position: 'absolute',
+                    top: `${classItem.top}px`,
+                    left: `${classItem.left}px`,
+                    width: `${classItem.width}px`,
+                    height: `${classItem.height}px`,
+                    backgroundColor: classItem.color,
+                    fontFamily: 'Helvetica, Arial, sans-serif',
+                    color: '#000000',
+                    fontSize: '11px',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                  }}
+                >
+                  <div className="p-2">
+                    <div className="font-bold">{classItem.code}</div>
+                    {classItem.note && (
+                      <div className="text-xs font-bold">- {classItem.note} -</div>
+                    )}
+                    <div className="mt-1">{classItem.teacher}</div>
+                    <div className="mt-1">{classItem.room} /</div>
+                    <div className="mt-1">{classItem.time}</div>
+                    {classItem.weeks && (
+                      <div className="text-xs mt-1 italic">{classItem.weeks}</div>
+                    )}
+                  </div>
+                </Component>
+              );
+            })}
           </div>
 
           {/* Legend */}
@@ -311,6 +332,105 @@ function TimetableWidget() {
           </div>
         </div>
       </div>
+
+      {/* Modal for class details */}
+      {selectedClass && selectedClass.details && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+          onClick={() => setSelectedClass(null)}
+        >
+          <div 
+            className="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white p-6 rounded-t-xl">
+              <div className="flex items-start justify-between">
+                <div>
+                  <h2 className="text-2xl font-bold mb-2">{selectedClass.details.fullName}</h2>
+                  <p className="text-gray-300 text-sm">Kód předmětu: {selectedClass.code}</p>
+                </div>
+                <button
+                  onClick={() => setSelectedClass(null)}
+                  className="text-white hover:bg-white hover:bg-opacity-20 rounded-lg p-2 transition-colors"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="p-6 space-y-4">
+              {/* Basic Info Grid */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-blue-50 rounded-lg p-4 border-2 border-blue-200">
+                  <div className="text-sm text-blue-600 font-semibold mb-1">Způsob zakončení</div>
+                  <div className="text-2xl font-bold text-gray-900">{selectedClass.details.completion}</div>
+                </div>
+                <div className="bg-green-50 rounded-lg p-4 border-2 border-green-200">
+                  <div className="text-sm text-green-600 font-semibold mb-1">Počet kreditů</div>
+                  <div className="text-2xl font-bold text-gray-900">{selectedClass.details.credits}</div>
+                </div>
+                <div className="bg-purple-50 rounded-lg p-4 border-2 border-purple-200">
+                  <div className="text-sm text-purple-600 font-semibold mb-1">Rozsah</div>
+                  <div className="text-2xl font-bold text-gray-900">{selectedClass.details.scope}</div>
+                </div>
+                <div className="bg-orange-50 rounded-lg p-4 border-2 border-orange-200">
+                  <div className="text-sm text-orange-600 font-semibold mb-1">Jazyk výuky</div>
+                  <div className="text-2xl font-bold text-gray-900">{selectedClass.details.language}</div>
+                </div>
+              </div>
+
+              {/* Department */}
+              <div className="bg-gray-50 rounded-lg p-4 border-2 border-gray-200">
+                <div className="text-sm text-gray-600 font-semibold mb-2">Katedra</div>
+                <div className="text-lg font-bold text-gray-900">{selectedClass.details.department}</div>
+              </div>
+
+              {/* Teacher & Schedule */}
+              <div className="bg-indigo-50 rounded-lg p-4 border-2 border-indigo-200">
+                <div className="text-sm text-indigo-600 font-semibold mb-2">Vyučující & Rozvrh</div>
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <span className="font-semibold text-gray-700">Vyučující:</span>
+                    <span className="text-gray-900">{selectedClass.teacher}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="font-semibold text-gray-700">Místnost:</span>
+                    <span className="text-gray-900">{selectedClass.room}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="font-semibold text-gray-700">Čas:</span>
+                    <span className="text-gray-900">{selectedClass.time}</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Capacity */}
+              <div className="bg-yellow-50 rounded-lg p-4 border-2 border-yellow-200">
+                <div className="text-sm text-yellow-600 font-semibold mb-2">Kapacita</div>
+                <div className="flex items-center gap-4">
+                  <div>
+                    <span className="text-3xl font-bold text-gray-900">{selectedClass.details.enrolled}</span>
+                    <span className="text-gray-600 text-lg"> / {selectedClass.details.capacity}</span>
+                  </div>
+                  <div className="flex-1">
+                    <div className="w-full bg-gray-200 rounded-full h-4">
+                      <div 
+                        className="bg-yellow-500 h-4 rounded-full transition-all"
+                        style={{ width: `${(selectedClass.details.enrolled / selectedClass.details.capacity) * 100}%` }}
+                      ></div>
+                    </div>
+                    <div className="text-xs text-gray-600 mt-1">
+                      {Math.round((selectedClass.details.enrolled / selectedClass.details.capacity) * 100)}% obsazeno
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
