@@ -69,7 +69,8 @@ import {
   Settings,
   Search,
   Bell,
-  Menu
+  Menu,
+  Wrench
 } from 'lucide-react';
 
 // Icon mapping helper - converts emoji to Lucide icons
@@ -362,6 +363,15 @@ function OverviewPage() {
               </div>
             </div>
           </div>
+          <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-lg p-5 border-2 border-orange-200">
+            <div className="flex items-center gap-3 mb-2">
+              <Wrench className="w-10 h-10 text-orange-600" />
+              <div>
+                <h3 className="font-bold text-gray-900">Tomáš Koníček</h3>
+                <p className="text-sm text-orange-700 font-medium">Řemeslný spoluautor</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -647,7 +657,7 @@ const officialProjects = [
       icon: '🗳️',
       color: 'red',
       description: 'Experiment s veřejným zapojením skrze herní mechanismus "hlasování nedopalky"',
-      artist: 'Martin Tomek',
+      artist: 'Martin Tomek, Tomáš Koníček',
       status: 'V plánu',
       details: ['Gamifikace', 'Zapojení komunity', 'Čistší prostor'],
       fullDescription: '**Pozorování a problém**\n\nCigaretové nedopalky jsou jedním z nejběžnějších odpadků na ulici. Mnoho lidí (zejména starší generace) ani nevnímá nedopalky jako odpad – odhodit ho na zem je pro ně normální. Přitom nedopalky znečišťují prostředí a jejich úklid stojí nemalé peníze.\n\n**Koncept hlasovacího popelníku**\n\nPopelník rozdělený na dvě přihrádky s otázkou, na kterou kuřák "hlasuje" tím, že vhodí nedopalek do jedné či druhé části.\n\n**Příklad:** "Je lepší káva, nebo čaj?" – jedna strana "káva", druhá "čaj"; lidé házejí špačky podle svého názoru.\n\nTento hravý prvek motivuje kuřáky dávat nedopalek do popelníku, ne na zem, a zároveň je to anketa.\n\n**Motivace projektu**\n\n• **Zlepšit čistotu Palmovky** - praktický dopad na prostředí\n\n• **Nenásilná komunikace problému** - místo moralizování použít hravost\n\n• **Mnohé kampaně nefungují, protože moralizují** - hravost by mohla fungovat lépe\n\n**Plán realizace**\n\n• Vyrobit či upravit stávající popelník\n\n• Doplnit ho **průhlednou dvoukomorovou nádobou** s nápisem vyzývajícím k hlasování\n\n• Téma může být neutrální nebo lokální (např. "Libeň nebo Karlín?" jako vtípek)\n\n• Sledovat, zda se zvýší počet nedopalků v popelníku a sníží na zemi\n\n**Metodologie výzkumu - Srovnání dvou lokalit**\n\n• **Experimentální místo** - s hlasovacím popelníkem\n\n• **Kontrolní místo** - bez hlasovacího popelníku\n\n**Postup měření:**\n\n1. Najít místo hodně znečištěné od nedopalků\n\n2. Vyčistit místo a dokumentovat (baseline)\n\n3. Počkat měsíc bez intervence\n\n4. Znovu vyčistit a **spočítat/zvážit nedopalky**\n\n5. Instalovat hlasovací popelník\n\n6. Po týdnu sesbírat nedopalky z obou lokalit a zvážit či spočítat\n\n**Sledované parametry:**\n\n• Volby lidí (jaké odpovědi vyhrávají)\n\n• Míru znečištění místa (počet nedopalků mimo popelník)\n\n• Before/after data - funguje intervence?\n\n**Vizualizace neviditelného**\n\nPrůhledná skleněná komora ukazuje nahromaděné nedopalky. Mnozí si možná vůbec poprvé **uvědomí, kolik nedopalků se denně vyhodí**. Forma vizualizace neviditelného problému.\n\n**Potenciál pro město**\n\nZískám **tvrdá data**, která mohou posloužit městu. Kdyby se to osvědčilo, mohla by radnice takové popelníky instalovat oficiálně.\n\n**Časový harmonogram**\n\n• **Zima 2025** (leden-březen) - Příprava, design, výroba\n\n• **Jarní klauzurní práce** - Prezentace projektu a metodologie\n\n• **Jaro 2026** - Instalace a testování (2 měsíce)\n\n• **Léto 2026** - Vyhodnocení dat\n\nPopelník lze vyrábět i v zimě, instalace a testování na jaře.',
@@ -717,7 +727,7 @@ const officialProjects = [
       icon: '🪑',
       color: 'orange',
       description: 'Dočasná přeměna parkovacích míst na prostor pro setkávání - kompletní obývací pokoj pod širým nebem',
-      artist: 'Martin Tomek',
+      artist: 'Martin Tomek, Tomáš Koníček',
       status: 'V plánu',
       details: ['Dřevěné palety', 'Komunitní náměstí', 'Reversibilní', 'Obývák venku'],
       fullDescription: '**Parklet a komunitní mikronáměstí**\n\nPalmovce chybí příjemný veřejný prostor k posezení a setkávání – něco jako malé náměstí, které by nebylo jen tranzitní. Identifikoval jsem místo před pobočkou Komerční banky, kde je široký chodník a asfaltová plocha, dnes využívaná jen pro rychlý průchod. Antropologický výzkum zmiňoval, že by zde šlo vytvořit odpočinkovou zónu. Rozhodl jsem se tedy naplánovat jednodenní akci ve formě parkletu neboli dočasného parku.\n\n**Realizace**\n\nRealizace by spočívala v tom, že bych na jeden den „obsadil" pár parkovacích míst nebo kus asfaltové plochy a vybavil ji dočasným mobiliářem: přinesu tam své paletové lavičky, stoly, několik velkých květináčů s rostlinami (půjčených či vyrobených), případně deštníky pro stín. Pozvu místní komunitu, aby se zastavila – mohu zajistit konvici s čajem nebo drobné občerstvení. Mohla by tam proběhnout i mini výstava fotek „Palmovka včera a dnes" pro oživení debaty.\n\n**Cíl experimentu**\n\nCílem je na vlastní oči vidět, jak lidé reagují, když najednou mají možnost se v místě zastavit. Sednou si a začnou si povídat? Ignorují to? Přijdou teenageři, senioři, rodiny? Takový jednodenní experiment mi umožní změřit zájem – mohu spočítat účastníky, sbírat jejich názory (umístím například nástěnku s papíry „Co byste zde rádi natrvalo?").\n\n**Veřejná prezentace projektu**\n\nZároveň to bude veřejná prezentace mé dosavadní práce v praxi: mohu tam vystavit plakáty dokumentující předchozí menší zásahy, pouštět z projektoru krátké záběry filmů, které jsem natočil při intervencích, atd. Bude to taková živá galerie a fórum v jednom. Pokud se akce povede, mohu ji opakovat třeba každé jaro a tím budovat tradici.\n\n**Mobiliář**\n\n• **Lavičky z palet** - sedací prostor pro 4-6 lidí\n\n• **Stolek** - centrální bod, možnost na kávu/knihu\n\n• **Koberec** - definuje prostor, přidává domácí atmosféru\n\n• **Květináč s květinami** - přináší zeleň a život do betonu\n\n• **Polštáře** - komfort a barva\n\n• **Deštníky** - stín v horkém počasí\n\n• **Nástěnka** - sběr názorů komunity\n\n• **Projektor** - prezentace dokumentace\n\n**Cíl projektu**\n\nUkázat potenciál městského prostoru a vyvolat debatu o prioritách ve veřejném prostoru. Změřit zájem komunity o trvalé komunitní náměstí.\n\n**Časový harmonogram**\n\n• **Jaro 2026** - Sběr palet, příprava materiálů\n\n• **Léto 2026** - Jednodenní akce parklet\n\nIdeální pro teplé počasí, kdy lidé tráví čas venku.',
@@ -754,7 +764,7 @@ const officialProjects = [
       icon: '🎮',
       color: 'purple',
       description: 'Spolupráce s game designem na vytvoření interaktivní hry s kamerou. Témata: internetová bezpečnost a veřejný prostor.',
-      artist: 'Martin Tomek',
+      artist: 'Martin Tomek, Michal Tancjura',
       status: 'V plánu',
       details: ['Computer vision', 'Interaktivní instalace', 'Edukace hrou'],
       fullDescription: 'Mezioborová spolupráce s Katedrou herního designu FAMU na vytvoření interaktivní hry využívající kameru a computer vision. Hra bude instalována ve veřejném prostoru a zaměří se na témata jako internetová bezpečnost, soukromí ve veřejném prostoru, nebo sledování a datová stopa. Herní mechaniky pomohou lidem zážitkově pochopit digitální témata v offline prostředí.',
@@ -857,7 +867,7 @@ const officialProjects = [
       icon: '💡',
       color: 'yellow',
       description: 'Instalace recyklovaných LED světel na tmavá místa - kritika konzumní kultury a zlepšení bezpečnosti',
-      artist: 'Ptáček',
+      artist: 'Ptáček (Martin Tomek, Michal Tancjura)',
       status: 'V přípravě',
       details: ['Recyklace baterií', 'Bezpečnost', 'Ekologický aktivismus', 'DIY elektronika'],
       fullDescription: '**Dočasná solární světla**\n\nDalším připravovaným projektem reagujícím na konkrétní problém Palmovky je instalace dočasných pouličních světel na tmavá místa. Některé podchody, vchody do metra nebo zákoutí jsou nedostatečně osvětlené, což snižuje pocit bezpečí. Zároveň jsem si všiml ekologického paradoxu: objevily se jednorázové elektronické cigarety, které obsahují malé Li-ion akumulátory, ale po jednom použití se vyhazují. Tyto baterie lze přitom snadno vyjmout a znovu využít.\n\n**Trojí motivace**\n\nMotivace je tedy trojí:\n\n1. **Zlepšit bezpečnost a orientaci** v nočním prostoru\n\n2. **Prakticky demonstrovat možnosti recyklace** elektronického odpadu\n\n3. **Kriticky poukázat na absurditu konzumní kultury**, která vyhazuje funkční baterie po jediném použití\n\n**Realizace**\n\nPlánuji sestrojit jednoduché LED lampičky napájené buď solárním panelem a baterií, nebo jen baterií nabíjecí (kterou bych nabíjel ručně jednou za čas). Tyto lampy umístím na místa, kde chybí světlo – například ke schodům u výstupu z metra Palmovka, nebo u zastávky tramvaje. Světlo bude slabší než veřejné osvětlení, spíše orientační, ale i to může pomoci.\n\nKe světlu umístím malou cedulku nebo QR kód s vysvětlením projektu: že jde o recyklované baterie a dočasné řešení, které upozorňuje na problém (tmu v místě a plýtvání zdroji).\n\n**Očekávaný dopad - Dvě roviny**\n\n**1. Praktická rovina:**\n\nLidé chodící tudy večer si možná s úlevou všimnou, že „někdo to tu nasvítil" – a třeba to přiměje odpovědné činitele k trvalému řešení, když uvidí zájem.\n\n**2. Environmentální rovina:**\n\nTi, kdo prozkoumají cedulku, se dozvědí o environmentálním aspektu: že jejich elektronická cigareta mohla třeba svítit ještě dál sloužit, místo aby skončila na skládce.\n\n**Aktivismus + Praktičnost**\n\nProjekt je tedy lehce aktivistický (kritika korporací prodávajících jednorázové baterie) a zároveň praktický. Samozřejmě budu opět sledovat životnost – jak dlouho lampy vydrží, než je někdo ukradne či poškodí, nebo než se vybije baterie. To vše zapíšu a použiji jako argumenty, proč či proč ne takové věci dělat v oficiálním měřítku.\n\n**Recyklace jednorázových cigaret**\n\nJednorázové elektronické cigarety obsahují:\n\n• **Li-ion akumulátory** - plně funkční baterie\n\n• **LED diody** - využitelné pro světla\n\n• **Elektronické komponenty** - možnost dalšího využití\n\nVšechny tyto komponenty končí na skládce po jediném použití - absurdní plýtvání zdroji.\n\n**Sledování a dokumentace**\n\n• Jak dlouho lampy vydrží?\n\n• Budou ukradeny nebo poškozeny?\n\n• Jak často je třeba nabíjet baterie?\n\n• Všimnou si lidé? Změní to jejich chování?\n\n• Zareagují odpovědné orgány?',
