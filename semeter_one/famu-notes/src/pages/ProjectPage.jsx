@@ -377,13 +377,16 @@ function OverviewPage() {
 
       {/* Research Resources */}
       <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">📚 Výzkumné podklady a dokumenty</h2>
+        <div className="flex items-center gap-3 mb-6">
+          <BookOpen className="w-7 h-7 text-gray-900" />
+          <h2 className="text-2xl font-bold text-gray-900">Výzkumné podklady a dokumenty</h2>
+        </div>
         
         <div className="space-y-4">
           {/* Anthropological Research */}
           <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border-2 border-indigo-200">
             <div className="flex items-start gap-4">
-              <div className="text-4xl">📄</div>
+              <FileText className="w-12 h-12 text-indigo-600" />
               <div className="flex-1">
                 <h3 className="font-bold text-gray-900 mb-2">Sociologicko-antropologický výzkum žitého prostoru v lokalitě Palmovka</h3>
                 <p className="text-gray-700 mb-4">
@@ -465,59 +468,35 @@ function OverviewPage() {
 
       {/* Grants & Funding */}
       <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-900 p-6">
-        <div className="flex items-center gap-3 mb-6">
-          <DollarSign className="w-7 h-7 text-gray-900" />
-          <h2 className="text-2xl font-bold text-gray-900">Financování projektu</h2>
-        </div>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">Financování projektu</h2>
         
         {/* Budget Breakdown */}
         <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6 border-2 border-blue-200 mb-6">
-          <div className="flex items-center gap-2 mb-4">
-            <TrendingUp className="w-6 h-6 text-gray-900" />
-            <h3 className="font-bold text-gray-900">Rozpočet jednotlivých intervencí</h3>
-          </div>
+          <h3 className="font-bold text-gray-900 mb-4">Rozpočet jednotlivých intervencí</h3>
           
           <div className="space-y-3 mb-4">
             <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-              <div className="flex items-center gap-2">
-                <Vote className="w-5 h-5 text-gray-600" />
-                <span className="text-gray-700">Hlasovací popelníky</span>
-              </div>
+              <span className="text-gray-700">Hlasovací popelníky</span>
               <span className="font-bold text-gray-900">1 500 Kč</span>
             </div>
             <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-              <div className="flex items-center gap-2">
-                <Banana className="w-5 h-5 text-gray-600" />
-                <span className="text-gray-700">Betonové banány - lavičky</span>
-              </div>
+              <span className="text-gray-700">Betonové banány - lavičky</span>
               <span className="font-bold text-gray-900">3 000 Kč</span>
             </div>
             <div className="flex justify-between items-center p-3 bg-green-100 rounded-lg border-2 border-green-300">
-              <div className="flex items-center gap-2">
-                <Sun className="w-5 h-5 text-green-600" />
-                <span className="text-gray-700">Slunečnice (realizováno)</span>
-              </div>
+              <span className="text-gray-700">Slunečnice (realizováno)</span>
               <span className="font-bold text-green-700">800 Kč</span>
             </div>
             <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-              <div className="flex items-center gap-2">
-                <Armchair className="w-5 h-5 text-gray-600" />
-                <span className="text-gray-700">Parklety</span>
-              </div>
+              <span className="text-gray-700">Parklety</span>
               <span className="font-bold text-gray-900">3 500 Kč</span>
             </div>
             <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-              <div className="flex items-center gap-2">
-                <Gamepad2 className="w-5 h-5 text-gray-600" />
-                <span className="text-gray-700">Křídový Game Jam</span>
-              </div>
+              <span className="text-gray-700">Křídový Game Jam</span>
               <span className="font-bold text-gray-900">1 000 Kč</span>
             </div>
             <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-              <div className="flex items-center gap-2">
-                <Camera className="w-5 h-5 text-gray-600" />
-                <span className="text-gray-700">Interaktivní kamerová hra</span>
-              </div>
+              <span className="text-gray-700">Interaktivní kamerová hra</span>
               <span className="font-bold text-gray-900">5 000 Kč</span>
             </div>
           </div>
@@ -532,38 +511,23 @@ function OverviewPage() {
           <h4 className="font-bold text-gray-900 mb-3 mt-6">Guerilla Art intervence:</h4>
           <div className="space-y-3 mb-4">
             <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-              <div className="flex items-center gap-2">
-                <Palette className="w-5 h-5 text-gray-600" />
-                <span className="text-gray-700">Detournement - Boj s reklamou</span>
-              </div>
+              <span className="text-gray-700">Detournement - Boj s reklamou</span>
               <span className="font-bold text-gray-900">750 Kč</span>
             </div>
             <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-              <div className="flex items-center gap-2">
-                <Brush className="w-5 h-5 text-gray-600" />
-                <span className="text-gray-700">Street Art - Obrazy v ulicích</span>
-              </div>
+              <span className="text-gray-700">Street Art - Obrazy v ulicích</span>
               <span className="font-bold text-gray-900">400 Kč</span>
             </div>
             <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-              <div className="flex items-center gap-2">
-                <Gallery className="w-5 h-5 text-gray-600" />
-                <span className="text-gray-700">Guerillová galerie</span>
-              </div>
+              <span className="text-gray-700">Guerillová galerie</span>
               <span className="font-bold text-gray-900">350 Kč</span>
             </div>
             <div className="flex justify-between items-center p-3 bg-green-100 rounded-lg border-2 border-green-300">
-              <div className="flex items-center gap-2">
-                <Waves className="w-5 h-5 text-green-600" />
-                <span className="text-gray-700">Houpačka (realizováno)</span>
-              </div>
+              <span className="text-gray-700">Houpačka (realizováno)</span>
               <span className="font-bold text-green-700">200 Kč</span>
             </div>
             <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-              <div className="flex items-center gap-2">
-                <Lamp className="w-5 h-5 text-gray-600" />
-                <span className="text-gray-700">Dočasná solární světla</span>
-              </div>
+              <span className="text-gray-700">Dočasná solární světla</span>
               <span className="font-bold text-gray-900">750 Kč</span>
             </div>
           </div>

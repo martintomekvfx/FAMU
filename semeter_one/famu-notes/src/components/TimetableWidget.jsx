@@ -25,7 +25,7 @@ const CLASSES = [
     height: 119,
     code: 'Dílna',
     teacher: 'BAGDASAROV G.',
-    room: 'TBA',
+    room: 'Trziste',
     time: '9:50 - 13:00',
     color: '#CCCCCC',
     link: '/subject/general',
