@@ -300,7 +300,7 @@ function TimetableWidget() {
                       <div className="text-xs font-bold">- {classItem.note} -</div>
                     )}
                     <div className="mt-1">{classItem.teacher}</div>
-                    <div className="mt-1">{classItem.room} /</div>
+                    <div className="mt-1">{classItem.room}</div>
                     <div className="mt-1">{classItem.time}</div>
                     {classItem.weeks && (
                       <div className="text-xs mt-1 italic">{classItem.weeks}</div>
