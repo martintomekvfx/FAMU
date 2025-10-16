@@ -175,33 +175,33 @@ function AV4Content() {
       </section>
 
       {/* Shrnutí pro prezentaci */}
-      <section className="bg-gradient-to-r from-gray-800 to-gray-900 text-white p-8 rounded-xl shadow-lg">
-        <h2 className="text-3xl font-bold mb-6">📋 Shrnutí pro prezentaci</h2>
+      <section className="bg-gradient-to-br from-slate-100 to-gray-200 p-8 rounded-xl shadow-lg border-2 border-gray-300">
+        <h2 className="text-3xl font-bold mb-6 text-gray-900">📋 Shrnutí pro prezentaci</h2>
         
         <div className="space-y-4">
-          <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
-            <h3 className="text-xl font-bold mb-2">1. Digitalizace světla</h3>
-            <p>Světlo jako packet, kus kódu - programovatelné, dynamické, nové médium</p>
+          <div className="bg-white p-4 rounded-lg shadow-md border-l-4 border-purple-500">
+            <h3 className="text-xl font-bold mb-2 text-purple-900">1. Digitalizace světla</h3>
+            <p className="text-gray-700">Světlo jako packet, kus kódu - programovatelné, dynamické, nové médium</p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
-            <h3 className="text-xl font-bold mb-2">2. Vnitřní prostory</h3>
-            <p>Programovatelné světlo, ambientní osvětlení, ohebné displeje, virtual production</p>
+          <div className="bg-white p-4 rounded-lg shadow-md border-l-4 border-green-500">
+            <h3 className="text-xl font-bold mb-2 text-green-900">2. Vnitřní prostory</h3>
+            <p className="text-gray-700">Programovatelné světlo, ambientní osvětlení, ohebné displeje, virtual production</p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
-            <h3 className="text-xl font-bold mb-2">3. Venkovní prostory</h3>
-            <p>Viditelné z vesmíru, dopady na zvířata a lidi, kolonializace noci, světelný smog</p>
+          <div className="bg-white p-4 rounded-lg shadow-md border-l-4 border-blue-500">
+            <h3 className="text-xl font-bold mb-2 text-blue-900">3. Venkovní prostory</h3>
+            <p className="text-gray-700">Viditelné z vesmíru, dopady na zvířata a lidi, kolonializace noci, světelný smog</p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
-            <h3 className="text-xl font-bold mb-2">4. Standardy reprezentace</h3>
-            <p>sRGB a Rec709 - lidstvo se shodlo na "správné" reprezentaci reality</p>
+          <div className="bg-white p-4 rounded-lg shadow-md border-l-4 border-orange-500">
+            <h3 className="text-xl font-bold mb-2 text-orange-900">4. Standardy reprezentace</h3>
+            <p className="text-gray-700">sRGB a Rec709 - lidstvo se shodlo na "správné" reprezentaci reality</p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
-            <h3 className="text-xl font-bold mb-2">5. Paradox</h3>
-            <p>Optimalizujeme realitu pro digitální svět, ale displeje jsou okna do perfektní reality, která neexistuje</p>
+          <div className="bg-white p-4 rounded-lg shadow-md border-l-4 border-red-500">
+            <h3 className="text-xl font-bold mb-2 text-red-900">5. Paradox</h3>
+            <p className="text-gray-700">Optimalizujeme realitu pro digitální svět, ale displeje jsou okna do perfektní reality, která neexistuje</p>
           </div>
         </div>
       </section>
