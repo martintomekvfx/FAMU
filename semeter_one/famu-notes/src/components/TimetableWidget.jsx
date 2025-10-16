@@ -88,7 +88,7 @@ const CLASSES = [
     width: 148, // 1h 35min duration
     top: 300,
     height: 59,
-    code: '373AS7',
+    code: 'LAZ-124 18:10 - 19:45',
     teacher: 'Audiovizuální seminář',
     room: 'LAZ-124 18:10 - 19:45',
     time: '18:10 - 19:45',
@@ -117,7 +117,7 @@ const CLASSES = [
     width: 227, // 2h 25min duration
     top: 360,
     height: 59,
-    code: '373UI',
+    code: 'LAZ-107 17:20 - 19:45',
     teacher: 'Umělá inteligence',
     room: 'LAZ-107 17:20 - 19:45',
     time: '17:20 - 19:45',
