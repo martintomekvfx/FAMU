@@ -13,7 +13,7 @@ const CLASSES = [
     height: 119,
     code: '373AVTE1',
     teacher: 'FABUŠ P.',
-    room: 'LAZ-423',
+    room: 'LAZ-423 /',
     time: '14:00 - 17:15',
     color: '#CCEEFF',
     link: '/subject/av',
@@ -27,7 +27,7 @@ const CLASSES = [
     height: 119,
     code: 'Dílna',
     teacher: 'BAGDASAROV G.',
-    room: 'Trziste',
+    room: 'Trziste /',
     time: '9:50 - 13:00',
     color: '#CCCCCC',
     link: '/subject/general',
@@ -40,7 +40,7 @@ const CLASSES = [
     height: 119,
     code: '373PAD1',
     teacher: 'BAGDASAROV G.',
-    room: 'LAZ-423',
+    room: 'LAZ-423 /',
     time: '14:00 - 16:25',
     color: '#CCCCCC',
     link: '/subject/av',
@@ -53,7 +53,7 @@ const CLASSES = [
     height: 119,
     code: '373PR',
     teacher: 'LUKÁČOVÁ M.',
-    room: 'LAZ-423',
+    room: 'LAZ-423 /',
     time: '17:20 - 18:55',
     color: '#CCCCCC',
     link: '/subject/general',
@@ -67,7 +67,7 @@ const CLASSES = [
     height: 119,
     code: '303DDF1',
     teacher: 'ČENĚK D.',
-    room: 'LAZ-217',
+    room: 'LAZ-217 /',
     time: '14:50 - 18:05',
     color: '#CCEEFF',
     link: '/subject/ddf',
@@ -106,7 +106,7 @@ const CLASSES = [
     height: 119,
     code: '373AVTE1',
     teacher: 'FABUŠ P.',
-    room: 'LAZ-423',
+    room: 'LAZ-423 /',
     time: '14:00 - 15:35',
     color: '#CCEEFF',
     link: '/subject/av',
@@ -306,7 +306,16 @@ function TimetableWidget() {
                       <div className="text-xs font-bold">- {classItem.note} -</div>
                     )}
                     <div className="mt-1">{classItem.teacher}</div>
-                    <div className="mt-1">{classItem.room} {classItem.time}</div>
+                    {classItem.note ? (
+                      // Small boxes (Lichý/Sudý týden) - time on same line as room
+                      <div className="mt-1">{classItem.room}</div>
+                    ) : (
+                      // Large boxes (every week) - time on separate line
+                      <>
+                        <div className="mt-1">{classItem.room}</div>
+                        <div className="mt-1">{classItem.time}</div>
+                      </>
+                    )}
                     {classItem.weeks && (
                       <div className="text-xs mt-1 italic">{classItem.weeks}</div>
                     )}
