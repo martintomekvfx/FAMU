@@ -48,9 +48,14 @@ function SubjectPage() {
             <div>
               <h1 className="text-3xl md:text-4xl font-bold">{subject.name}</h1>
               <p className="text-lg opacity-90 mt-1">{subject.description}</p>
-              {subject.time && (
-                <p className="text-md opacity-80 mt-1">⏰ {subject.time}</p>
-              )}
+              <div className="flex flex-wrap gap-4 mt-2">
+                {subject.time && (
+                  <p className="text-md opacity-80">⏰ {subject.time}</p>
+                )}
+                {subject.room && (
+                  <p className="text-md opacity-80">📍 {subject.room}</p>
+                )}
+              </div>
             </div>
           </div>
         </div>

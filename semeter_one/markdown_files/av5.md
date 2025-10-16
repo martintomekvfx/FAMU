@@ -55,3 +55,6 @@ rozpínavost směrem dovnitř
 
 
 civilizace se uci zit sam se sebou
+
+
+pro blém kauza , tkee nás trápí, napišme a otm jak se o tom tématu píše. 

@@ -103,6 +103,7 @@ export const subjects = [
     description: 'Poznámky z přednášek',
     color: 'purple',
     time: '18:10 - 19:45',
+    room: 'LAZ-124',
     classes: [
       {
         id: 1,
@@ -154,6 +155,7 @@ export const subjects = [
     description: 'Poznámky z přednášek o AI',
     color: 'green',
     time: '17:20 - 19:45',
+    room: 'LAZ-107',
     classes: [
       {
         id: 1,
@@ -161,6 +163,13 @@ export const subjects = [
         lecturer: 'ditamorg@gmail.com',
         title: 'Emergentní jevy a AlphaGo',
         description: 'Emergentní jevy, fázové jevy, Lee Sedol vs AlphaGo',
+      },
+      {
+        id: 2,
+        date: '2025',
+        lecturer: 'ditamorg@gmail.com',
+        title: 'Jack Clark a Import AI',
+        description: 'Import AI newsletter, technologický optimismus, sycophancy, Claude a ChatGPT.',
       },
     ],
     links: [],
