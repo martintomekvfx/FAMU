@@ -132,7 +132,12 @@ export const subjects = [
         description: 'Světlo jako nové médium, kolonializace noci, sRGB a Rec709, reprezentace reality.',
       },
     ],
-    links: [],
+    links: [
+      {
+        name: 'Docházka AV - SharePoint',
+        url: 'https://amu365-my.sharepoint.com/:x:/g/personal/palo_fabus_famu_cz/Ea08xhb4XzZNroBeRoJ8RacBb8qOTAaIfdap63bi28G3TQ?e=pgTKtn',
+      },
+    ],
   },
   {
     id: 'ai',
