@@ -74,6 +74,135 @@ function SubjectPage() {
           />
         </div>
 
+        {/* Syllabus for AV subject */}
+        {subject.id === 'av' && (
+          <div className="mb-12 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl shadow-lg p-8 border-2 border-purple-200">
+            <h2 className="text-3xl font-bold text-purple-900 mb-6">📅 Rozpis výuky a deadlines</h2>
+            
+            {/* Winter Semester */}
+            <div className="mb-8">
+              <h3 className="text-2xl font-bold text-purple-800 mb-4">Zimní semestr</h3>
+              <div className="space-y-3">
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <div className="font-bold text-purple-900">6. 10. a 9. 10.</div>
+                  <div className="text-gray-700">Mapa a území (PF)</div>
+                </div>
+                
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <div className="font-bold text-purple-900">13. 10. a 16. 10.</div>
+                  <div className="text-gray-700">Fakta a zájmy vědy (PF)</div>
+                </div>
+                
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <div className="font-bold text-purple-900">20. 10. a 23. 10.</div>
+                  <div className="text-gray-700">Performativita vědy (PF)</div>
+                </div>
+                
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <div className="font-bold text-purple-900">27. 10. a 30. 10.</div>
+                  <div className="text-gray-700">Romantismus v současném umění (NK)</div>
+                  <div className="text-sm text-orange-600 mt-1">⚠️ Pondělí - rektorské volno</div>
+                </div>
+                
+                <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-4 rounded-lg shadow-sm border-l-4 border-blue-500">
+                  <div className="font-bold text-purple-900">3. 11. a 6. 11.</div>
+                  <div className="text-gray-700">Politika vizuality (AB)</div>
+                  <div className="mt-2 bg-red-100 p-2 rounded text-sm">
+                    <span className="font-bold text-red-900">📝 Deadline 2. 11.</span> - Reflexe 1. odevzdaného textu (Anežka) - min 5 ns
+                  </div>
+                </div>
+                
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <div className="font-bold text-purple-900">10. 11. a 13. 11.</div>
+                  <div className="text-gray-700">Filosofie technologie (PF)</div>
+                  <div className="text-sm text-blue-600 mt-1">💡 Vybrat osobní téma ke kritickému představení</div>
+                </div>
+                
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <div className="font-bold text-purple-900">17. 11. a 20. 11.</div>
+                  <div className="text-gray-700">Virtualita (PF)</div>
+                  <div className="text-sm text-orange-600 mt-1">⚠️ Pondělí - státní svátek</div>
+                </div>
+                
+                <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-4 rounded-lg shadow-sm border-l-4 border-blue-500">
+                  <div className="font-bold text-purple-900">24. 11. a 27. 11.</div>
+                  <div className="text-gray-700">Kreativita umělé inteligence 1 (PF)</div>
+                  <div className="mt-2 bg-red-100 p-2 rounded text-sm">
+                    <span className="font-bold text-red-900">📝 Deadline 26. 11.</span> - Reflexe 1,5. odevzdaného textu (Palo) - min 5 ns
+                  </div>
+                </div>
+                
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <div className="font-bold text-purple-900">1. 12. a 4. 12.</div>
+                  <div className="text-gray-700">Sound ecology (SP)</div>
+                </div>
+                
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <div className="font-bold text-purple-900">8. 12. a 11. 12.</div>
+                  <div className="text-gray-700">Politics of sound (SP)</div>
+                </div>
+                
+                <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-4 rounded-lg shadow-sm border-l-4 border-blue-500">
+                  <div className="font-bold text-purple-900">15. 12. a 18. 12.</div>
+                  <div className="text-gray-700">Kreativita umělé inteligence 2 (PF)</div>
+                  <div className="mt-2 bg-red-100 p-2 rounded text-sm">
+                    <span className="font-bold text-red-900">📝 Deadline 15. 12.</span> - Reflexe 2. odevzdaného textu (Palo) - min 5 ns
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Summer Semester */}
+            <div>
+              <h3 className="text-2xl font-bold text-purple-800 mb-4">Letní semestr</h3>
+              <div className="space-y-3">
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <div className="font-bold text-purple-900">9. 2. a 12. 2.</div>
+                  <div className="text-gray-700">Postkolonialismus (AB)</div>
+                </div>
+                
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <div className="font-bold text-purple-900">16. 2. a 19. 2.</div>
+                  <div className="text-gray-700">Open narrative structures (ER)</div>
+                </div>
+                
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <div className="font-bold text-purple-900">23. 2. a 26. 2.</div>
+                  <div className="text-gray-700">Posthumanismus (PF)</div>
+                </div>
+                
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <div className="font-bold text-purple-900">2. 3. a 5. 3.</div>
+                  <div className="text-gray-700">Politika emancipace (NK)</div>
+                </div>
+                
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <div className="font-bold text-purple-900">9. 3. a 12. 3.</div>
+                  <div className="text-gray-700">Mediální specificita (MB)</div>
+                </div>
+                
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <div className="font-bold text-purple-900">16. 3. a 19. 3.</div>
+                  <div className="text-gray-700">Archivní obrat (MB)</div>
+                </div>
+                
+                <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-4 rounded-lg shadow-sm border-l-4 border-blue-500">
+                  <div className="font-bold text-purple-900">23. 3. a 26. 3.</div>
+                  <div className="text-gray-700">Digitální platformy (MB)</div>
+                  <div className="mt-2 bg-red-100 p-2 rounded text-sm">
+                    <span className="font-bold text-red-900">📝 ZKOUŠKA</span> - Reflexe 3. odevzdaného textu (Anežka + Nela) - min 10 ns
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Important Note */}
+            <div className="mt-6 bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+              <p className="font-bold text-yellow-900">⚠️ Povinná docházka: minimálně 80%</p>
+            </div>
+          </div>
+        )}
+
         <div className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-800 mb-2">Přehled hodin</h2>
           <p className="text-gray-600">Klikněte na hodinu pro zobrazení poznámek</p>
