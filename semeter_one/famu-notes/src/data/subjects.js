@@ -102,6 +102,7 @@ export const subjects = [
     shortName: 'AV',
     description: 'Poznámky z přednášek',
     color: 'purple',
+    time: '18:10 - 19:45',
     classes: [
       {
         id: 1,
@@ -131,6 +132,13 @@ export const subjects = [
         title: 'LED/OLED - Digitalizace světla',
         description: 'Světlo jako nové médium, kolonializace noci, sRGB a Rec709, reprezentace reality.',
       },
+      {
+        id: 5,
+        date: '2025',
+        lecturer: 'AV přednášející',
+        title: 'Politika vizuality',
+        description: 'Beatriz da Costa (Pigeon Blog), otázka viditelnosti, Charlotte Gyllenhammar, Ballard - život v představách, globální vesnice.',
+      },
     ],
     links: [
       {
@@ -145,6 +153,7 @@ export const subjects = [
     shortName: 'AI',
     description: 'Poznámky z přednášek o AI',
     color: 'green',
+    time: '17:20 - 19:45',
     classes: [
       {
         id: 1,

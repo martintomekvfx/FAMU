@@ -8,6 +8,7 @@ import AV1Content from '../content/av/av1';
 import AV2Content from '../content/av/av2';
 import AV3Content from '../content/av/av3';
 import AV4Content from '../content/av/av4';
+import AV5Content from '../content/av/av5';
 import AI1Content from '../content/ai/ai1';
 import General1Content from '../content/general/general1';
 import PR1Content from '../content/pr/pr1';
@@ -22,6 +23,7 @@ const contentMap = {
   'av-2': AV2Content,
   'av-3': AV3Content,
   'av-4': AV4Content,
+  'av-5': AV5Content,
   'ai-1': AI1Content,
   'general-1': General1Content,
   'pr-1': PR1Content,
