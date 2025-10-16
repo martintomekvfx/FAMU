@@ -6,6 +6,7 @@ import DDF2Content from '../content/ddf/class-02';
 import DDF3Content from '../content/ddf/class-03';
 import AV1Content from '../content/av/av1';
 import AV2Content from '../content/av/av2';
+import AV3Content from '../content/av/av3';
 import AI1Content from '../content/ai/ai1';
 import General1Content from '../content/general/general1';
 import PR1Content from '../content/pr/pr1';
@@ -18,6 +19,7 @@ const contentMap = {
   'ddf-3': DDF3Content,
   'av-1': AV1Content,
   'av-2': AV2Content,
+  'av-3': AV3Content,
   'ai-1': AI1Content,
   'general-1': General1Content,
   'pr-1': PR1Content,

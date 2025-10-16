@@ -360,4 +360,4 @@ bt nerusene u toho praveho maonetu
  zpochybnil rituály evropanů
 
 
- 
+ https://www.youtube.com/watch?v=akrq_HIC7h8
